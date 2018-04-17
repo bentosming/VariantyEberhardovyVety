@@ -1,7 +1,22 @@
 \chapter*{Úvod}
 \addcontentsline{toc}{chapter}{Úvod}
 
-Následuje několik ukázkových kapitol, které doporučují, jak by se
-měla bakalářská práce sázet. Primárně popisují použití \TeX{}ové
-šablony, ale obecné rady poslouží dobře i~uživatelům jiných
-systémů.
+Zkusíme-li upravovat Eulerův vzorec pro rovinné grafy
+$|V|-|E|+|S|=2$, můžeme pro kubické grafy dospět do tvaru 
+\begin{equation}\label{eq01:neccCond}
+\sum_{k \geq 3}{(6-k)p_k}=12,
+\end{equation}
+kde $p_k$ značí počet $k$-hranných stěn grafu. Výraz \eqref{eq01:neccCond} je nutnou podmínkou pro rovinnost kubického grafu. Pozoruhodně, počet šestihranných stěn v této podmínce nehraje žádnou roli. Toho si všiml Victor Eberhard a v roce 1981 formuloval a dokázal, že pokud můžeme volit $p_6$, dokážeme najít graf zadaný počtem ostatních stěn, který je rovinný.
+
+Abychom mohli větu formulovat formálně, je nutné definovat přijatelné posloupnosti: posloupnost $(p_k) = (p_3,p_4,...)$ kladných celých čísel je přijatelná, pokud existuje rovinný kubický 3-spojitý graf, který má právě $p_k$ $k$-hranných stěn.
+
+Přidáním podmínky na 3-spojitost získáváme jen grafy, které (podle Steinitzovy věty) odpovídají konvexním 3-polytopům. Ekvivalentně lze tedy přijatelnou posloupnost definovat následovně:
+
+\begin{definice}[Přijatelná posloupnost]\label{def01:1}
+Posloupnost $(p_k) = (p_3,p_4,...)$ kladných celých čísel je přijatelná, pokud existuje jednoduchý (vrcholy mají stupeň 3) 3-polytop, který má právě $p_k$ $k$-hranných stěn.
+\end{definice}
+
+Formulujme nyní Eberhardovu větu //TODO odkaz:
+\begin{veta}[Eberhardova věta]\label{veta01:1}
+Pro každou posloupnost $(p_k | 3 \leq k \neq 6)$ kladných celých čísel, splňující \eqref{eq01:neccCond} existuje taková hodnota $p_6$, že $(p_k | k\geq 3)$ je přijatelná.
+\end{veta}

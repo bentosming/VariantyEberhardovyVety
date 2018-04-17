@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  17 MAR 2018 14:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  5 APR 2018 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2224,8 +2224,14 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 120.
 (./makra.tex
 \c@veta=\count121
 \c@definice=\count122
-) (./prace.aux (./titulka.aux) (./uvod.aux) (./kap01.aux)
-(./kap02.aux) (./kap03.aux) (./kap04.aux) (./zaver.aux) (./literatura.aux))
+) (./prace.aux (./titulka.aux) (./uvod.aux) (./kap01.aux
+
+LaTeX Warning: Label `def01:1' multiply defined.
+
+
+LaTeX Warning: Label `veta01:1' multiply defined.
+
+) (./kap02.aux) (./kap03.aux) (./kap04.aux) (./zaver.aux) (./literatura.aux))
 \openout1 = `prace.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
@@ -2411,7 +2417,7 @@ Package natbib Warning: Citation `Andel07' on page 6 undefined on input line 21
 
 
 Overfull \hbox (6.40514pt too wide) in paragraph at lines 214--216
-[][]\T1/lmr/bx/n/12 Lemma 2 \T1/lmr/m/n/12 (\T1/lmr/bx/n/12 ?\T1/lmr/m/n/12 , s
+[][]\T1/lmr/bx/n/12 Lemma 3 \T1/lmr/m/n/12 (\T1/lmr/bx/n/12 ?\T1/lmr/m/n/12 , s
 tr. 29)\T1/lmr/bx/n/12 . []\T1/lmr/m/it/12 Ná-hodný vek-tor $\OML/lmm/b/it/12 X
 $ \T1/lmr/m/it/12 je m¥-°i-telné zob-ra-zení pro-storu $\OT1/lmr/m/n/12 (
 \OML/lmm/m/it/12 ; \OMS/lmsy/m/n/12 A\OML/lmm/m/it/12 ;  []\OT1/lmr/m/n/12 )$|
@@ -2498,17 +2504,17 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 
 ] [9]
-<../img/ukazka-obr01.pdf, id=228, 433.62pt x 433.62pt>
+<../img/ukazka-obr01.pdf, id=233, 433.62pt x 433.62pt>
 File: ../img/ukazka-obr01.pdf Graphic file (type pdf)
 <use ../img/ukazka-obr01.pdf>
 Package pdftex.def Info: ../img/ukazka-obr01.pdf  used on input line 156.
 (pdftex.def)             Requested size: 398.3596pt x 398.3596pt.
-<../img/ukazka-obr02.pdf, id=229, 433.62pt x 433.62pt>
+<../img/ukazka-obr02.pdf, id=234, 433.62pt x 433.62pt>
 File: ../img/ukazka-obr02.pdf Graphic file (type pdf)
 <use ../img/ukazka-obr02.pdf>
 Package pdftex.def Info: ../img/ukazka-obr02.pdf  used on input line 165.
 (pdftex.def)             Requested size: 398.3596pt x 398.3596pt.
-<../img/ukazka-obr03.pdf, id=230, 433.62pt x 614.295pt>
+<../img/ukazka-obr03.pdf, id=235, 433.62pt x 614.295pt>
 File: ../img/ukazka-obr03.pdf Graphic file (type pdf)
 <use ../img/ukazka-obr03.pdf>
 Package pdftex.def Info: ../img/ukazka-obr03.pdf  used on input line 171.
@@ -2568,13 +2574,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `prace.out' has not changed.
 (rerunfilecheck)             Checksum: 03BB70C97851BF3AB6B88289A8B662E2;2456.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15612 strings out of 492982
- 212284 string characters out of 6136225
- 279763 words of memory out of 5000000
- 18753 multiletter control sequences out of 15000+600000
+ 15616 strings out of 492982
+ 212329 string characters out of 6136225
+ 279835 words of memory out of 5000000
+ 18754 multiletter control sequences out of 15000+600000
  121716 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,19n,35p,492b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2599,9 +2609,9 @@ fb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2017
 type1/public/lm/lmtt12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msam10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb>
-Output written on prace.pdf (23 pages, 745926 bytes).
+Output written on prace.pdf (23 pages, 751037 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
- 58 named destinations out of 1000 (max. 500000)
+ 442 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
  185 words of extra memory for PDF output out of 10000 (max. 10000000)
 
