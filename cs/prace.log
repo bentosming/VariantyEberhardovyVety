@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  28 APR 2018 01:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  5 MAY 2018 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2229,7 +2229,11 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 120.
 
 LaTeX Warning: Label `def01:1' multiply defined.
 
-) (./kap04.aux) (./zaver.aux) (./literatura.aux))
+) (./kap04.aux
+
+LaTeX Warning: Label `obr03:Nvyber' multiply defined.
+
+) (./zaver.aux) (./literatura.aux))
 \openout1 = `prace.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
@@ -2320,7 +2324,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 6.
 
 pdfTeX warning: pdflatex.exe (file ../img/logo-cs.pdf): PDF inclusion: found PD
 F version <1.5>, but at most version <1.4> allowed
-<../img/logo-cs.pdf, id=62, 506.4591pt x 156.49065pt>
+<../img/logo-cs.pdf, id=74, 506.4591pt x 156.49065pt>
 File: ../img/logo-cs.pdf Graphic file (type pdf)
 <use ../img/logo-cs.pdf>
 Package pdftex.def Info: ../img/logo-cs.pdf  used on input line 10.
@@ -2402,7 +2406,7 @@ Kapitola 1.
 
  (./kap02.tex
 Kapitola 2.
-<../img/T-P.pdf, id=136, 337.8422pt x 125.09737pt>
+<../img/T-P.pdf, id=151, 337.8422pt x 125.09737pt>
 File: ../img/T-P.pdf Graphic file (type pdf)
 <use ../img/T-P.pdf>
 Package pdftex.def Info: ../img/T-P.pdf  used on input line 30.
@@ -2410,7 +2414,7 @@ Package pdftex.def Info: ../img/T-P.pdf  used on input line 30.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../img/T-T.pdf, id=137, 228.6944pt x 207.60562pt>
+<../img/T-T.pdf, id=152, 228.6944pt x 207.60562pt>
 File: ../img/T-T.pdf Graphic file (type pdf)
 <use ../img/T-T.pdf>
 Package pdftex.def Info: ../img/T-T.pdf  used on input line 38.
@@ -2418,7 +2422,7 @@ Package pdftex.def Info: ../img/T-T.pdf  used on input line 38.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../img/T-G.pdf, id=138, 142.71318pt x 141.27782pt>
+<../img/T-G.pdf, id=153, 142.71318pt x 141.27782pt>
 File: ../img/T-G.pdf Graphic file (type pdf)
 <use ../img/T-G.pdf>
 Package pdftex.def Info: ../img/T-G.pdf  used on input line 46.
@@ -2448,34 +2452,29 @@ Kapitola 3.
 
 
 ]
-<../img/iii+iv-construction.png, id=210, 721.69624pt x 318.18875pt>
+<../img/iii+iv-construction.png, id=225, 721.69624pt x 318.18875pt>
 File: ../img/iii+iv-construction.png Graphic file (type png)
 <use ../img/iii+iv-construction.png>
-Package pdftex.def Info: ../img/iii+iv-construction.png  used on input line 45.
+Package pdftex.def Info: ../img/iii+iv-construction.png  used on input line 48.
 
 (pdftex.def)             Requested size: 387.19939pt x 170.71652pt.
-) [8 <../img/iii+iv-construction.png>] [9]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [8] [9 <../img/iii+iv-construction.png>]
 \openout2 = `kap04.aux'.
 
  (./kap04.tex
 Kapitola 4.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 15.
-(c:/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 27.
-
-(c:/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [10
+) [10
 
 
 
 ]
 \openout2 = `zaver.aux'.
 
- (./zaver.tex)
-[11
+ (./zaver.tex) [11
 
 
 
@@ -2513,7 +2512,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `prace.out' has not changed.
-(rerunfilecheck)             Checksum: DC6AD33A4D7109B7E33FD8BE1E27EE51;1828.
+(rerunfilecheck)             Checksum: 67837DAB60971BDD90345D7EBC252E43;2187.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2521,30 +2520,29 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15507 strings out of 492982
- 210763 string characters out of 6136225
- 275656 words of memory out of 5000000
- 18686 multiletter control sequences out of 15000+600000
- 64018 words of font info for 54 fonts, out of 8000000 for 9000
+ 15440 strings out of 492982
+ 209370 string characters out of 6136225
+ 275622 words of memory out of 5000000
+ 18624 multiletter control sequences out of 15000+600000
+ 60333 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,35p,948b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,35p,984b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2017/tex
-mf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvi
-ps/lm/lm-rm.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c
-:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2017/tex
-mf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/texlive/2017/texmf-dist/fonts/type
-1/public/lm/lmbx12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi1
-0.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/
-2017/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2017/texmf-dist/fo
-nts/type1/public/lm/lmmi8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm
-/lmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texl
-ive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2017/texmf-dist/
-fonts/type1/public/lm/lmri12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public
-/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/
-texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on prace.pdf (19 pages, 768299 bytes).
+mf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvip
+s/lm/lm-mathsy.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2017/texmf-dist/fonts/t
+ype1/public/lm/lmbxi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
+ex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texli
+ve/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2017/texmf-dist/
+fonts/type1/public/lm/lmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/
+lm/lmr17.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/tex
+live/2017/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2017/texmf-di
+st/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
+lic/lm/lmsy8.pfb>
+Output written on prace.pdf (19 pages, 743903 bytes).
 PDF statistics:
- 332 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 336 PDF objects out of 1000 (max. 8388607)
+ 49 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

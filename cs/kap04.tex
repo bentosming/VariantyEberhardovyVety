@@ -1,40 +1,28 @@
 %%% Fiktivní kapitola s instrukcemi k PDF/A
 
-\chapter{Formát PDF/A}
+\chapter{Výsledky}
 
-Opatření rektora č. 13/2017 určuje, že elektronická podoba závěrečných
-prací musí být odevzdávána ve formátu PDF/A úrovně 1a nebo 2u. To jsou
-profily formátu PDF určující, jaké vlastnosti PDF je povoleno používat,
-aby byly dokumenty vhodné k~dlouhodobé archivaci a dalšímu automatickému
-zpracování. Dále se budeme zabývat úrovní 2u, kterou sázíme \TeX{}em.
+Díky programu popsanému v předchozí kapitole bylo možné zkusit dokončit důkaz věty TODO odkaz pro některé neutrální posloupnosti $q$ (na volbě posloupnosti $p$ nezáleží, protože konstrukce pro jádrový triark nezávisí na velikosti jádra, více viz TODO odkaz). 
 
-Mezi nejdůležitější požadavky PDF/A-2u patří:
+Vzhledem k výpočetním omezením programu jsme zkusili dokončit důkaz věty pouze pro takové neutrální posloupnosti $q$, že $Q = {r, s}$ a navíc $r<s<18$. Seznam posloupností, pro které program nalezl potřebné grafy je v tabulce níže TODO odkaz?. Pokud bychom se omezili na rozsah $r<s<14$, pak program grafy nalezl právě tehdy, když $r$ a $s$ jsou nesoudělná čísla.
 
-\begin{itemize}
+\begin{figure}[h]\centering
+\begin{tabular}{ c c c c c c c c c c c c }
+  - & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\
+  3 & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ \\
+  4 & $\bullet$ &  & $\bullet$ &  & $\bullet$ &  & $\bullet$ &  & $\bullet$ \\
+  5 & $\bullet$ & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ & $\bullet$  
+\end{tabular}
+\caption{Úplný výčet dvojic stran, pro které se podařilo dokončit důkaz věty TODO odkaz.}
+\label{obr03:Nvyber}
+\end{figure}
+TODO označneí
 
-\item Všechny fonty musí být zabudovány uvnitř dokumentu. Nejsou přípustné
-odkazy na externí fonty (ani na \uv{systémové}, jako je Helvetica nebo Times).
+Všechny potřebné grafy pro doložení důkazu jsou k práci přiloženy. TODO přiložit
 
-\item Fonty musí obsahovat tabulku ToUnicode, která definuje převod z~kódování
-znaků použitého uvnitř fontu to Unicode. Díky tomu je možné z~dokumentu
-spolehlivě extrahovat text.
+Přirozenou snahou při zkoumání nalezených grafů je grafy zobrazit, aby byly pro člověka dobře čitelné. V další sekci se tomuto tématu krátce věnujeme. 
 
-\item Dokument musí obsahovat metadata ve formátu XMP a je-li barevný,
-pak také formální specifikaci barevného prostoru.
+\section{Kreslení}
 
-\end{itemize}
-
-Tato šablona používá balíček {\tt pdfx,} který umí \LaTeX{} nastavit tak,
-aby požadavky PDF/A splňoval. Metadata v~XMP se generují automaticky podle
-informací v~souboru {\tt prace.xmpdata} (na vygenerovaný soubor se můžete
-podívat v~{\tt pdfa.xmpi}).
-
-Validitu PDF/A můžete zkontrolovat pomocí nástroje VeraPDF, který je
-k~dispozici na \url{http://verapdf.org/}.
-
-Pokud soubor nebude validní, mezi obvyklé příčiny patří používání méně
-obvyklých fontů (které se vkládají pouze v~bitmapové podobě a/nebo bez
-unicodových tabulek) a vkládání obrázků v~PDF, které samy o~sobě standard
-PDF/A nesplňují.
-
-Další postřehy o~práci s~PDF/A najdete na \url{http://mj.ucw.cz/vyuka/bc/pdfaq.html}.
+TODO přesunout
+Při hledání triarků byla vynaložena netriviální snaha pro nalezení způsobu, jak výsledný graf dobře zobrazit - od rovinného grafu by se dalo čekat, že nepůjde o příliš složitý úkol. Po špatné zkušenosti s dostupnými možnostmi jako GraphViz nebo funkcemi v SageMath, došlo na implementaci kreslícího algoritmu založeného na Tuttově kreslení TODO zmínit odkaz a dál o kreslení nemluvit? Nebo popsat? 
