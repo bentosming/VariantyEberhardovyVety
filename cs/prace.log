@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  5 MAY 2018 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  7 MAY 2018 01:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2225,11 +2225,7 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 120.
 \c@veta=\count121
 \c@definice=\count122
 ) (./prace.aux (./titulka.aux) (./uvod.aux) (./kap01.aux)
-(./kap02.aux) (./kap03.aux
-
-LaTeX Warning: Label `def01:1' multiply defined.
-
-) (./kap04.aux
+(./kap02.aux) (./kap03.aux) (./kap04.aux
 
 LaTeX Warning: Label `obr03:Nvyber' multiply defined.
 
@@ -2397,6 +2393,12 @@ Package hyperref Info: Option `pageanchor' set `true' on input line 55.
 
  (./kap01.tex
 Kapitola 1.
+
+Overfull \hbox (11.64444pt too wide) in paragraph at lines 35--36
+[]\T1/lmr/m/n/12 Pro uká-zání první vlast-nosti si sta£í uv¥-do-mit, ºe chceme 
+vý-raz $[][] [] \OT1/lmr/m/n/12 =|
+ []
+
 ) [3
 
 
@@ -2406,7 +2408,7 @@ Kapitola 1.
 
  (./kap02.tex
 Kapitola 2.
-<../img/T-P.pdf, id=151, 337.8422pt x 125.09737pt>
+<../img/T-P.pdf, id=166, 337.8422pt x 125.09737pt>
 File: ../img/T-P.pdf Graphic file (type pdf)
 <use ../img/T-P.pdf>
 Package pdftex.def Info: ../img/T-P.pdf  used on input line 30.
@@ -2414,7 +2416,7 @@ Package pdftex.def Info: ../img/T-P.pdf  used on input line 30.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../img/T-T.pdf, id=152, 228.6944pt x 207.60562pt>
+<../img/T-T.pdf, id=167, 228.6944pt x 207.60562pt>
 File: ../img/T-T.pdf Graphic file (type pdf)
 <use ../img/T-T.pdf>
 Package pdftex.def Info: ../img/T-T.pdf  used on input line 38.
@@ -2422,7 +2424,7 @@ Package pdftex.def Info: ../img/T-T.pdf  used on input line 38.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../img/T-G.pdf, id=153, 142.71318pt x 141.27782pt>
+<../img/T-G.pdf, id=168, 142.71318pt x 141.27782pt>
 File: ../img/T-G.pdf Graphic file (type pdf)
 <use ../img/T-G.pdf>
 Package pdftex.def Info: ../img/T-G.pdf  used on input line 46.
@@ -2452,7 +2454,7 @@ Kapitola 3.
 
 
 ]
-<../img/iii+iv-construction.png, id=225, 721.69624pt x 318.18875pt>
+<../img/iii+iv-construction.png, id=240, 721.69624pt x 318.18875pt>
 File: ../img/iii+iv-construction.png Graphic file (type png)
 <use ../img/iii+iv-construction.png>
 Package pdftex.def Info: ../img/iii+iv-construction.png  used on input line 48.
@@ -2481,28 +2483,29 @@ Kapitola 4.
 ]
 \openout2 = `literatura.aux'.
 
- (./literatura.tex
-No file prace.bbl.
-) (./prace.lof)
+ (./literatura.tex (./prace.bbl)) [12
+
+
+
+] (./prace.lof)
 \tf@lof=\write7
 \openout7 = `prace.lof'.
 
- [12
 
-
+[13
 
 
 ] (./prace.lot)
 \tf@lot=\write8
 \openout8 = `prace.lot'.
 
- [13
+ [14
 
-] [14
+] [15
 
 ]
 P\v {r}\'{\i }loha A.
-[15
+[16
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
@@ -2512,7 +2515,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `prace.out' has not changed.
-(rerunfilecheck)             Checksum: 67837DAB60971BDD90345D7EBC252E43;2187.
+(rerunfilecheck)             Checksum: BA77D672394A03963827ED34A569D819;2276.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2520,10 +2523,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15440 strings out of 492982
- 209370 string characters out of 6136225
- 275622 words of memory out of 5000000
- 18624 multiletter control sequences out of 15000+600000
+ 15463 strings out of 492982
+ 209699 string characters out of 6136225
+ 276793 words of memory out of 5000000
+ 18638 multiletter control sequences out of 15000+600000
  60333 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,9n,35p,984b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2539,10 +2542,11 @@ fonts/type1/public/lm/lmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/
 lm/lmr17.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/tex
 live/2017/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2017/texmf-di
 st/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
-lic/lm/lmsy8.pfb>
-Output written on prace.pdf (19 pages, 743903 bytes).
+lic/lm/lmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on prace.pdf (20 pages, 758630 bytes).
 PDF statistics:
- 336 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
+ 360 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
  174 words of extra memory for PDF output out of 10000 (max. 10000000)
 

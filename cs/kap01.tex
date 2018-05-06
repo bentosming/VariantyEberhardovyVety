@@ -2,11 +2,37 @@
 
 \chapter{Pojmy a definice}
 
-\section{sekce 1}
-Definice: 
+Dokažme nejprve, jak z Eulerova vzorce získáme \eqref{eq01:neccCond}. Pro každý kubický graf $G = (V,E)$ platí $3 |V| = 2 |E|$. Obecně platí, že počet stěn $s$ můžeme přepsat následovně $s = \sum_{k \geq 3}{p_k}$ a pro rovinné grafy platí i $ \sum_{k \geq 3}{k \cdot p_k}= 2|E|$, protože pokud pro každou stěnu započteme každou její hranu, získáme právě $2|E|$. Úpravou a dosazením do vzorce získáme požadovaný výraz: 
+\begin{align*}
+|V|-|E|+|S|=2 \\ \frac{1}{3} |E| + s = 2 \\
+\frac{1}{6} \sum_{k \geq 3}{k \cdot p_k} - \sum_{k \geq 3}{p_k} = 2 \\ 
+\sum_{k \geq 3}{(6-k)p_k}=12
+\end{align*}
+Čímž je důkaz dokončen.
 
-TODO zmínit, že o triarku často budeme mluvit jako o trojúhelníku (rovnorammený, základna...)
+Zaveďme nyní základní pojmy. Stěně rovinného grafu, která se skládá z $k$ hran, budeme říkat jednoduše \textbf{$k$-úhelník}. Pokud máme posloupnost $(p_k) = (p_3,p_4,...)$, která bude představovat počty k-úhelníků v grafu, definujme $P = \lbrace k \mid p_k \neq 0 \rbrace$ množinu jejích stěn.
 
-TODO řešítko neumí udržovat poměry stěn z neutrální posloupnosti
+Klasifikujme posloupnosti $(p_k) = (p_3,p_4,...)$ podle jejich vlastností.
 
-TODO zavést, že z posloupnost x získáme množinu velikostí stěn, které jsou v x nenulové jako X
+\begin{definice}[Neutrální posloupnost]\label{def01:neutralni}
+Posloupnost $(p_k) = (p_3,p_4,...)$ kladných celých čísel je neutrální, pokud $\sum_{k \geq 3}{(6-k)p_k}=0$.
+\end{definice}
+
+\begin{definice}[Přijatelná posloupnost]\label{def01:prijatelna}
+Posloupnost $(p_k) = (p_3,p_4,...)$ kladných celých čísel je přijatelná, pokud existuje rovinný kubický graf, který má právě $p_k$ $k$-úhelníků.
+\end{definice}
+
+Všimněme si, že původní Eberhardova věta, a i mnoho jejích variant, byla formulována pro 3-spojité grafy, tedy přesněji pro jednoduché konvexní 3-polytopy. Bijekci mezi těmito dvěma strukturami dokázal až o několik desítek let později Steinitz.
+
+Pro ujištění pojmů uveďme následující jednoduché vlastnosti přijatelných a neutrálních posloupností, které využijeme později.
+
+\begin{tvrz}\label{veta:posloupnosti}
+Pro každou neutrální posloupnost $q$ platí $\exists a,b \in Q : a <6 \wedge b>6$.
+Součet dvou neutrálních posloupností je neutrální posloupnost.
+Pro každou posloupnost $(p_k) = (p_3,p_4,...)$ existuje neutrální posloupnost $q$, že $p+qn$ je přijatelná pro nějaké $n \in \mathbb{N}$.
+\end{tvrz}
+
+Pro ukázání první vlastnosti si stačí uvědomit, že chceme výraz $\sum_{k \geq 3}{(6-k)p_k} = 0$, kde pro $k < 6$ je sčítaný člen kladný, zato pro $k>6$ je sčítaný člen záporný. Druhá vlastnost plyne z definice a distributivity násobení. Třetí tvrzení pro $q = (q_6)$ je slabší verze \eqref{veta:Eberhard}
+
+
+
