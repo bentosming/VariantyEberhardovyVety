@@ -15,11 +15,15 @@ Zaveďme nyní základní pojmy. Stěně rovinného grafu, která se skládá z 
 Klasifikujme posloupnosti $(p_k) = (p_3,p_4,...)$ podle jejich vlastností.
 
 \begin{definice}[Neutrální posloupnost]\label{def01:neutralni}
-Posloupnost $(p_k) = (p_3,p_4,...)$ kladných celých čísel je neutrální, pokud $\sum_{k \geq 3}{(6-k)p_k}=0$.
+Posloupnost $(p_k) = (p_3,p_4,...)$ nezáporných celých čísel je neutrální, pokud $\sum_{k \geq 3}{(6-k)p_k}=0$.
+\end{definice}
+
+\begin{definice}[Přípustná posloupnost]\label{def01:pripustna}
+Posloupnost $(p_k) = (p_3,p_4,...)$ nezáporných celých čísel je přípustná, pokud $\sum_{k \geq 3}{(6-k)p_k}=6$.
 \end{definice}
 
 \begin{definice}[Přijatelná posloupnost]\label{def01:prijatelna}
-Posloupnost $(p_k) = (p_3,p_4,...)$ kladných celých čísel je přijatelná, pokud existuje rovinný kubický graf, který má právě $p_k$ $k$-úhelníků.
+Posloupnost $(p_k) = (p_3,p_4,...)$ nezáporných celých čísel je přijatelná, pokud existuje rovinný kubický graf, který má právě $p_k$ $k$-úhelníků.
 \end{definice}
 
 Všimněme si, že původní Eberhardova věta, a i mnoho jejích variant, byla formulována pro 3-spojité grafy, tedy přesněji pro jednoduché konvexní 3-polytopy. Bijekci mezi těmito dvěma strukturami dokázal až o několik desítek let později Steinitz.
@@ -28,11 +32,13 @@ Pro ujištění pojmů uveďme následující jednoduché vlastnosti přijateln�
 
 \begin{tvrz}\label{veta:posloupnosti}
 Pro každou neutrální posloupnost $q$ platí $\exists a,b \in Q : a <6 \wedge b>6$.
-Součet dvou neutrálních posloupností je neutrální posloupnost.
+
+Součet dvou neutrálních posloupností je neutrální posloupnost. Součet neutrální a přípustné posloupnosti je přípustná posloupnost.
+
 Pro každou posloupnost $(p_k) = (p_3,p_4,...)$ existuje neutrální posloupnost $q$, že $p+qn$ je přijatelná pro nějaké $n \in \mathbb{N}$.
 \end{tvrz}
 
-Pro ukázání první vlastnosti si stačí uvědomit, že chceme výraz $\sum_{k \geq 3}{(6-k)p_k} = 0$, kde pro $k < 6$ je sčítaný člen kladný, zato pro $k>6$ je sčítaný člen záporný. Druhá vlastnost plyne z definice a distributivity násobení. Třetí tvrzení pro $q = (q_6)$ je slabší verze \eqref{veta:Eberhard}
+Pro ukázání první vlastnosti si stačí uvědomit, že chceme výraz $\sum_{k \geq 3}{(6-k)p_k} = 0$, kde pro $k < 6$ je sčítaný člen kladný, zato pro $k>6$ je sčítaný člen záporný. Druhá vlastnost plyne z definice a distributivity násobení. Třetí tvrzení pro $q = (q_6)$ je slabší verze \eqref{veta:Eberhard}.
 
 
 

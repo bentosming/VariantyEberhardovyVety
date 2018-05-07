@@ -2,26 +2,27 @@
 \chapter{Konstrukce důkazu}
 
 Představme hypotézu, kterou se snažíme ověřit.
-\begin{hypot}\label{veta02:1}
-Pro každou přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální posloupnost $q=(q_k \mid 3 \leq k \neq 6)$, existuje takové přirozené $n$, že $p+nq$ je přijatelná.
+\begin{hypot}\label{veta02:hypoteza}
+Mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální posloupnost $q=(q_k \mid 3 \leq k \neq 6)$, pak existuje takové přirozené $n$, že $p+nq$ je přijatelná.
 \end{hypot}
 
 TODO zmínit výjimku pro torus.
 
-V článku \citep{Samal09} odkaz autoři naznačují konstrukci důkazu, za předpokladu, že existují nějaké pomocné grafy. V další kapitole představíme způsob, jak takové grafy hledat. Teď se zaměříme na důkaz samotný, respektive nejprve představíme graf, který v důkazu pomáhal již Eberhardovi.
+V článku \citep{Samal09} autoři naznačují konstrukci důkazu, za předpokladu, že existují nějaké pomocné grafy. V další kapitole představíme způsob, jak takové grafy hledat. Teď se zaměříme na důkaz samotný, respektive nejprve představíme graf, který v důkazu pomáhal již Eberhardovi.
 
 \section{Triarky a operace s nimi}
 
 \begin{definice}[Triark]\label{def02:1}
-\textbf{Triark} je takový rovinný graf $T$, že vrcholy jeho vnější stěny tvoří cyklus $C$, každý vnitřní vrchol (tj. vrcholy $T-C$) má v $T$ stupeň právě 3 a v $C$ jsou tři navzájem různé vrcholy $x$, $y$, $z$ stupně 2 - \textbf{rohy}, že vrcholy každé ze tří cest v C, které vzniknou odstraněním rohů z C, mají střídavě stupeň 2 a 3, počínaje i konče stupněm 2.
+Triark je takový rovinný graf $T$, že vrcholy jeho vnější stěny tvoří cyklus $C$, každý vnitřní vrchol (tj. vrcholy $T-C$) má v $T$ stupeň právě 3 a v $C$ jsou tři navzájem různé vrcholy $x$, $y$, $z$ stupně 2 - \textbf{rohy}, že vrcholy každé ze tří cest v C, které vzniknou odstraněním rohů z C, mají střídavě stupeň 2 a 3, počínaje i konče stupněm 2.
 \end{definice}
 
-\textbf{Strana} triarku je každá z výše zmíněných cest v C, ke které na oba konce připojíme i příslušný roh.
+\textbf{Strana} triarku je každá z výše zmíněných cest v C, ke které na oba konce připojíme i příslušný roh. \textbf{Délka strany} triarku odpovídá počtu jejích vnitřních vrcholů stupně 2 v T. O triarku se stranami délky $a$, $b$, $c$ mluvíme jako o ($a$, $b$, $c$,)-\textbf{triarku}. Poznamenejme, že na pořadí stran v názvu nezáleží (odpovídají rotacím). Později využijeme ještě dalšího značení. $M$-\textbf{triark} má vnitřní strany pouze velikostí z $M$. U triarku přejímáme některé termíny používané pro trojúhelníky a jejich význam bude vždy intuitivní.
 
-\textbf{Délka strany} triarku odpovídá počtu jejích vnitřních vrcholů stupně 2 v T.
-
-O triarku se stranami délky $a$, $b$, $c$ mluvíme jako o ($a$, $b$, $c$,)-\textbf{triarku}. Poznamenejme, že na pořadí stran v názvu nezáleží (odpovídají rotacím).
-Později využijeme ještě dalšího značení. $M$-\textbf{triark} má vnitřní strany pouze velikostí z $M$. U triarku přejímáme některé termíny používané pro trojúhelníky a jejich význam bude vždy intuitivní.
+\begin{figure}[h!]\centering
+\includegraphics[height=60mm]{../img/triarc}
+\caption{Ukázka (4,4,3){4,7}-triarku.}
+\label{obr03:triark}
+\end{figure}
 
 Zmiňme velmi užitečnou vlastnost triarků: pokud máme dva triarky, oba mající stranu stejné délky, můžeme je za tuto stranu slepit a získáme opět graf, jehož vnitřní vrcholy mají stupeň 3. (Při slepovaní se ztotožní vždy vrchol stupně 2 s vrcholem stupně 3.) Pokud slepíme triarky tak, že protější strany výsledného grafu budou stejně dlouhé (tedy speciálně při slepení dvou stejný triarků), budeme podle jeho tvaru mluvit o \textbf{rovnoběžníku}. Rovnoběžníky jdou navíc slepovat podobně jako triarky a můžeme tím každý již existující rovnoběžník zvětšit na libovolný rozměr, který je násobkem jeho původních rozměrů.
 
@@ -32,7 +33,7 @@ Zmiňme velmi užitečnou vlastnost triarků: pokud máme dva triarky, oba mají
 \label{obr21:T-P}
 \end{figure}
 
-Mohli bychom ale chtít spojovat triarky tak, aby výsledkem byl opět triark. Mějme ($a_1$, $b_1$, $c_1$)-triark a ($a_2$, $b_2$, $c_2$)-triark a vhodný rovnoběžník. Slepením jako na TODO odkaz vznikne ($a_1+a_2$, $b_1+b_2$, $c_1+c_2$)-triark. 
+Mohli bychom ale chtít spojovat triarky tak, aby výsledkem byl opět triark. Mějme ($a_1$, $b_1$, $c_1$)-triark a ($a_2$, $b_2$, $c_2$)-triark a vhodný rovnoběžník. Slepením, jako na obrázku \ref{obr22:T-T}, vznikne ($a_1+a_2$, $b_1+b_2$, $c_1+c_2$)-triark. 
 
 \begin{figure}[h!]\centering
 \includegraphics[height=40mm]{../img/T-T}
@@ -40,7 +41,7 @@ Mohli bychom ale chtít spojovat triarky tak, aby výsledkem byl opět triark. M
 \label{obr22:T-T}
 \end{figure}
 
-A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Jde o souvislý graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačně znamená záměna dvoj- a tří- vaznosti vrcholů. Způsob spojení odpovídá přesně zavedení definice, ale je znázorněno i na obrázku TODO odkaz. 
+A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Jde o souvislý graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačně znamená záměna dvoj- a tří- vaznosti vrcholů. Způsob spojení odpovídá přesně zavedení definice, ale je znázorněno i na obrázku \ref{obr23:T-G}. 
 
 \begin{figure}[h!]\centering
 \includegraphics[height=40mm]{../img/T-G}
