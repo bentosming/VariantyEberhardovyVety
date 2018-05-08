@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  8 MAY 2018 00:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  8 MAY 2018 03:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2418,12 +2418,12 @@ Package pdftex.def Info: ../img/triarc.pdf  used on input line 22.
 File: ../img/T-P.pdf Graphic file (type pdf)
 <use ../img/T-P.pdf>
 Package pdftex.def Info: ../img/T-P.pdf  used on input line 31.
-(pdftex.def)             Requested size: 398.54047pt x 113.81102pt.
-<../img/T-T.pdf, id=181, 228.6944pt x 207.60562pt>
+(pdftex.def)             Requested size: 412.56496pt x 117.82323pt.
+<../img/T-T.pdf, id=181, 542.15929pt x 141.94029pt>
 File: ../img/T-T.pdf Graphic file (type pdf)
 <use ../img/T-T.pdf>
 Package pdftex.def Info: ../img/T-T.pdf  used on input line 39.
-(pdftex.def)             Requested size: 125.37401pt x 113.81102pt.
+(pdftex.def)             Requested size: 412.56496pt x 108.01001pt.
 <../img/T-G.pdf, id=183, 142.71318pt x 141.27782pt>
 File: ../img/T-G.pdf Graphic file (type pdf)
 <use ../img/T-G.pdf>
@@ -2443,46 +2443,38 @@ Kapitola 3.
 
 
 ]
-<../img/reseni.pdf, id=256, 536.47528pt x 545.81816pt>
+<../img/reseni.pdf, id=267, 536.47528pt x 545.81816pt>
 File: ../img/reseni.pdf Graphic file (type pdf)
 <use ../img/reseni.pdf>
-Package pdftex.def Info: ../img/reseni.pdf  used on input line 28.
+Package pdftex.def Info: ../img/reseni.pdf  used on input line 27.
 (pdftex.def)             Requested size: 412.56496pt x 419.74825pt.
  [8 <../img/reseni.pdf>]
-<../img/iii+iv-construction.png, id=278, 721.69624pt x 318.18875pt>
+<../img/iii+iv-construction.png, id=289, 721.69624pt x 318.18875pt>
 File: ../img/iii+iv-construction.png Graphic file (type png)
 <use ../img/iii+iv-construction.png>
-Package pdftex.def Info: ../img/iii+iv-construction.png  used on input line 54.
+Package pdftex.def Info: ../img/iii+iv-construction.png  used on input line 53.
 
-(pdftex.def)             Requested size: 774.4098pt x 341.43306pt.
-
-Overfull \hbox (361.84485pt too wide) in paragraph at lines 54--55
- [][] |
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [9] [10 <../img/iii+iv-construction.png>]
+(pdftex.def)             Requested size: 412.56496pt x 181.89381pt.
+) [9 <../img/iii+iv-construction.png>]
 \openout2 = `kap04.aux'.
 
  (./kap04.tex
 Kapitola 4.
-) [11
+) [10
 
 
 
 ]
 \openout2 = `zaver.aux'.
 
- (./zaver.tex) [12
+ (./zaver.tex) [11
 
 
 
 ]
 \openout2 = `literatura.aux'.
 
- (./literatura.tex (./prace.bbl)) [13
+ (./literatura.tex (./prace.bbl)) [12
 
 
 
@@ -2491,20 +2483,20 @@ Kapitola 4.
 \openout7 = `prace.lof'.
 
 
-[14
+[13
 
 
 ] (./prace.lot)
 \tf@lot=\write8
 \openout8 = `prace.lot'.
 
- [15
+ [14
 
-] [16
+] [15
 
 ]
 P\v {r}\'{\i }loha A.
-[17
+[16
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
@@ -2518,10 +2510,10 @@ Package rerunfilecheck Info: File `prace.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15478 strings out of 492982
- 210014 string characters out of 6136225
- 276058 words of memory out of 5000000
- 18647 multiletter control sequences out of 15000+600000
+ 15479 strings out of 492982
+ 210033 string characters out of 6136225
+ 276193 words of memory out of 5000000
+ 18649 multiletter control sequences out of 15000+600000
  60333 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,9n,35p,962b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2539,9 +2531,9 @@ live/2017/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2017/texmf-di
 st/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
 lic/lm/lmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
 s/msbm10.pfb>
-Output written on prace.pdf (21 pages, 785900 bytes).
+Output written on prace.pdf (20 pages, 794456 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
  184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
