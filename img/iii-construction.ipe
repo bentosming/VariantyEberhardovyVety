@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20180508103944" modified="D:20180508114937"/>
+<info created="D:20180508103944" modified="D:20180509154210"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -619,23 +619,22 @@ h
 303.118 374.841 m
 381.648 359.576 l
 </path>
-<text transformations="translations" pos="164 452" stroke="black" type="label" width="24.089" height="11.955" depth="0" valign="baseline" size="LARGE" style="math">mk</text>
 <path matrix="0.98178 0.190022 -0.190022 0.98178 177.633 -165.649" stroke="black" pen="ultrafat">
 303.118 374.841 m
 381.648 359.576 l
 </path>
 <group>
 <group>
-<text transformations="translations" pos="248 416" stroke="black" type="label" width="12.636" height="11.764" depth="0" valign="baseline" size="LARGE" style="math">A</text>
-<text matrix="1 0 0 1 4 -4" transformations="translations" pos="164 348" stroke="black" type="label" width="13.675" height="11.764" depth="0" valign="baseline" size="LARGE" style="math">B</text>
-<text matrix="1 0 0 1 20 -32" transformations="translations" pos="164 348" stroke="black" type="label" width="13.675" height="11.764" depth="0" valign="baseline" size="LARGE" style="math">B</text>
-<text matrix="1 0 0 1 144 -32" transformations="translations" pos="164 348" stroke="black" type="label" width="13.675" height="11.764" depth="0" valign="baseline" size="LARGE" style="math">B</text>
-<text matrix="1 0 0 1 164 -4" transformations="translations" pos="164 348" stroke="black" type="label" width="13.675" height="11.764" depth="0" valign="baseline" size="LARGE" style="math">B</text>
+<text transformations="translations" pos="248 416" stroke="black" type="label" width="15.167" height="14.119" depth="0" valign="baseline" size="huge" style="math">A</text>
+<text matrix="1 0 0 1 4 -4" transformations="translations" pos="164 348" stroke="black" type="label" width="16.413" height="14.119" depth="0" valign="baseline" size="huge" style="math">B</text>
+<text matrix="1 0 0 1 20 -32" transformations="translations" pos="164 348" stroke="black" type="label" width="16.413" height="14.119" depth="0" valign="baseline" size="huge" style="math">B</text>
+<text matrix="1 0 0 1 144 -32" transformations="translations" pos="164 348" stroke="black" type="label" width="16.413" height="14.119" depth="0" valign="baseline" size="huge" style="math">B</text>
+<text matrix="1 0 0 1 164 -4" transformations="translations" pos="164 348" stroke="black" type="label" width="16.413" height="14.119" depth="0" valign="baseline" size="huge" style="math">B</text>
 </group>
-<text transformations="translations" pos="248 352" stroke="black" type="label" width="15.113" height="11.766" depth="2.58" valign="baseline" size="LARGE" style="math">P_l</text>
-<text transformations="translations" pos="164 452" stroke="black" type="label" width="24.089" height="11.955" depth="0" valign="baseline" size="LARGE" style="math">mk</text>
-<text matrix="1 0 0 1 160 0" transformations="translations" pos="164 452" stroke="black" type="label" width="24.089" height="11.955" depth="0" valign="baseline" size="LARGE" style="math">mk</text>
-<text matrix="1 0 0 1 12 0" transformations="translations" pos="428 264" stroke="black" type="label" width="12.972" height="11.764" depth="0" valign="baseline" size="LARGE" style="math">R</text>
+<text transformations="translations" pos="248 352" stroke="black" type="label" width="18.039" height="14.119" depth="3.1" valign="baseline" size="huge" style="math">P_l</text>
+<text transformations="translations" pos="164 452" stroke="black" type="label" width="28.913" height="14.349" depth="0" valign="baseline" size="huge" style="math">mk</text>
+<text matrix="1 0 0 1 160 0" transformations="translations" pos="164 452" stroke="black" type="label" width="28.913" height="14.349" depth="0" valign="baseline" size="huge" style="math">mk</text>
+<text matrix="1 0 0 1 12 0" transformations="translations" pos="428 264" stroke="black" type="label" width="15.57" height="14.119" depth="0" valign="baseline" size="huge" style="math">R</text>
 </group>
 </page>
 </ipe>

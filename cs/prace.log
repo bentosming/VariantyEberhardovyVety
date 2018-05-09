@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  9 MAY 2018 02:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  9 MAY 2018 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2225,20 +2225,7 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 120.
 \c@veta=\count121
 \c@definice=\count122
 ) (./prace.aux (./titulka.aux) (./uvod.aux) (./kap01.aux)
-(./kap02.aux) (./kap03.aux) (./kap04.aux
-
-LaTeX Warning: Label `obr03:konstrukceiv' multiply defined.
-
-
-LaTeX Warning: Label `obr03:konstrukceiv' multiply defined.
-
-
-LaTeX Warning: Label `obr03:konstrukceiv' multiply defined.
-
-
-LaTeX Warning: Label `obr03:konstrukceiv' multiply defined.
-
-) (./zaver.aux) (./literatura.aux))
+(./kap02.aux) (./kap03.aux) (./kap04.aux) (./zaver.aux) (./literatura.aux))
 \openout1 = `prace.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
@@ -2414,7 +2401,7 @@ Kapitola 2.
 <../img/triarc.pdf, id=162, 216.45065pt x 270.59395pt>
 File: ../img/triarc.pdf Graphic file (type pdf)
 <use ../img/triarc.pdf>
-Package pdftex.def Info: ../img/triarc.pdf  used on input line 22.
+Package pdftex.def Info: ../img/triarc.pdf  used on input line 21.
 (pdftex.def)             Requested size: 136.56279pt x 170.71652pt.
 [4
 
@@ -2424,12 +2411,12 @@ Package pdftex.def Info: ../img/triarc.pdf  used on input line 22.
 <../img/T-P.pdf, id=174, 517.55266pt x 147.80319pt>
 File: ../img/T-P.pdf Graphic file (type pdf)
 <use ../img/T-P.pdf>
-Package pdftex.def Info: ../img/T-P.pdf  used on input line 31.
+Package pdftex.def Info: ../img/T-P.pdf  used on input line 30.
 (pdftex.def)             Requested size: 412.56496pt x 117.82323pt.
 <../img/T-T.pdf, id=176, 542.15929pt x 141.94029pt>
 File: ../img/T-T.pdf Graphic file (type pdf)
 <use ../img/T-T.pdf>
-Package pdftex.def Info: ../img/T-T.pdf  used on input line 39.
+Package pdftex.def Info: ../img/T-T.pdf  used on input line 38.
 (pdftex.def)             Requested size: 412.56496pt x 108.01001pt.
  [5 <../img/T-P.pdf> <../img/T-T.pdf>]) [6]
 \openout2 = `kap03.aux'.
@@ -2441,46 +2428,43 @@ Kapitola 3.
 
 
 ]
-<../img/reseni.pdf, id=243, 536.47528pt x 545.81816pt>
+<../img/reseni.pdf, id=244, 536.47528pt x 545.81816pt>
 File: ../img/reseni.pdf Graphic file (type pdf)
 <use ../img/reseni.pdf>
 Package pdftex.def Info: ../img/reseni.pdf  used on input line 27.
 (pdftex.def)             Requested size: 412.56496pt x 419.74825pt.
  [8 <../img/reseni.pdf>]
-<../img/iii-construction.pdf, id=265, 445.29865pt x 371.23192pt>
+<../img/iii-construction.pdf, id=269, 445.29834pt x 371.23091pt>
 File: ../img/iii-construction.pdf Graphic file (type pdf)
 <use ../img/iii-construction.pdf>
 Package pdftex.def Info: ../img/iii-construction.pdf  used on input line 53.
-(pdftex.def)             Requested size: 412.56496pt x 343.95059pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../img/iv-construction.pdf, id=266, 202.86891pt x 148.86415pt>
+(pdftex.def)             Requested size: 227.62204pt x 189.75575pt.
+<../img/iv-construction.pdf, id=270, 202.86891pt x 148.86415pt>
 File: ../img/iv-construction.pdf Graphic file (type pdf)
 <use ../img/iv-construction.pdf>
 Package pdftex.def Info: ../img/iv-construction.pdf  used on input line 59.
-(pdftex.def)             Requested size: 412.56496pt x 302.7748pt.
+(pdftex.def)             Requested size: 170.71652pt x 125.27444pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [9] [10 <../img/iii-construction.pdf>] [11 <../img/iv-construction.pdf>]
+) [9 <../img/iii-construction.pdf>] [10 <../img/iv-construction.pdf>]
 \openout2 = `kap04.aux'.
 
 
 (./kap04.tex
 Kapitola 4.
-[12
+[11
 
 
 
 ]
-<../img/sageplot.pdf, id=323, 271.03204pt x 285.7636pt>
+<../img/sageplot.pdf, id=321, 271.03204pt x 285.7636pt>
 File: ../img/sageplot.pdf Graphic file (type pdf)
 <use ../img/sageplot.pdf>
 Package pdftex.def Info: ../img/sageplot.pdf  used on input line 46.
 (pdftex.def)             Requested size: 170.71652pt x 179.99275pt.
-<../img/planar.pdf, id=324, 285.7636pt x 285.7636pt>
+<../img/planar.pdf, id=322, 285.7636pt x 285.7636pt>
 File: ../img/planar.pdf Graphic file (type pdf)
 <use ../img/planar.pdf>
 Package pdftex.def Info: ../img/planar.pdf  used on input line 53.
@@ -2489,7 +2473,7 @@ Package pdftex.def Info: ../img/planar.pdf  used on input line 53.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../img/Triarc15150{4,7}__v37.png, id=325, 1229.59375pt x 1209.51875pt>
+<../img/Triarc15150{4,7}__v37.png, id=323, 1229.59375pt x 1209.51875pt>
 File: ../img/Triarc15150{4,7}__v37.png Graphic file (type png)
 <use ../img/Triarc15150{4,7}__v37.png>
 Package pdftex.def Info: ../img/Triarc15150{4,7}__v37.png  used on input line 6
@@ -2498,7 +2482,7 @@ Package pdftex.def Info: ../img/Triarc15150{4,7}__v37.png  used on input line 6
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../img/tutteplot.pdf, id=327, 284.60193pt x 285.7636pt>
+<../img/tutteplot.pdf, id=325, 284.60193pt x 285.7636pt>
 File: ../img/tutteplot.pdf Graphic file (type pdf)
 <use ../img/tutteplot.pdf>
 Package pdftex.def Info: ../img/tutteplot.pdf  used on input line 67.
@@ -2506,7 +2490,7 @@ Package pdftex.def Info: ../img/tutteplot.pdf  used on input line 67.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [13 <../img/sageplot.pdf>] [14 <../img/planar.pdf> <../img/Triarc15150{4,7}__
+) [12 <../img/sageplot.pdf>] [13 <../img/planar.pdf> <../img/Triarc15150{4,7}__
 v37.png> <../img/tutteplot.pdf
 
 pdfTeX warning: pdflatex.exe (file ../img/tutteplot.pdf): PDF inclusion: multip
@@ -2514,14 +2498,14 @@ le pdfs with page group included in a single page
 >]
 \openout2 = `zaver.aux'.
 
- (./zaver.tex) [15
+ (./zaver.tex) [14
 
 
 
 ]
 \openout2 = `literatura.aux'.
 
- (./literatura.tex (./prace.bbl)) [16
+ (./literatura.tex (./prace.bbl)) [15
 
 
 
@@ -2530,14 +2514,14 @@ le pdfs with page group included in a single page
 \openout7 = `prace.lof'.
 
 
-[17
+[16
 
 
-] [18
+] [17
 
 ]
 P\v {r}\'{\i }loha A.
-[19
+[18
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
@@ -2548,17 +2532,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `prace.out' has not changed.
 (rerunfilecheck)             Checksum: 08D7A224231C4C6169E6AEA3CDA1593B;2247.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15506 strings out of 492982
- 210747 string characters out of 6136225
- 277212 words of memory out of 5000000
- 18668 multiletter control sequences out of 15000+600000
+ 15508 strings out of 492982
+ 210792 string characters out of 6136225
+ 277533 words of memory out of 5000000
+ 18671 multiletter control sequences out of 15000+600000
  60333 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,9n,35p,980b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2575,10 +2555,11 @@ lm/lmr17.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/tex
 live/2017/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2017/texmf-di
 st/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pub
 lic/lm/lmsy8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msbm10.pfb>
-Output written on prace.pdf (23 pages, 823834 bytes).
+s/msam10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb>
+Output written on prace.pdf (22 pages, 832789 bytes).
 PDF statistics:
- 505 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
+ 508 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

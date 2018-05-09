@@ -1,6 +1,6 @@
 %%% Fiktivní kapitola s instrukcemi k PDF/A
 
-\chapter{Výsledky}
+\chapter{Výsledky} \label{vysledky}
 
 Díky programu popsanému v předchozí kapitole bylo možné zkusit dokončit důkaz věty \eqref{veta02:hypoteza} pro některé neutrální posloupnosti $q$ (na volbě posloupnosti $p$ nezáleží, protože konstrukce pro jádrový triark nezávisí na velikosti jádra). 
 
@@ -30,13 +30,13 @@ Zamysleme se, jak graf bude vypadat. Vrcholy vnější stěny rozmístěme po kr
 
 Problémem takového nakreslení je počet soustředných kružnic, které bychom potřebovali, který odpovídá počtu stěn grafu. Množství potřebných kružnic by šlo celkem jednoduše snížit. Nově přidávané vrcholy nakreslíme vždy na největší kružnici, na které v příslušné výseči ještě žádný vrchol neleží. Dalším problémem by bylo rozložení vrcholů do výsečí. Představme si třeba zadání, ve kterém značný podíl tvoří souvislá posloupnost \uv{out} vrcholů. Pokud ve výpočtu dojde k uzavření stěny, která tyto vrcholy obsahuje, až na závěr, bude výseč, ve které leží, jinak zcela prázdná.
 
-Další možností jsou běžně dostupné program či funkce na kreslení grafů. Posouzení jejich kvality na nalezených grafech necháváme na čtenáři.
+Další možností jsou běžně dostupné programy či funkce na kreslení grafů. Posouzení jejich kvality na náhodném z malých nalezených grafů necháváme na čtenáři.
 
-Nejuspokojivější nalezenou možností je Tuttův (barycentrický) algoritmus \cite{Tutte}. Jak název napovídá, jde o umisťování vrcholů do \uv{těžišť}. Nejprve je třeba rozdělit vrcholy do dvou skupin: pevné a volné. Pevné vrcholy jsou rozestaveny, aby tvořily konvexní n-úhelník. Pozice volných vrcholů se pak dopočítá jako vážený průměr sousedních vrcholů, tedy stačí řešit soustavu lineárních rovnic.
+Nejuspokojivější nalezenou možností je Tuttův (barycentrický) algoritmus. Jak název napovídá, jde o umisťování vrcholů do \uv{těžišť}. Nejprve je třeba rozdělit vrcholy do dvou skupin: pevné a volné. Pevné vrcholy jsou rozestaveny, aby tvořily konvexní n-úhelník. Pozice volných vrcholů se pak dopočítá jako vážený průměr sousedních vrcholů, tedy stačí řešit soustavu lineárních rovnic.
 
-Aby mohl algoritmus dobře fungovat, je nutné, aby graf byl 3-souvislý. Pokud by nebyl, pak vrcholy komponenty, která by po odebrání dvou vrcholů byla oddělena od zbytku grafu a neobsahovala by pevné vrcholy, budou ležet v jedné přímce.
+Aby mohl algoritmus dobře fungovat, je nutné, aby graf byl 3-souvislý (že jde i o postačující podmínku ukazuje článek  \cite{Tutte}). Pokud by nebyl 3-souvislý, pak vrcholy komponenty, která by po odebrání dvou vrcholů byla oddělena od zbytku grafu a neobsahovala by pevné vrcholy, budou ležet v jedné přímce.
 
-Pro převedení grafu na 3-souvislý stačí do každé vnitřní stěny vložit vrchol a spojit ho se všemi vrcholy dané stěny. Ze způsobu, kterým graf vzniká, víme, že je 2-souvislý. Uvažujme nyní situaci po odebrání dvou vrcholů, které způsobí rozpadnutí grafu na více komponent. V každé nově vzniklé komponentě je vrchol, který je nově ve \uv{vnější stěně}. To znamená, že po přidání vrcholů pro stěny bude jedním z nich spojen s další komponentou a tedy bude 3-souvislý. 
+Pro převedení grafu na 3-souvislý stačí do každé vnitřní stěny vložit nový vrchol a spojit ho se všemi vrcholy dané stěny. Ze způsobu, kterým graf vzniká, víme, že je 2-souvislý. Uvažujme nyní situaci po odebrání dvou vrcholů, které způsobí rozpadnutí grafu na více komponent. V každé nově vzniklé komponentě je vrchol, který je nově ve \uv{vnější stěně} a před odebráním byl ve stěně, ve které je i jiný vrchol než $u$ a $v$. To znamená, že po přidání vrcholů pro stěny bude jedním z nich spojen s další komponentou a tedy bude 3-souvislý. 
 
 V našem případě za pevné vrcholy volíme vrcholy vnější stěny, které jsou rozmístěné na kružnici a podle konkrétního grafu je pak možné nastavit váhy jednotlivých vrcholů. Obecně se pro dostatečně malé grafy (do 40-ti vrcholů) osvědčila lineární závislost váhy na pořadí přidání vrcholu do grafu, nejdříve přidaný je nejtěžší.
 
@@ -45,30 +45,28 @@ V našem případě za pevné vrcholy volíme vrcholy vnější stěny, které j
 \begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/sageplot}
 \caption{Automatické nakreslení SageMath.}
-\label{obr03:konstrukceiv}
+\label{obr:sageplot}
 \end{figure}
 
 
 \begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/planar}
 \caption{Rovinné nakreslení SageMath.}
-\label{obr03:konstrukceiv}
+\label{obr:planar}
 \end{figure}
 
 
 \begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/Triarc15150{4,7}__v37}
 \caption{Neato s předdefinovanými pozicemi vnější stěny.}
-\label{obr03:konstrukceiv}
+\label{obr:Triarc15150{4,7}__v37}
 \end{figure}
 
 
 \begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/tutteplot}
 \caption{Tuttovo nakreslení.}
-\label{obr03:konstrukceiv}
+\label{obr:tutteplot}
 \end{figure}
 
 
-
-Při hledání triarků byla vynaložena netriviální snaha pro nalezení způsobu, jak výsledný graf dobře zobrazit - od rovinného grafu by se dalo čekat, že nepůjde o příliš složitý úkol. Po špatné zkušenosti s dostupnými možnostmi jako GraphViz nebo funkcemi v SageMath, došlo na implementaci kreslícího algoritmu založeného na Tuttově kreslení TODO zmínit odkaz a dál o kreslení nemluvit? Nebo popsat? 
