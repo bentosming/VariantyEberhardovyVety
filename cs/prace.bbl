@@ -20,4 +20,10 @@ M.~DeVos, A.~Georgakopoulos, B.~Mohar, and R.~Šámal.
 \newblock An eberhard-like theorem for pentagons and heptagons.
 \newblock {\em TODO}, 2009.
 
+\bibitem{Tutte}
+W.~T. Tutte.
+\newblock How to draw a graph.
+\newblock {\em Proceedings of the London Mathematical Society}, s3-13:743--767,
+  1963.
+
 \end{thebibliography}
