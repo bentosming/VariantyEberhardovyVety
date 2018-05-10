@@ -2,43 +2,55 @@
 
 \chapter{Pojmy a definice}
 
-Dokažme nejprve, jak z Eulerova vzorce získáme \eqref{eq01:neccCond}. Pro každý kubický graf $G = (V,E)$ platí $3 |V| = 2 |E|$. Obecně platí, že počet stěn $s$ můžeme přepsat následovně $s = \sum_{k \geq 3}{p_k}$ a pro rovinné grafy platí i $ \sum_{k \geq 3}{k \cdot p_k}= 2|E|$, protože pokud pro každou stěnu započteme každou její hranu, získáme právě $2|E|$. Úpravou a dosazením do vzorce získáme požadovaný výraz: 
+Pokud čtenář není seznámen se základy teorie grafů, doporučujeme začít třeba knihou Kapitoly z diskrétní matematiky \cite{Matousek}. Před zadefinováním základní terminologie pro tuto práci dokažme nejprve, jak z Eulerova vzorce získáme \eqref{eq01:neccCond}. 
+
+\begin{dukaz}
+Pro každý kubický graf $G = (V,E)$ platí $3 |V| = 2 |E|$. Obecně platí, že počet stěn $s$ můžeme přepsat následovně $s = \sum_{k \geq 3}{p_k}$ a pro rovinné grafy platí i $ \sum_{k \geq 3}{k \cdot p_k}= 2|E|$, protože pokud pro každou stěnu započteme každou její hranu, získáme právě $2|E|$. Úpravou a dosazením do vzorce získáme požadovaný výraz: 
 \begin{align*}
-|V|-|E|+|S|=2 \\ \frac{1}{3} |E| + s = 2 \\
-\frac{1}{6} \sum_{k \geq 3}{k \cdot p_k} - \sum_{k \geq 3}{p_k} = 2 \\ 
+|V|-|E|+|S|=2 \\ -\frac{1}{3} |E| + s = 2 \\
+-\frac{1}{6} \sum_{k \geq 3}{k \cdot p_k} + \sum_{k \geq 3}{p_k} = 2 \\ 
 \sum_{k \geq 3}{(6-k)p_k}=12
 \end{align*}
-Čímž je důkaz dokončen.
+\end{dukaz}
 
-Zaveďme nyní základní pojmy. Stěně rovinného grafu, která se skládá z $k$ hran, budeme říkat jednoduše \textbf{$k$-úhelník}. Pokud máme posloupnost $(p_k) = (p_3,p_4,...)$, která bude představovat počty k-úhelníků v grafu, definujme $P = \lbrace k \mid p_k \neq 0 \rbrace$ množinu jejích stěn.
+Zaveďme nyní základní pojmy. Stěně rovinného grafu, která se skládá z $k$ hran, budeme říkat jednoduše \textbf{$\boldsymbol{k}$-úhelník}. Pokud máme posloupnost $(p_k) = (p_3,p_4,\dots)$, která bude představovat počty k-úhelníků v grafu, definujme $\boldsymbol{P} = \lbrace k \mid p_k \neq 0 \rbrace$ jako její \textbf{množinu stěn}.
 
-Klasifikujme posloupnosti $(p_k) = (p_3,p_4,...)$ podle jejich vlastností.
+Klasifikujme posloupnosti $(p_k) = (p_3,p_4,\dots)$ podle jejich vlastností.
 
 \begin{definice}[Neutrální posloupnost]\label{def01:neutralni}
-Posloupnost $(p_k) = (p_3,p_4,...)$ nezáporných celých čísel je neutrální, pokud $\sum_{k \geq 3}{(6-k)p_k}=0$.
+Posloupnost $(p_k) = (p_3,p_4,\dots)$ nezáporných celých čísel je neutrální, pokud $\sum_{k \geq 3}{(6-k)p_k}=0$.
 \end{definice}
 
 \begin{definice}[Přípustná posloupnost]\label{def01:pripustna}
-Posloupnost $(p_k) = (p_3,p_4,...)$ nezáporných celých čísel je přípustná, pokud $\sum_{k \geq 3}{(6-k)p_k}=6$.
+Posloupnost $(p_k) = (p_3,p_4,\dots)$ nezáporných celých čísel je přípustná, pokud $\sum_{k \geq 3}{(6-k)p_k}=6$.
 \end{definice}
 
-\begin{definice}[Přijatelná posloupnost]\label{def01:prijatelna}
-Posloupnost $(p_k) = (p_3,p_4,...)$ nezáporných celých čísel je přijatelná, pokud existuje rovinný kubický graf, který má právě $p_k$ $k$-úhelníků.
+\begin{definice}[Realizovatelná posloupnost]\label{def01:prijatelna}
+Posloupnost $(p_k) = (p_3,p_4,\dots)$ nezáporných celých čísel je realizovatelná, pokud existuje konečný rovinný kubický graf, který má právě $p_k$ $k$-úhelníků.
 \end{definice}
 
-Všimněme si, že původní Eberhardova věta, a i mnoho jejích variant, byla formulována pro 3-spojité grafy, tedy přesněji pro jednoduché konvexní 3-polytopy. Bijekci mezi těmito dvěma strukturami dokázal až o několik desítek let později Steinitz.
+Všimněme si, že původní Eberhardova věta, a i mnoho jejích variant, byla formulována pro 3-souvislé grafy, tedy přesněji pro jednoduché konvexní 3-polytopy. Bijekci mezi těmito dvěma strukturami dokázal až o několik desítek let později Steinitz \cite{Steinitz}. 
 
-Pro ujištění pojmů uveďme následující jednoduché vlastnosti přijatelných a neutrálních posloupností, které využijeme později.
-
-\begin{tvrz}\label{veta:posloupnosti}
-Pro každou neutrální posloupnost $q$ platí $\exists a,b \in Q : a <6 \wedge b>6$.
-
-Součet dvou neutrálních posloupností je neutrální posloupnost. Součet neutrální a přípustné posloupnosti je přípustná posloupnost.
-
-Pro každou posloupnost $(p_k) = (p_3,p_4,...)$ existuje neutrální posloupnost $q$, že $p+qn$ je přijatelná pro nějaké $n \in \mathbb{N}$.
+Pro ujištění pojmů uveďme následující jednoduché vlastnosti neutrálních, přípustných a realizovatelných posloupností, které využijeme později.
+\begin{tvrz}
+Pro každou neutrální (či přípustnou nebo realizovatelnou) posloupnost $p=(p_3,p_4,\dots)$ existuje $h \in \mathbb{N}$, že $ \forall k \in \mathbb{N}, k>h $ platí $ p_k=0$.
 \end{tvrz}
 
-Pro ukázání první vlastnosti si stačí uvědomit, že chceme $\sum_{k \geq 3}{(6-k)p_k} = 0$, kde pro $k < 6$ je sčítaný člen kladný, zato pro $k>6$ je sčítaný člen záporný. Druhá vlastnost plyne z definice a distributivity násobení. Třetí tvrzení pro $q = (q_6)$ je slabší verze \eqref{veta:Eberhard}.
+\begin{dukaz}
+Neutrální posloupnost $p$ splňuje $\sum_{k \geq 3}{(6-k)p_k}=0$ neboli $\sum_{3 \leq k \leq 5}{(6-k)p_k}=\sum_{k \geq 5}{(k-6)p_k}$. Všechny sčítance na obou stranách výrazu jsou kladné. Hodnota levého součtu tří sčítanců je konečná. Pravý součet má tedy také konečnou hodnotu a navíc mají všechny jeho nenulové sčítance hodnotu alespoň 1. Nenulových hodnot v posloupnosti je tedy pouze konečně. 
+\end{dukaz}
+
+\begin{tvrz}\label{veta:posloupnosti}
+\begin{description}
+\item[] Pro každou $q$ neutrální posloupnost $\exists a,b \in Q : a <6 \wedge b>6$.
+\item[] Součet dvou neutrálních posloupností je neutrální posloupnost. Součet neutrální a přípustné posloupnosti je přípustná posloupnost.
+\item[] Pro každou přípustnou posloupnost $(p_k) = (p_3,p_4,\dots)$ existuje neutrální posloupnost $q$, že $p+qn$ je realizovatelná pro nějaké $n \in \mathbb{N}$.
+\end{description}
+\end{tvrz}
+
+Pro ukázání první vlastnosti si stačí uvědomit, že chceme $\sum_{k \geq 3}{(6-k)p_k} = 0$, kde pro $k < 6$ je sčítaný člen kladný, zato pro $k>6$ je sčítaný člen záporný. Druhá vlastnost plyne z definice a distributivity násobení. Třetí tvrzení pro je slabší verze Věty \ref{veta:Eberhard}.
+
+K poslední vlastnosti se nabízí otázka, jak lze $q$ omezit, aby pořád $p+qn$ byla realizovatelná. Eberhard ukázal, že stačí  $q = (0,0,0,q_6=1,0,\dots)$, tedy přidat šestiúhelníky. DeVos a kol. ukázal že i omezení na  $q = (0,0,1,0,1,0,\dots)$ funguje. V této práci ukážeme, že posloupností s pouze dvěma nenulovými hodnotami, které v tomto směru vyhovují, existuje výrazně víc.
 
 
 

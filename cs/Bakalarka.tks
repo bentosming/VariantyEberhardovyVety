@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TexmakerSession quickmode="12">
-    <document line="11" file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/uvod.tex" bookmark3="0" bookmark2="0" master="false" bookmark1="0" hasfocus="false"/>
-    <document line="12" file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/kap01.tex" bookmark3="0" bookmark2="0" master="false" bookmark1="0" hasfocus="false"/>
-    <document line="132" file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/literatura.bib" bookmark3="0" bookmark2="0" master="false" bookmark1="0" hasfocus="false"/>
-    <document line="14" file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/prace.tex" bookmark3="0" bookmark2="0" master="true" bookmark1="0" hasfocus="true"/>
-    <document line="0" file="C:\Users\Zuzana\Documents\Bakalářka\vzor-bpnew\vzor-bp\cs\prace.tex" bookmark3="0" bookmark2="0" master="false" bookmark1="0" hasfocus="false"/>
-    <document line="0" file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/literatura.tex" bookmark3="0" bookmark2="0" master="false" bookmark1="0" hasfocus="false"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/kap03.tex" bookmark1="0" bookmark3="0" bookmark2="0" master="false" hasfocus="false" line="0"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/uvod.tex" bookmark1="0" bookmark3="0" bookmark2="0" master="false" hasfocus="false" line="11"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/literatura.tex" bookmark1="0" bookmark3="0" bookmark2="0" master="false" hasfocus="false" line="0"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/kap01.tex" bookmark1="0" bookmark3="0" bookmark2="0" master="false" hasfocus="false" line="12"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/literatura.bib" bookmark1="0" bookmark3="0" bookmark2="0" master="false" hasfocus="false" line="132"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/prace.tex" bookmark1="0" bookmark3="0" bookmark2="0" master="true" hasfocus="true" line="0"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/kap04.tex" bookmark1="0" bookmark3="0" bookmark2="0" master="false" hasfocus="false" line="0"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/kap02.tex" bookmark1="0" bookmark3="0" bookmark2="0" master="false" hasfocus="false" line="0"/>
+    <document file="C:/Users/Zuzana/Documents/Bakalářka/GIT/VariantyEberhardovyVety/cs/zaver.tex" bookmark1="0" bookmark3="0" bookmark2="0" master="false" hasfocus="false" line="0"/>
 </TexmakerSession>

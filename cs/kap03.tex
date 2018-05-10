@@ -9,17 +9,29 @@ Program na vstupu očekává zadání vnější stěny: každý vrchol je zastou
 
 Postup hledání původně imitoval lidské pokusy o řešení problému: nakreslit si vnější stěnu, zkusit spojit nějaké dva vrcholy řetízkem vhodné délky (aby nově uzavřená stěna byla z neutrální posloupnosti) a dokud je místo na papíře, spojovat. Pak si překreslit nejvnitřnější, zatím neuzavřenou stěnu (budeme mluvit o \textbf{hranici}), ta se stane \uv{vnější stěnou} na novém papíře a pokračovat. V situaci, kdy nelze dál nic spojit, nebo je jasné, že graf nemůže vyhovovat parametrům, vrátit se podle uvážení zpět.
 
-Kdybychom chtěli znát jen \uv{ano/ne} odpověď, jestli graf existuje, nebylo by vůbec třeba si pamatovat celý rozpracovaný graf, stačilo-by pracovat s hranicemi, které navíc stačí reprezentovat jako binární číslo. Výsledkem by pak mohla být jen posloupnost hranic, kterými se prošlo před uzavřením grafu, nebo samotné \uv{ano/ne}. Překvapivě obtížné je pak z této posloupnosti nestrojově získat skutečný graf, proto program nabízí i možnost graf dodatečně rekonstruovat podle prošlých stavů.
+TODO vizuálně na body?
+
+TOD prolink dopředu na obrázek ufona
+
+Kdybychom chtěli znát jen \uv{ano/ne} odpověď, jestli graf existuje, nebylo by vůbec třeba si pamatovat celý rozpracovaný graf, stačilo by pracovat s hranicemi, které navíc stačí reprezentovat jako binární číslo. Výsledkem by pak mohla být jen posloupnost hranic, kterými se prošlo před uzavřením grafu, nebo samotné \uv{ano/ne}. Překvapivě obtížné je pak z této posloupnosti nestrojově získat skutečný graf, proto program nabízí i možnost graf dodatečně rekonstruovat podle prošlých stavů.
 
 V tento okamžik je jasné, že problém je vlastně prohledávání v binárních řetězcích (které reprezentují hranice). Je proto vhodné zmínit, podle jakého kritéria se program rozhoduje, kterým směrem hledat dále. Implementace vždy upřednostňuje ke zpracování již nalezený řetězec nejmenší délky, a pro něj najde všechny další sousedy.
 
-Aby toto prohledávání fungovalo dobře, je třeba trochu zkomplikovat reprezentaci hranice. Hlavním požadavkem bude identita mezi reprezentací (jediným binárním řetězcem) a všemi hranicemi (tedy cykly, na kterých vyznačené vrcholy ještě vyžadují dalšího souseda), které jsou pro algoritmus izomorfní - tedy všechny rotace a převrácení hranice.
+Aby toto prohledávání fungovalo dobře, je třeba trochu zkomplikovat reprezentaci hranice. Hlavním požadavkem bude identita mezi reprezentací (jediným binárním řetězcem) a všemi hranicemi (tedy cykly, na kterých vyznačené vrcholy ještě vyžadují dalšího souseda), které jsou pro algoritmus izomorfní -- tedy všechny rotace a převrácení hranice.
+
+TODO pseudokód
 
 \begin{definice}[Hranice a její reprezentace]\label{def01:1}
-Cyklus $C$ a množinu $I \subseteq C(V)$ zveme hranicí $H$. Množina $I$ jsou právě ty vrcholy, které ve výsledném vyplnění musí mít dalšího souseda. Pokud  $i = \emptyset$, mluvíme o hranici přímo jako o stěně.
+Dvojici cyklus $C$ a množina $I \subseteq V(C)$ nazveme hranicí $H$. Množina $I$ jsou právě ty vrcholy, které ve výsledném vyplnění musí mít dalšího souseda. Pokud  $I = \emptyset$, mluvíme o hranici přímo jako o stěně.
 
-Binární řetězec (číslo) reprezentující hranici $H$ získáme následně: každý vrchol H označíme buď znakem 1 (jako I v "in" podle orientace pomyslené hrany) nebo 0 (jako 0 v "out"). Zaznamenejme pak všechny řetězce, které získáme čtením od každého vrcholu pro i proti směru hodinových ručiček. Ten z nich, který z nich má největší hodnotu (pokud řetězec chápeme jako binární číslo), je reprezentací hranice. Pokud $i = \emptyset$, pak přidejme speciální znak a zapamatujme počet vrcholů.
+Definujme funkci $f(H,(u,v))$ jako charakteristický vektor množiny $I$ následně: každý vrchol H popišme buď znakem 1 (jako I v \uv{in} podle orientace pomyslené hrany) nebo 0 (jako 0 v \uv{out}). Hodnota $f(H, (u, v))$, kde $H=(C, I)$, $u, v \in V(C)$ a $ \lbrace u, v \rbrace \in E(C)$, se pak získá zaznamenáním popisků vrcholů $H$, začínaje vrcholem $u$, pokračujíce vrcholem $v$ a dále po hranách $C$. 
+
+Reprezentací hranice je hodnota $\max_{\lbrace u, v \rbrace \in E(C)} {f(H,(u,v))}$. Pokud $I = \emptyset$, pak přidejme speciální znak a zapamatujme počet vrcholů.
 \end{definice}
+
+TODO vyřešit I = prázdná předem 
+TODO pozorování o začínání jedničkou + počtu řetězců v maximu
+
 
 Pro lepší představu přikládáme posloupnost hranic s vizualizací na obrázku \ref{obr03:reseni}, která řeší (4,4,3)$\lbrace$4,7$\rbrace$-triark. 
 
@@ -35,7 +47,7 @@ Podle předchozí kapitoly pro dokončení důkazu pro konkrétní dvojici $p$ a
 \begin{description}
 \item[(i)] ($k$, $k$, $k$),$Q$-triark;
 \item[(ii)] ($k$, $k$, $k-1$),$Q$-triark;
-\item[(iii)] ($mk$,$mk$,$x$),$Q\cup \lbrace 1\rbrace$-triark, kde je právě jedna stěna velikosti $l$;
+\item[(iii)] ($mk$,$mk$,$x$),$Q\cup \lbrace l\rbrace$-triark, kde je právě jedna stěna velikosti $l$;
 \item[(iv)] prstenec, který dokáže spojit dva stejně velké, rovnostranné triarky.
 \end{description}
 
@@ -43,24 +55,23 @@ Pro dané $k$ získáme grafy (i) a (ii) z řešítka hned. Pro zbylé je nutné
 
 Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít právě jednu stěnu délky $p_l$. Spojme proto stěnu s vnější stěnou triarku ručně a ptejme se na výplň vzniklých oblastí $A$ a $B$. Ke spojení použijeme $l$ kopií řetízku $R$, každý napojíme na jeden z vrcholů jádra a druhé konce spojíme s \uv{in} vrcholy základny triarku. V řetízku navíc fixujeme, ve které straně od něj budou mít které jeho vrcholy třetího souseda (znázorněno šedě v obrázku \ref{obr03:konstrukceiii}). Konstrukce je obecná pro všechny přípustné hodnoty $l$, tedy není závislá na volbě $p$. Navíc není (při dobré volně R) vynucená ani příliš velká stěna, takže konstrukce může být obecná i pro všechny q (protože q je neutrální, tedy v ní musí být nenulová hodnota na pozici reprezentující stěnu velikosti alespoň 6, tvrzení \ref{veta:posloupnosti}).
 
-
-
-Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí - $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
-
-Tyto konstrukce jsou v řešítku implementovány. Výsledný program tedy na vstupu očekává seznam velikostí stěn, které mohou tvořit neutrální posloupnost. Pokud pro daný seznam stěn existuje více neutrálních posloupností, využije program pro každý pomocný graf libovolnou z nich.
-
-\begin{figure}[h!]\centering
+\begin{figure}[h]\centering
 \includegraphics[width = 80mm]{../img/iii-construction}
 \caption{Konstrukce grafu typu (iii) pomocí řetízků $R$, konkrétně ($mk$,$mk$,$l+1$)-triarku s $l$-úhelníkem $P_l$ jako jádro.}
 \label{obr03:konstrukceiii}
 \end{figure}
 
-\begin{figure}[h!]\centering
+Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí - $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
+
+Tyto konstrukce jsou v řešítku implementovány. Výsledný program tedy na vstupu očekává seznam velikostí stěn, které mohou tvořit neutrální posloupnost. Pokud pro daný seznam stěn existuje více neutrálních posloupností, využije program pro každý pomocný graf libovolnou z nich.
+
+\begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/iv-construction}
 \caption{Konstrukce grafu typu (iv), slepované triarky jsou vyznačené šedě, prstenec odpovídá plášti.}
 \label{obr03:konstrukceiv}
 \end{figure}
 
+%\newpage 
 
 
 \section{Uživatelská dokumentace/formáty výstupu}
