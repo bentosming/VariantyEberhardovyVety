@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  10 MAY 2018 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  10 MAY 2018 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2418,7 +2418,7 @@ Kapitola 2.
 <../img/triarc.pdf, id=172, 216.45065pt x 270.59395pt>
 File: ../img/triarc.pdf Graphic file (type pdf)
 <use ../img/triarc.pdf>
-Package pdftex.def Info: ../img/triarc.pdf  used on input line 23.
+Package pdftex.def Info: ../img/triarc.pdf  used on input line 21.
 (pdftex.def)             Requested size: 136.56279pt x 170.71652pt.
 [5
 
@@ -2428,14 +2428,19 @@ Package pdftex.def Info: ../img/triarc.pdf  used on input line 23.
 <../img/T-P.pdf, id=186, 517.55266pt x 147.80319pt>
 File: ../img/T-P.pdf Graphic file (type pdf)
 <use ../img/T-P.pdf>
-Package pdftex.def Info: ../img/T-P.pdf  used on input line 32.
+Package pdftex.def Info: ../img/T-P.pdf  used on input line 30.
 (pdftex.def)             Requested size: 412.56496pt x 117.82323pt.
 <../img/T-T.pdf, id=188, 542.15929pt x 141.94029pt>
 File: ../img/T-T.pdf Graphic file (type pdf)
 <use ../img/T-T.pdf>
-Package pdftex.def Info: ../img/T-T.pdf  used on input line 40.
+Package pdftex.def Info: ../img/T-T.pdf  used on input line 38.
 (pdftex.def)             Requested size: 412.56496pt x 108.01001pt.
- [6 <../img/T-P.pdf> <../img/T-T.pdf>]) [7]
+ [6 <../img/T-P.pdf> <../img/T-T.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
+
+ []
+
+) [7]
 \openout2 = `kap03.aux'.
 
  (./kap03.tex
@@ -2445,43 +2450,53 @@ Kapitola 3.
 
 
 ]
-<../img/reseni.pdf, id=254, 536.47528pt x 545.81816pt>
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
+
+ []
+
+<../img/reseni.pdf, id=260, 536.47528pt x 545.81816pt>
 File: ../img/reseni.pdf Graphic file (type pdf)
 <use ../img/reseni.pdf>
-Package pdftex.def Info: ../img/reseni.pdf  used on input line 39.
+Package pdftex.def Info: ../img/reseni.pdf  used on input line 51.
 (pdftex.def)             Requested size: 412.56496pt x 419.74825pt.
- [9 <../img/reseni.pdf>]
-<../img/iii-construction.pdf, id=279, 445.29834pt x 371.23091pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../img/iii-construction.pdf, id=263, 445.29834pt x 371.23091pt>
 File: ../img/iii-construction.pdf Graphic file (type pdf)
 <use ../img/iii-construction.pdf>
-Package pdftex.def Info: ../img/iii-construction.pdf  used on input line 59.
+Package pdftex.def Info: ../img/iii-construction.pdf  used on input line 71.
 (pdftex.def)             Requested size: 227.62204pt x 189.75575pt.
-<../img/iv-construction.pdf, id=281, 202.86891pt x 148.86415pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
+<../img/iv-construction.pdf, id=272, 202.86891pt x 148.86415pt>
 File: ../img/iv-construction.pdf Graphic file (type pdf)
 <use ../img/iv-construction.pdf>
-Package pdftex.def Info: ../img/iv-construction.pdf  used on input line 69.
+Package pdftex.def Info: ../img/iv-construction.pdf  used on input line 81.
 (pdftex.def)             Requested size: 170.71652pt x 125.27444pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [10 <../img/iii-construction.pdf>] [11 <../img/iv-construction.pdf>]
+) [10 <../img/reseni.pdf>] [11 <../img/iii-construction.pdf> <../img/iv-constru
+ction.pdf>]
 \openout2 = `kap04.aux'.
 
-
-(./kap04.tex
+ (./kap04.tex
 Kapitola 4.
 [12
 
 
 
 ]
-<../img/sageplot.pdf, id=332, 271.03204pt x 285.7636pt>
+<../img/sageplot.pdf, id=337, 271.03204pt x 285.7636pt>
 File: ../img/sageplot.pdf Graphic file (type pdf)
 <use ../img/sageplot.pdf>
 Package pdftex.def Info: ../img/sageplot.pdf  used on input line 47.
 (pdftex.def)             Requested size: 170.71652pt x 179.99275pt.
-<../img/planar.pdf, id=333, 285.7636pt x 285.7636pt>
+<../img/planar.pdf, id=338, 285.7636pt x 285.7636pt>
 File: ../img/planar.pdf Graphic file (type pdf)
 <use ../img/planar.pdf>
 Package pdftex.def Info: ../img/planar.pdf  used on input line 54.
@@ -2490,7 +2505,7 @@ Package pdftex.def Info: ../img/planar.pdf  used on input line 54.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../img/Triarc15150{4,7}__v37.png, id=334, 1229.59375pt x 1209.51875pt>
+<../img/Triarc15150{4,7}__v37.png, id=339, 1229.59375pt x 1209.51875pt>
 File: ../img/Triarc15150{4,7}__v37.png Graphic file (type png)
 <use ../img/Triarc15150{4,7}__v37.png>
 Package pdftex.def Info: ../img/Triarc15150{4,7}__v37.png  used on input line 6
@@ -2499,7 +2514,7 @@ Package pdftex.def Info: ../img/Triarc15150{4,7}__v37.png  used on input line 6
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../img/tutteplot.pdf, id=336, 284.60193pt x 285.7636pt>
+<../img/tutteplot.pdf, id=341, 284.60193pt x 285.7636pt>
 File: ../img/tutteplot.pdf Graphic file (type pdf)
 <use ../img/tutteplot.pdf>
 Package pdftex.def Info: ../img/tutteplot.pdf  used on input line 68.
@@ -2558,34 +2573,31 @@ Package rerunfilecheck Info: File `prace.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 15514 strings out of 492982
- 210875 string characters out of 6136225
- 277585 words of memory out of 5000000
+ 15519 strings out of 492982
+ 210905 string characters out of 6136225
+ 278586 words of memory out of 5000000
  18673 multiletter control sequences out of 15000+600000
  60333 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,9n,35p,980b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{veta.3} has been referenced but does not exist, r
-eplaced by a fixed one
-
-{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2017/texmf
--dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dv
-ips/lm/lm-rm.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{
-c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/texlive/2017/te
-xmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2017/texmf-dist/fonts/typ
-e1/public/lm/lmbxi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmex
-10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive
-/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2017/texmf-dist/fo
-nts/type1/public/lm/lmmib10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/
-lm/lmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/te
-xlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2017/texmf-dis
-t/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publ
-ic/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c
-:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on prace.pdf (23 pages, 848725 bytes).
+ 37i,9n,35p,991b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2017/tex
+mf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2017/texmf-dist/fonts/enc/
+dvips/lm/lm-rm.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/texlive/2017/
+texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2017/texmf-dist/fonts/t
+ype1/public/lm/lmbxi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
+ex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texli
+ve/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2017/texmf-dist/
+fonts/type1/public/lm/lmmib10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publi
+c/lm/lmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2017/texmf-d
+ist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pu
+blic/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+<c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/
+texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on prace.pdf (23 pages, 850954 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
+ 531 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

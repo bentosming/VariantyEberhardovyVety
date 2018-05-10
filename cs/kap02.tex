@@ -15,9 +15,7 @@ V článku \citep{Samal09} autoři naznačují konstrukci důkazu, za předpokla
 Triark je takový rovinný graf $T$, že vrcholy jeho vnější stěny tvoří cyklus $C$, každý vnitřní vrchol (tj. vrcholy $T-C$) má v $T$ stupeň právě 3 a v $C$ jsou tři navzájem různé vrcholy $x$, $y$, $z$ stupně 2 -- \textbf{rohy}, že vrcholy každé ze tří cest v C, které vzniknou odstraněním rohů z C, mají střídavě stupeň 2 a 3, počínaje i konče stupněm 2.
 \end{definice}
 
-\textbf{Strana} triarku je každá z výše zmíněných cest v C, ke které na oba konce připojíme i příslušný roh. \textbf{Délka strany} triarku odpovídá počtu jejích vnitřních vrcholů stupně 2 v T. O triarku se stranami délky $a$, $b$, $c$ mluvíme jako o ($a$, $b$, $c$)-\textbf{triarku}. Poznamenejme, že na pořadí stran v názvu nezáleží (odpovídají rotacím). Později využijeme ještě dalšího značení. $M$-\textbf{triark} má vnitřní strany pouze velikostí z $M$. U triarku přejímáme některé termíny používané pro trojúhelníky a jejich význam bude vždy intuitivní.
-
-TODO definovat i (abv)Qtriatk
+\textbf{Strana} triarku je každá z výše zmíněných cest v C, ke které na oba konce připojíme i příslušný roh. \textbf{Délka strany} triarku odpovídá počtu jejích vnitřních vrcholů stupně 2 v T. O triarku se stranami délky $a$, $b$, $c$ mluvíme jako o \textbf{($\boldsymbol{a}$, $\boldsymbol{b}$, $\boldsymbol{c}$)-triarku}. Poznamenejme, že na pořadí stran v názvu nezáleží (odpovídají rotacím a zrcadlení). Později využijeme ještě dalšího značení. \textbf{$\boldsymbol{M}$-triark} má vnitřní strany pouze velikostí z množiny $M$. \textbf{($\boldsymbol{a}$, $\boldsymbol{b}$, $\boldsymbol{c}$)$\boldsymbol{M}$-triark} je zároveň ($a$, $b$, $c$)-triark a $M$-triark. Tato značení využíváme i pro další typy grafů a jejich význam je analogický. U triarku přejímáme některé termíny používané pro trojúhelníky a jejich význam bude vždy intuitivní.
 
 \begin{figure}[h!]\centering
 \includegraphics[height=60mm]{../img/triarc}
@@ -42,7 +40,7 @@ Mohli bychom ale chtít spojovat triarky tak, aby výsledkem byl opět triark. M
 \label{obr22:T-T}
 \end{figure}
 
-A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Pro lepší představu si prstenec představujme jako plášť trojbokého hranolu, triarky jako dolní a boční podstavu. Na všech podstavných hranách dojde ke splynutí vrcholů triarků s vrcholy prstence a vznikne graf nakreslitelný na hranol (tedy tedy i na sféru), takže výsledkem je rovinný graf. Zadefinujme prstenec. Prstenec je souvislý graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačně znamená záměna dvoj- a tří- vaznosti vrcholů. Pro případné dokreslení můžeme použít obrázek \ref{obr03:konstrukceiv}, na kterém je speciální druh prstence. 
+A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Pro lepší představu si prstenec představujme jako plášť trojbokého hranolu, triarky jako dolní a boční podstavu. Na všech podstavných hranách dojde ke splynutí vrcholů triarků s vrcholy prstence a vznikne graf nakreslitelný na hranol (tedy tedy i na sféru), takže výsledkem je rovinný graf. Zadefinujme prstenec formálně. Prstenec je souvislý graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačné znamená záměna dvoj- a tří- vaznosti vrcholů. Pro případné dokreslení můžeme použít obrázek \ref{obr03:konstrukceiv}, na kterém je speciální druh prstence. 
 
 TODo provazba na definici prstence, chybí kubičnost a rovinnost
 
@@ -62,21 +60,20 @@ Mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální poslou
 \item[(i)] ($k$, $k$, $k$)$Q$-triark;
 \item[(ii)] ($k$, $k$, $k-1$)$Q$-triark;
 \item[(iii)] rovnoramenný $Q\cup \lbrace l \rbrace$-triark, délky jehož stejných stran jsou dělitelné $k$ a který obsahuje právě jednu stěnu velikosti $l$ pro každé nenulové $p_l$ v $p$, této stěně říkejme \textbf{jádro} triarku;
-\item[(iv)] prstenec, který dokáže spojit dva stejně velké, rovnostranné triarky.
-\end{description} TODO pro každé t a (t,t,t) triarky
+\item[(iv)] $\forall t \in \mathbb{N}, t>1$ $Q$-prstenec, který dokáže spojit dva ($t$, $t$, $t$)-triarky.
+\end{description} 
 
 Pak existuje takové přirozené $n$, že $p+nq$ je realizovatelná.
 \end{veta}
 
 
 Myšlenka důkazu pak není příliš složitá: každou stěnu ze zadané posloupnosti $p$ zabalíme do triarku (iii), připravíme si pomocné lepicí a zkrášlující prvky (ii), díky kterým získáme jediný velký rovnostranný triark. K němu zkonstruujeme ještě jeden se stejně dlouhými (i) a pomocným prstencem je spojíme v kýžený graf (iv). Všechny tyto pomocné objekty jsou totiž (kromě jader) jen ze stěn, které jsou v zadané neutrální posloupnosti, lepicí operace zachovávají kubičnost uvnitř grafu a prstenec pak spojí dva triarky v hledaný kubický graf.
-
-\textit{Důkaz.} Nejprve slepíme dva ($k$, $k$, $k-1$)-triarky za stěnu délky $k$ a získáme rovnoběžník se všemi stranami délky $k$. A díky slepování můžeme získat i libovolný rovnoběžník o rozměrech $mk$, $lk$ pro $m$, $l$ přirozená. Poté postupně spojujeme jednotlivé jádrové triarky za pomoci příslušného lichoběžníku, dokud nezískáme jediný triark, který obsahuje všechny stěny z $P$.
+\begin{dukaz}
+Nejprve slepíme dva ($k$, $k$, $k-1$)-triarky za stěnu délky $k$ a získáme rovnoběžník se všemi stranami délky $k$. A díky slepování můžeme získat i libovolný rovnoběžník o rozměrech $mk$, $lk$ pro $m$, $l$ přirozená. Poté postupně spojujeme jednotlivé jádrové triarky za pomoci příslušného lichoběžníku, dokud nezískáme jediný triark, který obsahuje všechny stěny z $P$.
 
 Zkusme vzniklý triark upravit na rovnostranný. Při slepování triarků se velikosti výsledných stran rovnají součtům původním. Pokud tedy slepujeme s ($k$, $k$, $k-1$)-triarkem, zmenšíme vždy tu stěnu, na kterou připadne rozměr $k-1$, vůči ostatním. Takže pokud budeme opakovat lepení výsledného triarku, v každém kroku se součet rozdílů mezi stranami zmenší a tedy nutně získáme rovnostranný triark. Modifikujme ho stejnou operací, aby zůstal rovnostranný, ale navíc délka jeho stran byla násobkem $k$ a označme výsledný triark $T_1$.
 
-Slepováním ($k$,$k$,$k$)-triarků z (i) spolu s $k$,$k$ rovnoběžníky získáme druhý triark $T_2$ o stejném rozměru jako $T_1$. Kdybychom celý problém řešili na tóru, stačilo by $T_1$ a $T_2$ spojit do rovnoběžníku a sjednotit odpovídající strany. Na kouli místo toho použijeme prstenec z (iv). Tím získáme graf, který je kubický, rovinný a obsahuje požadované stěny. $\square$
-
-TODO jak se píše tórus 
+Slepováním ($k$,$k$,$k$)-triarků z (i) spolu s ($k$, $k$) rovnoběžníky získáme druhý triark $T_2$ o stejném rozměru jako $T_1$. Kdybychom celý problém řešili na toru, stačilo by $T_1$ a $T_2$ spojit do rovnoběžníku a sjednotit odpovídající strany. Na kouli místo toho použijeme prstenec z (iv). Tím získáme graf, který je kubický, rovinný a obsahuje požadované stěny. 
+\end{dukaz}
 
 Všimněme si, že větu jde jednoduše zesílit: nejen že za splnění předpokladů existuje nějaké $n \in \mathbb{N}$, pro které je $p+nq$ realizovatelná; existuje jich libovolně mnoho. V důkazu stačí před spojením $T_1$ a $T_2$ prstencem nejprve oba triarky slepit s dalšími instancemi $T_2$ tak, aby vznikly nové, stejně velké rovnostranné triarky $T_{1}^*$ a $T_{2}^*$. Tímto způsobem lze libovolně zvětšit $n$. $T_{1}^*$ a $T_{2}^*$ pak opět spojíme prstencem.
