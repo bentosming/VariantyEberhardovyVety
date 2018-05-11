@@ -1,31 +1,8 @@
 %%% Fiktivní kapitola s instrukcemi k PDF/A
 
-\chapter{Výsledky} \label{vysledky}
+\chapter{Kreslení} \label{kresleni}
 
-Díky programu popsanému v předchozí kapitole bylo možné zkusit dokončit důkaz věty \eqref{veta02:hypoteza} pro některé neutrální posloupnosti $q$ (na volbě posloupnosti $p$ nezáleží, protože konstrukce pro jádrový triark nezávisí na velikosti jádra). 
-
-Vzhledem k výpočetním omezením programu jsme zkusili dokončit důkaz věty pouze pro takové neutrální posloupnosti $q$, že $Q = \lbrace r, s\rbrace$ a navíc $r<s<18$. Seznam posloupností, pro které program nalezl potřebné grafy je v tabulce \ref{obr03:tabvysledky}. Pokud bychom se omezili na rozsah $r<s<14$, pak program grafy nalezl právě tehdy, když $r$ a $s$ jsou nesoudělná čísla.
-
-\begin{figure}[h]\centering
-\begin{tabular}{ c c c c c c c c c c c c }
-  - & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\
-  3 & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ \\
-  4 & $\bullet$ &  & $\bullet$ &  & $\bullet$ &  & $\bullet$ &  & $\bullet$ \\
-  5 & $\bullet$ & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ & $\bullet$  
-\end{tabular}
-\caption{Úplný výčet dvojic stran, pro které se podařilo dokončit důkaz věty \eqref{veta02:hypoteza}.}
-\label{obr03:tabvysledky}
-\end{figure}
-
-TODO fakt větu jako výsledek!!
-
-Všechny potřebné grafy pro doložení důkazu jsou k práci přiloženy. TODO přiložit
-
-Přirozenou snahou při zkoumání nalezených grafů je grafy zobrazit, aby byly pro člověka dobře čitelné. V další sekci se tomuto tématu krátce věnujeme. 
-
-\section{Kreslení}
-
-Přirozenou snahou pro studování nalezených grafů, a pochopení, proč právě soudělnost velikosti stěn zabraňuje v použití navrženého algoritmu k dokončení důkazu, je jejich zobrazení, které je pro člověka dostatečně čitelné. Překvapivě, i přes rovinnost grafů a celkem dobré znalosti jejich struktury není jednoduché hezké rovinné nakreslení najít.
+Přirozenou snahou pro studování nalezených grafů, a pochopení, proč některé nelze najít, je hledat jejich zobrazení, které je pro člověka dostatečně čitelné. Překvapivě, i přes rovinnost grafů a celkem dobré znalosti jejich struktury není jednoduché hezké rovinné nakreslení najít.
 
 Zamysleme se, jak graf bude vypadat. Vrcholy vnější stěny rozmístěme po kružnici a pak - podle jednotlivých hranic, které graf řeší - vždy vrcholy nově uzavřené stěny nakresleme na soustřednou, menší kružnici tak, aby spojnice žádného bodu hranice se středem kružnic neprotínala jiný bod hranice. Tímto způsobem určitě získáme rovinné nakreslení (ale hrany mohou být libovolné křivky), protože v každém kroku je možné spojit libovolné dva vrcholy, které mohou být v řešení zrovna spojovány, tak, abychom zachovali požadovanou vlastnost tvaru hranice.
 
@@ -41,11 +18,9 @@ Pro převedení grafu na 3-souvislý stačí do každé vnitřní stěny vložit
 
 V našem případě za pevné vrcholy volíme vrcholy vnější stěny, které jsou rozmístěné na kružnici a podle konkrétního grafu je pak možné nastavit váhy jednotlivých vrcholů. Obecně se pro dostatečně malé grafy (do 40-ti vrcholů) osvědčila lineární závislost váhy na pořadí přidání vrcholu do grafu, nejdříve přidaný je nejtěžší.
 
-
-
 \begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/sageplot}
-\caption{Automatické nakreslení SageMath.}
+\caption{Automatické nakreslení SageMath \cite{sagemath}. Všimněme si, že pokud bychom si zkusili představit, že cyklus vrcholů 0, 1, $\dots$, 16 je ona vnější kružnice z vylepšeného prvního popsaného kreslení a navíc nechť je základnou kužele a všechny další kružnice nechť jsou vždy v tomto kuželu výš (tak, aby mohly ležet na plášti), pak (s množstvím fantazie) se koukáme na podobné nakreslení, jen popsané je pohled shora a zobrazené pohled z boku. Při nakreslení většího grafu je tato myšlenka viditelnější.}
 \label{obr:sageplot}
 \end{figure}
 
@@ -69,5 +44,3 @@ V našem případě za pevné vrcholy volíme vrcholy vnější stěny, které j
 \caption{Tuttovo nakreslení.}
 \label{obr:tutteplot}
 \end{figure}
-
-

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  10 MAY 2018 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  12 MAY 2018 01:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2197,6 +2197,20 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plparsep=\skip57
 \pl@lab=\toks32
 )
+(c:/texlive/2017/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(c:/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(c:/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+\everycr=\toks33
+\minrowclearance=\skip58
+)
 (c:/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -2205,6 +2219,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Package option `usenames' ignored on input line 216.
 Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -2215,8 +2230,8 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-Package hyperref Info: Option `unicode' set `true' on input line 119.
-Package hyperref Info: Option `breaklinks' set `true' on input line 120.
+Package hyperref Info: Option `unicode' set `true' on input line 120.
+Package hyperref Info: Option `breaklinks' set `true' on input line 121.
 
 \@input{makra.aux}
 \openout2 = `makra.aux'.
@@ -2225,40 +2240,44 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 120.
 \c@veta=\count121
 \c@definice=\count122
 ) (./prace.aux (./titulka.aux) (./uvod.aux) (./kap01.aux)
-(./kap02.aux) (./kap03.aux) (./kap04.aux) (./zaver.aux) (./literatura.aux))
+(./kap02.aux) (./kap03.aux) (./kap04.aux) (./kap05.aux
+
+LaTeX Warning: Label `obr03:tabvysledky' multiply defined.
+
+) (./zaver.aux) (./literatura.aux))
 \openout1 = `prace.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 126.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 127.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 127.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 127.
 
 
 (c:/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 126.
+LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 127.
 
 (c:/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 126.
+Package hyperref Info: Link coloring OFF on input line 127.
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2268,9 +2287,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count123
 )
-LaTeX Info: Redefining \ref on input line 126.
-LaTeX Info: Redefining \pageref on input line 126.
-LaTeX Info: Redefining \nameref on input line 126.
+LaTeX Info: Redefining \ref on input line 127.
+LaTeX Info: Redefining \pageref on input line 127.
+LaTeX Info: Redefining \nameref on input line 127.
 
 (./prace.out) (./prace.out)
 \@outlinefile=\write5
@@ -2284,12 +2303,12 @@ LaTeX Info: Redefining \nameref on input line 126.
 \scratchbox=\box30
 \nofMPsegments=\count125
 \nofMParguments=\count126
-\everyMPshowfont=\toks33
+\everyMPshowfont=\toks34
 \MPscratchCnt=\count127
 \MPscratchDim=\dimen135
 \MPnumerator=\count128
 \makeMPintoPDFobject=\count129
-\everyMPtoPDFconversion=\toks34
+\everyMPtoPDFconversion=\toks35
 ) (c:/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -2486,58 +2505,72 @@ ction.pdf>]
 
  (./kap04.tex
 Kapitola 4.
-[12
-
-
-
-]
-<../img/sageplot.pdf, id=337, 271.03204pt x 285.7636pt>
+<../img/sageplot.pdf, id=328, 271.03204pt x 285.7636pt>
 File: ../img/sageplot.pdf Graphic file (type pdf)
 <use ../img/sageplot.pdf>
-Package pdftex.def Info: ../img/sageplot.pdf  used on input line 47.
+Package pdftex.def Info: ../img/sageplot.pdf  used on input line 22.
 (pdftex.def)             Requested size: 170.71652pt x 179.99275pt.
-<../img/planar.pdf, id=338, 285.7636pt x 285.7636pt>
-File: ../img/planar.pdf Graphic file (type pdf)
-<use ../img/planar.pdf>
-Package pdftex.def Info: ../img/planar.pdf  used on input line 54.
-(pdftex.def)             Requested size: 170.71652pt x 170.72255pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../img/Triarc15150{4,7}__v37.png, id=339, 1229.59375pt x 1209.51875pt>
+<../img/planar.pdf, id=331, 285.7636pt x 285.7636pt>
+File: ../img/planar.pdf Graphic file (type pdf)
+<use ../img/planar.pdf>
+Package pdftex.def Info: ../img/planar.pdf  used on input line 29.
+(pdftex.def)             Requested size: 170.71652pt x 170.72255pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../img/Triarc15150{4,7}__v37.png, id=332, 1229.59375pt x 1209.51875pt>
 File: ../img/Triarc15150{4,7}__v37.png Graphic file (type png)
 <use ../img/Triarc15150{4,7}__v37.png>
-Package pdftex.def Info: ../img/Triarc15150{4,7}__v37.png  used on input line 6
-1.
+Package pdftex.def Info: ../img/Triarc15150{4,7}__v37.png  used on input line 3
+6.
 (pdftex.def)             Requested size: 170.71652pt x 167.92883pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../img/tutteplot.pdf, id=341, 284.60193pt x 285.7636pt>
+<../img/tutteplot.pdf, id=334, 284.60193pt x 285.7636pt>
 File: ../img/tutteplot.pdf Graphic file (type pdf)
 <use ../img/tutteplot.pdf>
-Package pdftex.def Info: ../img/tutteplot.pdf  used on input line 68.
+Package pdftex.def Info: ../img/tutteplot.pdf  used on input line 43.
 (pdftex.def)             Requested size: 170.71652pt x 171.41586pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [13 <../img/sageplot.pdf>] [14 <../img/planar.pdf> <../img/Triarc15150{4,7}__
-v37.png> <../img/tutteplot.pdf
+) [12
 
-pdfTeX warning: pdflatex.exe (file ../img/tutteplot.pdf): PDF inclusion: multip
-le pdfs with page group included in a single page
->]
+
+
+] [13 <../img/sageplot.pdf> <../img/planar.pdf
+
+pdfTeX warning: pdflatex.exe (file ../img/planar.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>] [14 <../img/Triarc15150{4,7}__v37.png> <../img/tutteplot.pdf>]
+\openout2 = `kap05.aux'.
+
+ (./kap05.tex
+Kapitola 5.
+) [15
+
+
+
+]
 \openout2 = `zaver.aux'.
 
- (./zaver.tex) [15
+ (./zaver.tex) [16
 
 
 
 ]
 \openout2 = `literatura.aux'.
 
- (./literatura.tex (./prace.bbl)) [16
+ (./literatura.tex (./prace.bbl
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 44.
+
+(c:/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))) [17
 
 
 
@@ -2548,42 +2581,52 @@ Overfull \hbox (2.90149pt too wide) in paragraph at lines 9--9
 OML/lmm/m/it/12 mk$\T1/lmr/m/n/12 ,$\OML/lmm/m/it/12 l \OT1/lmr/m/n/12 + |
  []
 
+
+Overfull \hbox (12.12906pt too wide) in paragraph at lines 12--12
+ [][] [][]\T1/lmr/m/n/12 Automatické na-kres-lení Sage-Math [[]]. V²im-n¥me si,
+ ºe po-kud bychom |
+ []
+
 )
 \tf@lof=\write7
 \openout7 = `prace.lof'.
 
- [17
+ [18
 
 
-] [18
+] [19
 
 ]
 P\v {r}\'{\i }loha A.
-[19
+[20
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
  (./prace.aux (./titulka.aux) (./uvod.aux) (./kap01.aux) (./kap02.aux)
-(./kap03.aux) (./kap04.aux) (./zaver.aux) (./literatura.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
+(./kap03.aux) (./kap04.aux) (./kap05.aux) (./zaver.aux) (./literatura.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
 Package rerunfilecheck Info: File `prace.out' has not changed.
-(rerunfilecheck)             Checksum: 79C3E479D1E3E2833E1E7A5B1811979D;2242.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
+(rerunfilecheck)             Checksum: 9F4796FEA0B150D3F86FFB4ECFD158F2;2231.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
  ) 
 Here is how much of TeX's memory you used:
- 15519 strings out of 492982
- 210905 string characters out of 6136225
- 278586 words of memory out of 5000000
- 18673 multiletter control sequences out of 15000+600000
- 60333 words of font info for 51 fonts, out of 8000000 for 9000
+ 15626 strings out of 492982
+ 212546 string characters out of 6136225
+ 285285 words of memory out of 5000000
+ 18758 multiletter control sequences out of 15000+600000
+ 60651 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,9n,35p,991b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,35p,1170b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2017/tex
 mf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2017/texmf-dist/fonts/enc/
-dvips/lm/lm-rm.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/texlive/2017/
+dvips/lm/lm-mathsy.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathex
+.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}<c:/texlive/2017/
 texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2017/texmf-dist/fonts/t
 ype1/public/lm/lmbxi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lm
 ex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texli
@@ -2593,11 +2636,12 @@ c/lm/lmr12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2017/texmf-d
 ist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/pu
 blic/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-<c:/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/
-texlive/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on prace.pdf (23 pages, 850954 bytes).
+<c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2017/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on prace.pdf (24 pages, 880673 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

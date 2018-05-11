@@ -7,48 +7,49 @@ A level-1 auxiliary file: kap01.aux
 A level-1 auxiliary file: kap02.aux
 A level-1 auxiliary file: kap03.aux
 A level-1 auxiliary file: kap04.aux
+A level-1 auxiliary file: kap05.aux
 A level-1 auxiliary file: zaver.aux
 A level-1 auxiliary file: literatura.aux
 The style file: unsrt.bst
 Database file #1: literatura.bib
-You've used 7 entries,
+You've used 8 entries,
             1791 wiz_defined-function locations,
-            502 strings with 4339 characters,
-and the built_in function-call counts, 1313 in all, are:
-= -- 119
-> -- 42
+            509 strings with 4490 characters,
+and the built_in function-call counts, 1435 in all, are:
+= -- 129
+> -- 46
 < -- 1
-+ -- 18
-- -- 11
-* -- 61
-:= -- 220
-add.period$ -- 22
-call.type$ -- 7
++ -- 20
+- -- 12
+* -- 64
+:= -- 240
+add.period$ -- 25
+call.type$ -- 8
 change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 70
-empty$ -- 137
-format.name$ -- 11
-if$ -- 302
+cite$ -- 8
+duplicate$ -- 77
+empty$ -- 152
+format.name$ -- 12
+if$ -- 329
 int.to.chr$ -- 0
-int.to.str$ -- 7
+int.to.str$ -- 8
 missing$ -- 9
-newline$ -- 38
-num.names$ -- 7
-pop$ -- 21
+newline$ -- 43
+num.names$ -- 8
+pop$ -- 24
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 29
+skip$ -- 32
 stack$ -- 0
 substring$ -- 56
-swap$ -- 14
+swap$ -- 16
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 11
-width$ -- 8
-write$ -- 78
+while$ -- 12
+width$ -- 9
+write$ -- 88

@@ -55,6 +55,7 @@
 \usepackage{dcolumn}        % lepší zarovnání sloupců v tabulkách
 \usepackage{booktabs}       % lepší vodorovné linky v tabulkách
 \usepackage{paralist}       % lepší enumerate a itemize
+\usepackage{colortbl}			%tabulka
 \usepackage[usenames]{xcolor}  % barevná sazba
 
 %%% Údaje o práci
@@ -94,12 +95,12 @@
 % Nepovinné poděkování (vedoucímu práce, konzultantovi, tomu, kdo
 % zapůjčil software, literaturu apod.)
 \def\Podekovani{%
-Poděkování.
+Děkuji doc. Mgr. Robertu Šámalovi, Ph.D., vedoucímu práce, za ochotu, trpělivost, odborné rady a čas, které mi věnoval. Za výběr tématu a připomínky při řešení i sepisování práce.
 }
 
 % Abstrakt (doporučený rozsah cca 80-200 slov; nejedná se o zadání práce)
 \def\Abstrakt{%
-Abstrakt.
+Pro konkrétní nakreslení rovinného grafu definujme posloupnost $(p_k)=(p_3,p_4,\dots)$ počtu stěn velikosti $k$ -- $k$-úhelníků. Z důsledku Eulerova vzorce o rovinných grafech pro kubické grafy splňuje $p$ vztah $\sum_{k \geq 3}{(6-k)p_k}=12$. Je celkem přirozené ptát se, jak vypadají $p$, pro které existuje odpovídající graf. Eberhard ukázal, že pokud $p$ vyhovuje důsledku Eulerova vzorce, pak existuje rovinný kubický graf, který odpovídá $p$ až na počet šestiúhelníků. VaMos a kol. dokázali obdobu věty, kde je povoleno k $p$ přidat pětiúhelníky a sedmiúhelníky. V této práci na jejich výsledky navazujeme, využijeme jejich důkazové strategie a díky navrženému programu najdeme stavební bloky, které autorům k zobecnění věty chyběly. Výsledkem práce je následující věta: pro každou posloupnost $p$ nezáporných celých čísel splňující důsledek Eulerova vzorce existuje nekonečně mnoho kubických rovinných grafů, které $p$ odpovídají až na $r$-úhelníky a $s$-úhelníky, pro každou z dvojic splňující $r,s \in \mathbb{N}, s<6<r<14 $ a $ s$, $r$ jsou nesoudělné.
 }
 \def\AbstraktEN{%
 Abstract.
@@ -107,10 +108,10 @@ Abstract.
 
 % 3 až 5 klíčových slov (doporučeno), každé uzavřeno ve složených závorkách
 \def\KlicovaSlova{%
-{klíčová} {slova}
+{kubické grafy} {rovinné grafy} {Eberhardova věta} {kreslení grafů} 
 }
 \def\KlicovaSlovaEN{%
-{key} {words}
+{cubic graphs} {planar graphs} {Eberhard's theorem} {graph drawing}
 }
 
 %% Balíček hyperref, kterým jdou vyrábět klikací odkazy v PDF,
@@ -136,6 +137,7 @@ Abstract.
 \include{kap02}
 \include{kap03}
 \include{kap04}
+\include{kap05}
 
 \include{zaver}
 

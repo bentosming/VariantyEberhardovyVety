@@ -37,4 +37,10 @@ W.~T. Tutte.
 \newblock {\em Proceedings of the London Mathematical Society}, s3-13:743--767,
   1963.
 
+\bibitem{sagemath}
+{The Sage Developers}.
+\newblock {\em {S}ageMath, the {S}age {M}athematics {S}oftware {S}ystem
+  ({V}ersion 8.1)}, 2017.
+\newblock {\tt http://www.sagemath.org}.
+
 \end{thebibliography}
