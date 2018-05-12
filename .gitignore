@@ -1,5 +1,5 @@
 
-*.aux
-*.aux
-*.out
-*.log
+cs/*.aux
+cs/*.aux
+cs/*.out
+cs/*.log
