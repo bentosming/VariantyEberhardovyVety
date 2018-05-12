@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  12 MAY 2018 02:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.3.17)  12 MAY 2018 14:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2505,44 +2505,45 @@ ction.pdf>]
 
  (./kap04.tex
 Kapitola 4.
-<../img/sageplot.pdf, id=328, 271.03204pt x 285.7636pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
+
+ []
+
+[12
+
+
+
+]
+<../img/sageplot.pdf, id=335, 271.03204pt x 285.7636pt>
 File: ../img/sageplot.pdf Graphic file (type pdf)
 <use ../img/sageplot.pdf>
-Package pdftex.def Info: ../img/sageplot.pdf  used on input line 22.
+Package pdftex.def Info: ../img/sageplot.pdf  used on input line 28.
 (pdftex.def)             Requested size: 170.71652pt x 179.99275pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../img/planar.pdf, id=331, 285.7636pt x 285.7636pt>
+<../img/planar.pdf, id=338, 285.7636pt x 285.7636pt>
 File: ../img/planar.pdf Graphic file (type pdf)
 <use ../img/planar.pdf>
-Package pdftex.def Info: ../img/planar.pdf  used on input line 29.
+Package pdftex.def Info: ../img/planar.pdf  used on input line 35.
 (pdftex.def)             Requested size: 170.71652pt x 170.72255pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../img/Triarc15150{4,7}__v37.png, id=332, 1229.59375pt x 1209.51875pt>
+<../img/Triarc15150{4,7}__v37.png, id=339, 1229.59375pt x 1209.51875pt>
 File: ../img/Triarc15150{4,7}__v37.png Graphic file (type png)
 <use ../img/Triarc15150{4,7}__v37.png>
-Package pdftex.def Info: ../img/Triarc15150{4,7}__v37.png  used on input line 3
-6.
+Package pdftex.def Info: ../img/Triarc15150{4,7}__v37.png  used on input line 4
+2.
 (pdftex.def)             Requested size: 170.71652pt x 167.92883pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../img/tutteplot.pdf, id=334, 284.60193pt x 285.7636pt>
+<../img/tutteplot.pdf, id=341, 284.60193pt x 285.7636pt>
 File: ../img/tutteplot.pdf Graphic file (type pdf)
 <use ../img/tutteplot.pdf>
-Package pdftex.def Info: ../img/tutteplot.pdf  used on input line 43.
+Package pdftex.def Info: ../img/tutteplot.pdf  used on input line 49.
 (pdftex.def)             Requested size: 170.71652pt x 171.41586pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [12
-
-
-
-] [13 <../img/sageplot.pdf> <../img/planar.pdf
+) [13 <../img/sageplot.pdf> <../img/planar.pdf
 
 pdfTeX warning: pdflatex.exe (file ../img/planar.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
@@ -2616,10 +2617,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 175.
  ) 
 Here is how much of TeX's memory you used:
- 15626 strings out of 492982
- 212546 string characters out of 6136225
- 286332 words of memory out of 5000000
- 18758 multiletter control sequences out of 15000+600000
+ 15628 strings out of 492982
+ 212567 string characters out of 6136225
+ 286331 words of memory out of 5000000
+ 18759 multiletter control sequences out of 15000+600000
  60651 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,10n,35p,1190b,2256s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2639,9 +2640,9 @@ blic/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
 <c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2017/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2017/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on prace.pdf (24 pages, 882240 bytes).
+Output written on prace.pdf (24 pages, 883992 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
+ 558 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
  196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

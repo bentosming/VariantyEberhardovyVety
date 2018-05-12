@@ -14,9 +14,15 @@ Nejuspokojivější nalezenou možností je Tuttův (barycentrický) algoritmus.
 
 Aby mohl algoritmus dobře fungovat, je nutné, aby graf byl 3-souvislý (že jde i o postačující podmínku ukazuje článek  \cite{Tutte}). Pokud by nebyl 3-souvislý, pak vrcholy komponenty, která by po odebrání dvou vrcholů byla oddělena od zbytku grafu a neobsahovala by pevné vrcholy, budou ležet v jedné přímce.
 
-Pro převedení grafu na 3-souvislý stačí do každé vnitřní stěny vložit nový vrchol a spojit ho se všemi vrcholy dané stěny. Ze způsobu, kterým graf vzniká, víme, že je 2-souvislý. Uvažujme nyní situaci po odebrání dvou vrcholů, které způsobí rozpadnutí grafu na více komponent. V každé nově vzniklé komponentě je vrchol, který je nově ve \uv{vnější stěně} a před odebráním byl ve stěně, ve které je i jiný vrchol než $u$ a $v$. To znamená, že po přidání vrcholů pro stěny bude jedním z nich spojen s další komponentou a tedy bude 3-souvislý.  TODO!! není pravda
+\begin{tvrz} \label{prevodNa3Spoj}
+Mějme graf $G=(V,E)$ a seznam jeho stěn $F$, oboje získané algoritmem z Kapitoly \ref{resitko}. Pro každou stěnu $f \in F$ vytvořme nový vrchol $v_f$ a buď $V^*$ množina těchto vrcholů.  Pak graf $G^* = (V \cup V^*, E \cup \lbrace \lbrace u,v \rbrace \mid u_f \in V^*, v \in f, f \in F\rbrace$ je 3-souvislý.
+\end{tvrz}
 
-V našem případě za pevné vrcholy volíme vrcholy vnější stěny, které jsou rozmístěné na kružnici a podle konkrétního grafu je pak možné nastavit váhy jednotlivých vrcholů. Obecně se pro dostatečně malé grafy (do 40-ti vrcholů) osvědčila lineární závislost váhy na pořadí přidání vrcholu do grafu, nejdříve přidaný je nejtěžší.
+\begin{dukaz}
+Pro spor nechť jsou vrcholy $u,v  \in V\cup V^*$ takové, že po jejich odebrání se graf $G^*$ rozpadne na více komponent.  Ze způsobu, kterým graf vzniká, víme, že je 2-souvislý, a proto ani jeden z $u,v$ není z $V^*$. Označme vrcholy $a,b$, mezi kterými po odebrání $u,v$ nevede cesta, nechť $P$ je cesta, která je spojuje v $G^*$ a bez újmy na obecnosti díky 2-souvislosti nechť $u \in P$ a $v \notin P$. Pak vrcholy těsně před a po $u$ v $P$ sdílí v $G$ nějakou stěnu $f$ (protože v $G$ mají vrcholy stupeň nejvýše 3) a tedy lze P upravit vyměněním $u$ za $v_f$, která spojuje $a$ a $b$ v grafu po odebrání $u,v$, což je spor s volbou $a,b$.
+\end{dukaz}
+
+Pro převedení grafu na 3-souvislý stačí tedy do každé stěny vložit nový vrchol a spojit ho se všemi vrcholy dané stěny. Pak zbývá zvolit pevné vrcholy -- v našem případě volíme vrcholy původní vnější stěny, které rozmístíme na kružnici a podle konkrétního grafu je pak možné nastavit váhy jednotlivých vrcholů. Obecně se pro dostatečně malé grafy (do 40-ti vrcholů) osvědčila lineární závislost váhy na pořadí přidání vrcholu do grafu, nejdříve přidaný je nejtěžší.
 
 \begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/sageplot}

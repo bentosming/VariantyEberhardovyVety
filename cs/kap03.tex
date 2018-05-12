@@ -1,7 +1,7 @@
 %%% Fiktivní kapitola s ukázkami tabulek, obrázků a kódu
 
 \chapter{Řešítko} \label{resitko}
-Abychom mohli dokončit důkaz některých instancí hypotézy \ref{veta02:hypoteza}, potřebujeme získat požadované stavební bloky. Nabízí se naprogramovat řešítko, které bude umět alespoň některé typy hledaných grafů najít. Hlavním cílem této práce bylo takový program připravit a pomocí něj získat lepší představu o potenciálu uvedené konstrukce důkazu.
+Abychom mohli dokončit důkaz některých instancí Hypotézy \ref{veta02:hypoteza}, potřebujeme získat požadované stavební bloky. Nabízí se naprogramovat řešítko, které bude umět alespoň některé typy hledaných grafů najít. Hlavním cílem této práce bylo takový program připravit a pomocí něj získat lepší představu o potenciálu uvedené konstrukce důkazu.
 
 \section{Algoritmus}
 
@@ -17,7 +17,7 @@ Postup hledání původně imitoval lidské pokusy o řešení problému:
 \item V situaci, kdy nelze dál nic spojit, nebo je jasné, že graf nemůže vyhovovat parametrům, se vrátit podle uvážení zpět.
 \end{enumerate}
 
-Část běhu algoritmu je znázorněna na obrázku \ref{obr03:reseni}, nejsou v něm zaznamenány \uv{slepé uličky}.
+Část běhu algoritmu je znázorněna na Obrázku \ref{obr03:reseni}, nejsou v něm zaznamenány \uv{slepé uličky}.
 
 Kdybychom chtěli znát jen \uv{ano/ne} odpověď, jestli graf existuje, nebylo by vůbec třeba si pamatovat celý rozpracovaný graf, stačilo by pracovat s hranicemi, které navíc stačí reprezentovat jako binární číslo. Výsledkem by pak mohla být jen posloupnost hranic, kterými se prošlo před uzavřením grafu, nebo samotné \uv{ano/ne}. Překvapivě obtížné je pak z této posloupnosti nestrojově získat skutečný graf, proto program nabízí i možnost graf dodatečně rekonstruovat podle prošlých stavů.
 
@@ -45,7 +45,7 @@ Při výpočtu reprezentace podle definice hledáme maximum přes $2 |V(C)|$ hod
 Každý vrchol v C má dva sousedy, tedy v (multi)množině, ze které hledáme řetězce je $2 |V(C)|$ (ne nutně různých) hodnot. Odpovídá to představě, že zkoušíme začít v každém vrcholu a čteme v obou směrech. Vzhledem k tomu, že $I\neq \emptyset$, je v každém přečteném řetězci alespoň jedna jednička. Hledání maxima zajistí, že se upřednostní řetězec, který jedničkou začíná (ten je dostupný, protože se začínalo číst i z vrcholů, které jsou v $I$).  
 \end{dukaz}
 
-Pro lepší představu přikládáme posloupnost hranic a jejich reprezentací s vizualizací na obrázku \ref{obr03:reseni}, která řeší (4,4,3)$\lbrace$4,7$\rbrace$-triark. 
+Pro lepší představu přikládáme posloupnost hranic a jejich reprezentací s vizualizací na Obrázku \ref{obr03:reseni}, která řeší (4,4,3)$\lbrace$4,7$\rbrace$-triark. 
 
 \begin{figure}[h!]\centering
 \includegraphics[width=\textwidth]{../img/reseni}
@@ -63,9 +63,9 @@ Podle předchozí kapitoly pro dokončení důkazu pro konkrétní dvojici $p$ a
 \item[(iv)] prstenec, který dokáže spojit dva stejně velké, rovnostranné triarky.
 \end{description}
 
-Pro dané $k$ získáme grafy (i) a (ii) z řešítka hned. Pro zbylé je nutné pomoci si konstrukcí, která se ukázala jako úspěšná pro některé neutrální sekvence. O výsledcích získaných z programu píšeme v kapitole \ref{vysledky}.
+Pro dané $k$ získáme grafy (i) a (ii) z řešítka hned. Pro zbylé je nutné pomoci si konstrukcí, která se ukázala jako úspěšná pro některé neutrální sekvence. O výsledcích získaných z programu píšeme v Kapitole \ref{vysledky}.
 
-Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít právě jednu stěnu délky $p_l$. Spojme proto stěnu s vnější stěnou triarku ručně a ptejme se na výplň vzniklých oblastí $A$ a $B$. Ke spojení použijeme $l$ kopií řetízku $R$, každý napojíme na jeden z vrcholů jádra a druhé konce spojíme s \uv{in} vrcholy základny triarku. V řetízku navíc fixujeme, ve které straně od něj budou mít které jeho vrcholy třetího souseda (znázorněno šedě v obrázku \ref{obr03:konstrukceiii}). Konstrukce je obecná pro všechny přípustné hodnoty $l$, tedy není závislá na volbě $p$. Nevíme ani o důvodu, který by implikoval nemožnost jejího využití pro libovolné $q$.
+Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít právě jednu stěnu délky $p_l$. Spojme proto stěnu s vnější stěnou triarku ručně a ptejme se na výplň vzniklých oblastí $A$ a $B$. Ke spojení použijeme $l$ kopií řetízku $R$, každý napojíme na jeden z vrcholů jádra a druhé konce spojíme s \uv{in} vrcholy základny triarku. V řetízku navíc fixujeme, ve které straně od něj budou mít které jeho vrcholy třetího souseda (znázorněno šedě v Obrázku \ref{obr03:konstrukceiii}). Konstrukce je obecná pro všechny přípustné hodnoty $l$, tedy není závislá na volbě $p$. Nevíme ani o důvodu, který by implikoval nemožnost jejího využití pro libovolné $q$.
 
 \begin{figure}[h]\centering
 \includegraphics[width = 80mm]{../img/iii-construction}
@@ -73,7 +73,7 @@ Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít pr�
 \label{obr03:konstrukceiii}
 \end{figure}
 
-Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí - $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
+Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí - $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na Obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
 
 Tyto konstrukce jsou v řešítku implementovány. Výsledný program tedy na vstupu očekává seznam velikostí stěn, které mohou tvořit neutrální posloupnost. Pokud pro daný seznam stěn existuje více neutrálních posloupností, využije program pro každý pomocný graf libovolnou z nich.
 
