@@ -7,7 +7,7 @@ Mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální poslou
 \end{hypot}
 
 
-V článku \citep{Samal09} autoři naznačují konstrukci důkazu, za předpokladu, že existují nějaké pomocné grafy. V další kapitole představíme způsob, jak takové grafy hledat. Teď se zaměříme na důkaz samotný, respektive nejprve představíme graf, který v důkazu pomáhal již Eberhardovi.
+V článku \cite{Samal09} autoři naznačují strategii důkazu, za předpokladu, že existují nějaké pomocné grafy. V další kapitole představíme způsob, jak takové grafy hledat. Teď se zaměříme na důkaz samotný, respektive nejprve představíme graf, který v důkazu pomáhal již Eberhardovi.
 
 \section{Triarky a operace s nimi}
 
@@ -40,9 +40,7 @@ Mohli bychom ale chtít spojovat triarky tak, aby výsledkem byl opět triark. M
 \label{obr22:T-T}
 \end{figure}
 
-A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Pro lepší představu si prstenec představujme jako plášť trojbokého hranolu, triarky jako dolní a boční podstavu. Na všech podstavných hranách dojde ke splynutí vrcholů triarků s vrcholy prstence a vznikne graf nakreslitelný na hranol (tedy tedy i na sféru), takže výsledkem je rovinný graf. Zadefinujme prstenec formálně. Prstenec je souvislý graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačné znamená záměna dvoj- a tří- vaznosti vrcholů. Pro případné dokreslení můžeme použít Obrázek \ref{obr03:konstrukceiv}, na kterém je speciální druh prstence. 
-
-TODo provazba na definici prstence, chybí kubičnost a rovinnost
+A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Pro lepší představu si prstenec představujme jako plášť trojbokého hranolu, triarky jako dolní a boční podstavu. Na všech podstavných hranách dojde ke splynutí vrcholů triarků s vrcholy prstence a vznikne graf nakreslitelný na hranol (tedy tedy i na sféru), takže výsledkem je rovinný graf. Zadefinujme prstenec formálně. Prstenec je souvislý kubický rovinný graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačné znamená záměna dvoj- a tří- vaznosti vrcholů. Pro případné dokreslení můžeme použít Obrázek \ref{obr03:konstrukceiv}, na kterém je speciální druh prstence. 
 
 %\begin{figure}[h!]\centering
 %\includegraphics[height=40mm]{../img/T-G}
@@ -59,7 +57,7 @@ Mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální poslou
 \begin{description}
 \item[(i)] ($k$, $k$, $k$)$Q$-triark;
 \item[(ii)] ($k$, $k$, $k-1$)$Q$-triark;
-\item[(iii)] rovnoramenný $Q\cup \lbrace l \rbrace$-triark, délky jehož stejných stran jsou dělitelné $k$ a který obsahuje právě jednu stěnu velikosti $l$ pro každé nenulové $p_l$ v $p$, této stěně říkejme \textbf{jádro} triarku;
+\item[(iii)] $\forall p_l \neq 0$ rovnoramenný $Q\cup \lbrace l \rbrace$-triark, délky jehož stejných stran jsou dělitelné $k$ a který obsahuje právě jednu stěnu velikosti $l$, této stěně říkejme \textbf{jádro} triarku;
 \item[(iv)] $\forall t \in \mathbb{N}, t>1$ $Q$-prstenec, který dokáže spojit dva ($t$, $t$, $t$)-triarky.
 \end{description} 
 
@@ -67,7 +65,7 @@ Pak existuje takové přirozené $n$, že $p+nq$ je realizovatelná.
 \end{veta}
 
 
-Myšlenka důkazu pak není příliš složitá: každou stěnu ze zadané posloupnosti $p$ zabalíme do triarku (iii), připravíme si pomocné lepicí a zkrášlující prvky (ii), díky kterým získáme jediný velký rovnostranný triark. K němu zkonstruujeme ještě jeden se stejně dlouhými (i) a pomocným prstencem je spojíme v kýžený graf (iv). Všechny tyto pomocné objekty jsou totiž (kromě jader) jen ze stěn, které jsou v zadané neutrální posloupnosti, lepicí operace zachovávají kubičnost uvnitř grafu a prstenec pak spojí dva triarky v hledaný kubický graf.
+Myšlenka důkazu pak není příliš složitá: každou stěnu ze zadané posloupnosti $p$ zabalíme do triarku (iii), připravíme si pomocné lepicí a zkrášlující prvky (ii), díky kterým získáme jediný velký rovnostranný triark. K němu zkonstruujeme ještě jeden se stejně dlouhými stranami (i) a pomocným prstencem je spojíme v kýžený graf (iv). Všechny tyto pomocné objekty jsou totiž rovinné a (kromě jader) jen ze stěn, které jsou v zadané neutrální posloupnosti. Lepicí operace zachovávají kubičnost uvnitř grafu a prstenec pak spojí dva triarky v hledaný kubický graf.
 \begin{dukaz}
 Nejprve slepíme dva ($k$, $k$, $k-1$)-triarky za stěnu délky $k$ a získáme rovnoběžník se všemi stranami délky $k$. A díky slepování můžeme získat i libovolný rovnoběžník o rozměrech $mk$, $lk$ pro $m$, $l$ přirozená. Poté postupně spojujeme jednotlivé jádrové triarky za pomoci příslušného lichoběžníku, dokud nezískáme jediný triark, který obsahuje všechny stěny z $P$.
 

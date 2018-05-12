@@ -1,7 +1,7 @@
 %%% Fiktivní kapitola s ukázkami tabulek, obrázků a kódu
 
 \chapter{Řešítko} \label{resitko}
-Abychom mohli dokončit důkaz některých instancí Hypotézy \ref{veta02:hypoteza}, potřebujeme získat požadované stavební bloky. Nabízí se naprogramovat řešítko, které bude umět alespoň některé typy hledaných grafů najít. Hlavním cílem této práce bylo takový program připravit a pomocí něj získat lepší představu o potenciálu uvedené konstrukce důkazu.
+Abychom mohli dokončit důkaz některých instancí Hypotézy \ref{veta02:hypoteza}, potřebujeme získat požadované stavební bloky. Nabízí se naprogramovat řešítko, které bude umět alespoň některé typy hledaných grafů najít. Hlavním cílem této práce bylo takový program připravit a pomocí něj získat lepší představu o potenciálu uvedené strategie důkazu.
 
 \section{Algoritmus}
 
@@ -69,11 +69,11 @@ Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít pr�
 
 \begin{figure}[h]\centering
 \includegraphics[width = 80mm]{../img/iii-construction}
-\caption{Konstrukce grafu typu (iii) pomocí řetízků $R$, konkrétně ($mk$,$mk$,$l+1$)-triarku s $l$-úhelníkem $P_l$ jako jádro.}
+\caption{Konstrukce grafu typu (iii) pomocí řetízků $R$, konkrétně ($mk$, $mk$, $l+1$)-triarku s $l$-úhelníkem $P_l$ jako jádro.}
 \label{obr03:konstrukceiii}
 \end{figure}
 
-Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí - $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na Obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
+Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí -- $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na Obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
 
 Tyto konstrukce jsou v řešítku implementovány. Výsledný program tedy na vstupu očekává seznam velikostí stěn, které mohou tvořit neutrální posloupnost. Pokud pro daný seznam stěn existuje více neutrálních posloupností, využije program pro každý pomocný graf libovolnou z nich.
 
