@@ -4,7 +4,7 @@ Díky programu popsanému v předchozí kapitole bylo možné zkusit dokončit d
 
 Vzhledem k výpočetním omezením programu jsme zkusili dokončit důkaz věty pouze pro takové neutrální posloupnosti $q$, že $Q = \lbrace r, s\rbrace$ a navíc $r<s<18$. Seznam posloupností, pro které program nalezl potřebné grafy je v Tabulce \ref{obr03:tabvysledky}. Pokud bychom se omezili na rozsah $r<s<14$, pak program grafy nalezl právě tehdy, když $r$ a $s$ jsou nesoudělná čísla.
 
-\begin{figure}[h]\centering
+\begin{table}[h]\centering
 \begin{tabular}{ c | c c c c c c c c c c c }
   {$r\setminus s$} & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\ \hline
   3 & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ &  & $\bullet$ & $\bullet$ \\
@@ -13,40 +13,79 @@ Vzhledem k výpočetním omezením programu jsme zkusili dokončit důkaz věty 
 \end{tabular}
 \caption{Úplný výčet dvojic stran, pro které se podařilo dokončit důkaz Věty \ref{veta02:hypoteza}.}
 \label{obr03:tabvysledky}
-\end{figure}
+\end{table}
+
+Formulujme výsledek do věty.
+
+\begin{veta} \label{veta:vysledek}
+Pro každou neutrální posloupnost $q$, která má nenulové hodnoty pouze pro $q_r$ a $q_s$, kde $r,s$ je vyznačená dvojice z Tabulky \ref{obr03:tabvysledky}, platí následující: 
+mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$, pak existuje nekonečně takových přirozených $n$, že $p+nq$ je realizovatelná.
+\end{veta}
 
 
-TODO poznamenat, že to jsou hodnoty mk
+\begin{table}[h]\centering
+\begin{tabular}{| c || c | c | c |}
+\hline 
+{$s\setminus r$} & 3 &4&5 \\ \hline \hline
 
-\begin{figure}[h]\centering
-\begin{tabular}{| c | c | c | c |}
-\hline
-{$s\setminus r$} & 3 &4&5 \\ \hline
- 7 & \cellcolor{lightgray}Nalezeno & \cellcolor{lightgray}Nalezeno & \cellcolor{lightgray}Nalezeno\\
- & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3,4,5,6,7\\
- & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3,4,5,6,7\\
- & \cellcolor{lightgray}AB : 101010 & \cellcolor{lightgray}AB : 101010 & \cellcolor{lightgray}AB : 01001101\\
+7 & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3\\
+ & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3\\
+ & \cellcolor{lightgray}AB : 101010 & \cellcolor{lightgray}AB : 101010 & \cellcolor{lightgray}AB : 101010\\
  & \cellcolor{lightgray}CD : 101010 & \cellcolor{lightgray}CD : 101010 & \cellcolor{lightgray}CD : 1010\\\hline
 
-8 & \cellcolor{lightgray}Nalezeno & Nenalezeno & \cellcolor{lightgray}Nalezeno\\
- & \cellcolor{lightgray}(i): 3 & (i): 3,5,6,9 & \cellcolor{lightgray}(i): 3\\
+8 & \cellcolor{lightgray}(i): 3 & (i): 3,5,6,9 & \cellcolor{lightgray}(i): 3\\
  & \cellcolor{lightgray}(ii): 3 & (ii):  & \cellcolor{lightgray}(ii): 3\\
  & \cellcolor{lightgray}AB : 1010 & AB :  & \cellcolor{lightgray}AB : 1010\\
  & \cellcolor{lightgray}CD : 1010 & CD :  & \cellcolor{lightgray}CD : 1010\\\hline
 
-9 & Nenalezeno & \cellcolor{lightgray}Nalezeno & Nenalezeno\\
- & (i): 3,4,8 & \cellcolor{lightgray}(i): 3 & (i): 3,4,5,6,7,8,9,10\\
- & (ii):  & \cellcolor{lightgray}(ii): 3 & (ii): 3,4,5,6,7,8,9,10\\
+9 & (i): 3,4,8 & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3\\
+ & (ii):  & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3\\
+ & AB :  & \cellcolor{lightgray}AB : 1010 & \cellcolor{lightgray}AB : 1010\\
+ & CD :  & \cellcolor{lightgray}CD : 1010 & \cellcolor{lightgray}CD : 1010\\\hline
+
+10 & \cellcolor{lightgray}(i): 3 & (i): 3,4,5,6,7,8,9,10 & (i): 4,5,9,10\\
+ & \cellcolor{lightgray}(ii): 3 & (ii):  & (ii): \\
+ & \cellcolor{lightgray}AB : 1010 & AB :  & AB : \\
+ & \cellcolor{lightgray}CD : 1010 & CD : 1010 & CD : \\\hline
+
+11 & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3\\
+ & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3\\
+ & \cellcolor{lightgray}AB : 1010 & \cellcolor{lightgray}AB : 1010 & \cellcolor{lightgray}AB : 1010\\
+ & \cellcolor{lightgray}CD : 1010 & \cellcolor{lightgray}CD : 1010 & \cellcolor{lightgray}CD : 1010\\\hline
+
+12 & (i): 3,4,5,6,7,8,9,10 & (i): 5,6 & \cellcolor{lightgray}(i): 3\\
+ & (ii):  & (ii):  & \cellcolor{lightgray}(ii): 3\\
+ & AB :  & AB :  & \cellcolor{lightgray}AB : 1010\\
+ & CD :  & CD :  & \cellcolor{lightgray}CD : 1010\\\hline
+
+13 & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3 & \cellcolor{lightgray}(i): 3\\
+ & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3 & \cellcolor{lightgray}(ii): 3\\
+ & \cellcolor{lightgray}AB : 1010 & \cellcolor{lightgray}AB : 1010 & \cellcolor{lightgray}AB : 1010\\
+ & \cellcolor{lightgray}CD : 1010 & \cellcolor{lightgray}CD : 1010 & \cellcolor{lightgray}CD : 1010\\\hline
+
+14 & \cellcolor{lightgray}(i): 3 & (i): 3,4,5,6,7,8,9,10 & (i): \\
+ & \cellcolor{lightgray}(ii): 3 & (ii):  & (ii): \\
+ & \cellcolor{lightgray}AB : 1010 & AB :  & AB : \\
+ & \cellcolor{lightgray}CD : 1010 & CD : 1010 & CD : \\\hline
+
+15 & (i): 3,4,7,8 & \cellcolor{lightgray}(i): 3 & (i): 9,10\\
+ & (ii):  & \cellcolor{lightgray}(ii): 3 & (ii): \\
  & AB :  & \cellcolor{lightgray}AB : 1010 & AB : \\
  & CD :  & \cellcolor{lightgray}CD : 1010 & CD : \\\hline
 
+16 & \cellcolor{lightgray}(i): 3 & (i): 3,5,6,8,9 & (i): \\
+ & \cellcolor{lightgray}(ii): 3 & (ii):  & (ii): \\
+ & \cellcolor{lightgray}AB : 1010 & AB :  & AB : \\
+ & \cellcolor{lightgray}CD : 1010 & CD :  & CD : \\\hline
 
+17 & \cellcolor{lightgray}(i): 3 & (i):  & (i): \\
+ & \cellcolor{lightgray}(ii): 3 & (ii):  & (ii): \\
+ & \cellcolor{lightgray}AB : 1010 & AB :  & AB : \\
+ & \cellcolor{lightgray}CD : 1010 & CD :  & CD : \\\hline
 
 \end{tabular}
-\caption{Úplný výčet dvojic stran, pro které se podařilo dokončit důkaz Věty \ref{veta02:hypoteza}.}
-\label{obr03:tabvysledky}
-\end{figure}
-
-TODO fakt větu jako výsledek!!
+\caption{Přehled nalezených grafů. Ohraničené buňky kódují výsledek pro danou dvojici $r$, $s$. Pokud jsou grafy nalezené, je buňka šedá. První řádek buňky: $k$ pro nalezené ($k$, $k$, $k$)-triarky; druhý: $k$ pro nalezené ($k$, $k$, $k$)- a zároveň ($k$, $k$, $k-1$)-triarky; třetí: řetízek pro konstrukci grafu (iii), kde $mk$ odpovídá poslední hodnotě v druhém řádku; čtvrtý: řetízek pro graf (iv).}
+\label{obr03:tabvysledkycele}
+\end{table}
 
 Všechny potřebné grafy pro doložení důkazu jsou k práci přiloženy. TODO přiložit

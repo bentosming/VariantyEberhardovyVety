@@ -27,6 +27,12 @@ Aby toto prohledávání fungovalo dobře, je třeba trochu zkomplikovat repreze
 
 TODO pseudokód
 
+\begin{figure}[h!]\centering
+\includegraphics[width=\textwidth]{../img/reseni}
+\caption{Možný postup vyplnění (4,4,3)$\lbrace$4,7$\rbrace$-triarku. Hodnota pod grafem vždy odpovídá reprezentaci aktuální, tučně zvýrazněné, hranice.}
+\label{obr03:reseni}
+\end{figure}
+
 \begin{definice}[Hranice a její reprezentace]\label{def01:1}
 Dvojici cyklus $C$ a množina $I \subseteq V(C)$ nazveme hranicí $H$. Množina $I$ jsou právě ty vrcholy, které ve výsledném vyplnění musí mít dalšího souseda. Pokud  $I = \emptyset$, mluvíme o hranici přímo jako o stěně a nedefinujeme pro ni reprezentaci.
 
@@ -35,7 +41,8 @@ Definujme funkci $f(H,(u,v))$ jako charakteristický vektor množiny $I$ násled
 Reprezentací hranice je hodnota $\max_{\lbrace u, v \rbrace \in E(C)} {f(H,(u,v))}$.
 \end{definice}
 
-Objasněme pojem opět jednoduchým pozorováním.
+Objasněme pojem opět jednoduchým pozorováním a Obrázkem \ref{obr03:reseni} -- posloupností hranic s jejich reprezentacemi, která řeší (4,4,3)$\lbrace$4,7$\rbrace$-triark. 
+
 
 \begin{tvrz}
 Při výpočtu reprezentace podle definice hledáme maximum přes $2 |V(C)|$ hodnot a reprezentace každé hranice začíná znakem 1.
@@ -45,15 +52,10 @@ Při výpočtu reprezentace podle definice hledáme maximum přes $2 |V(C)|$ hod
 Každý vrchol v C má dva sousedy, tedy v (multi)množině, ze které hledáme řetězce je $2 |V(C)|$ (ne nutně různých) hodnot. Odpovídá to představě, že zkoušíme začít v každém vrcholu a čteme v obou směrech. Vzhledem k tomu, že $I\neq \emptyset$, je v každém přečteném řetězci alespoň jedna jednička. Hledání maxima zajistí, že se upřednostní řetězec, který jedničkou začíná (ten je dostupný, protože se začínalo číst i z vrcholů, které jsou v $I$).  
 \end{dukaz}
 
-Pro lepší představu přikládáme posloupnost hranic a jejich reprezentací s vizualizací na Obrázku \ref{obr03:reseni}, která řeší (4,4,3)$\lbrace$4,7$\rbrace$-triark. 
-
-\begin{figure}[h!]\centering
-\includegraphics[width=\textwidth]{../img/reseni}
-\caption{Možný postup vyplnění (4,4,3)$\lbrace$4,7$\rbrace$-triarku. Hodnota pod grafem vždy odpovídá reprezentaci aktuální, tučně zvýrazněné, hranice.}
-\label{obr03:reseni}
-\end{figure}
-
 Pro jistotu poznamenejme, že pokud program hledaný graf nenašel, může, ale nemusí to znamenat, že neexistuje.
+
+
+\bigskip
 
 Podle předchozí kapitoly pro dokončení důkazu pro konkrétní dvojici $p$ a $q$ a nějaké přirozené $k$ potřebujeme tyto čtyři typy grafů:
 \begin{description}
@@ -86,6 +88,19 @@ Tyto konstrukce jsou v řešítku implementovány. Výsledný program tedy na vs
 %\newpage 
 
 
-\section{Uživatelská dokumentace/formáty výstupu}
+\section{Program a výstupy} \label{prg&vystupy}
 
-TODO?
+Implementaci výše popsaného algoritmu k práci přikládáme jako spustitelný program (pro Windows) i zdrojové kódy. Jde o standardní konzolovou aplikaci, včetně nápovědy pro použití v podobě \texttt{-h} argumentu při spuštění. Například příloha TODO včetně dat pro Tabulku \ref{obr03:tabvysledkycele} lze vygenerovat argumenty \texttt{-r -l 50000 -ExportAsAll}.
+
+Zastavme se u typů souborů, které program může generovat:
+\begin{description}
+
+\item[Graf] vypíše nalezený graf jako seznam hran
+\item[Hranice] vypíše posloupnost hranic, podle kterých je graf sestaven, příkladem může být Obrázek \ref{obr03:reseni}
+\item[Stěny] vypíše vnitřní stěny grafu, které odpovídají chodu algoritmu a které jinak nemusí být dány jednoznačně
+\item[Graphviz -- neato] vypíše graf v jazyku DOT, navíc rozmístí vrcholy vnější hranice grafu na kružnici
+\item[Tuttovo kreslení] vypíše skript pro SageMath, který graf vykreslí podle barycentrické metody, je v něm připravená funkce pro změnu vah vrcholů
+
+\end{description}
+
+

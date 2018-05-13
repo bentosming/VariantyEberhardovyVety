@@ -31,16 +31,16 @@ E.~Steinitz.
 \newblock {\em Encyclopädie der mathematischen {W}issenschaften, Band 3??},
   ??:1--139, 1922.
 
-\bibitem{Tutte}
-W.~T. Tutte.
-\newblock How to {D}raw a {G}raph.
-\newblock {\em Proceedings of the {L}ondonn {M}athematical {S}ociety},
-  s3-13:743--767, 1963.
-
 \bibitem{sagemath}
 {The Sage Developers}.
 \newblock {\em {S}ageMath, the {S}age {M}athematics {S}oftware {S}ystem
   ({V}ersion 8.1)}, 2017.
 \newblock {\tt http://www.sagemath.org}.
+
+\bibitem{Tutte}
+W.~T. Tutte.
+\newblock How to {D}raw a {G}raph.
+\newblock {\em Proceedings of the {L}ondonn {M}athematical {S}ociety},
+  s3-13:743--767, 1963.
 
 \end{thebibliography}
