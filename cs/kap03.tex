@@ -13,7 +13,7 @@ Postup hledání původně imitoval lidské pokusy o řešení problému:
 \item nakreslit si vnější stěnu,
 \item vybrat si dvojici vrcholů, kterým ještě chybí soused, a spojit je řetízkem vhodné délky (aby nově vzniklá oblast byla stěna a měla velikost z neutrální posloupnosti)
 \item krok 2 opakovat, dokud je místo na papíře.
-\item Když místo dojde, překreslit si nejvnitřnější, zatím neuzavřenou stěnu (budeme mluvit o \textbf{hranici}). Ta se stane \uv{vnější stěnou} na novém papíře a pokračovat od kroku 1.
+\item Když místo dojde, překreslit si nejvnitřnější, zatím neuzavřenou stěnu (budeme mluvit o \textbf{hranici}). Ta se stane \uv{vnější stěnou} na novém papíře a~pokračovat od~kroku 1.
 \item V situaci, kdy nelze dál nic spojit, nebo je jasné, že graf nemůže vyhovovat parametrům, se vrátit podle uvážení zpět.
 \end{enumerate}
 
@@ -34,7 +34,7 @@ TODO pseudokód
 \end{figure}
 
 \begin{definice}[Hranice a její reprezentace]\label{def01:1}
-Dvojici cyklus $C$ a množina $I \subseteq V(C)$ nazveme hranicí $H$. Množina $I$ jsou právě ty vrcholy, které ve výsledném vyplnění musí mít dalšího souseda. Pokud  $I = \emptyset$, mluvíme o hranici přímo jako o stěně a nedefinujeme pro ni reprezentaci.
+Dvojici cyklus $C$ a množina $I \subseteq V(C)$ nazveme hranicí $H$. Množina $I$ jsou právě ty vrcholy, které ve výsledném vyplnění musí mít dalšího souseda. Pokud  $I = \emptyset$, mluvíme o hranici přímo jako o~stěně a~nedefinujeme pro ni reprezentaci.
 
 Definujme funkci $f(H,(u,v))$ jako charakteristický vektor množiny $I$ následně: každý vrchol H popišme buď znakem 1 (jako I v \uv{in} podle orientace pomyslené hrany) nebo 0 (jako 0 v \uv{out}). Hodnota $f(H, (u, v))$, kde $H=(C, I)$, $u, v \in V(C)$ a $ \lbrace u, v \rbrace \in E(C)$, se pak získá zaznamenáním popisků vrcholů $H$, začínaje vrcholem $u$, pokračujíce vrcholem $v$ a dále po hranách $C$. 
 
@@ -57,17 +57,15 @@ Pro jistotu poznamenejme, že pokud program hledaný graf nenašel, může, ale 
 
 \bigskip
 
-Podle předchozí kapitoly pro dokončení důkazu pro konkrétní dvojici $p$ a $q$ a nějaké přirozené $k$ potřebujeme tyto čtyři typy grafů:
+Podle předchozí kapitoly pro dokončení důkazu pro konkrétní dvojici $p$ a~$q$ a~nějaké přirozené $k$ potřebujeme tyto čtyři typy grafů:
 \begin{description}
 \item[(i)] ($k$, $k$, $k$)$Q$-triark;
 \item[(ii)] ($k$, $k$, $k-1$)$Q$-triark;
-\item[(iii)] ($mk$,$mk$,$x$)$Q\cup \lbrace l\rbrace$-triark, kde je právě jedna stěna velikosti $l$;
+\item[(iii)] ($mk$ ,$mk$ ,$x$)$Q\cup \lbrace l\rbrace$-triark, kde je právě jedna stěna velikosti $l$;
 \item[(iv)] prstenec, který dokáže spojit dva stejně velké, rovnostranné triarky.
 \end{description}
 
-Pro dané $k$ získáme grafy (i) a (ii) z řešítka hned. Pro zbylé je nutné pomoci si konstrukcí, která se ukázala jako úspěšná pro některé neutrální sekvence. O výsledcích získaných z programu píšeme v Kapitole \ref{vysledky}.
-
-Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít právě jednu stěnu délky $p_l$. Spojme proto stěnu s vnější stěnou triarku ručně a ptejme se na výplň vzniklých oblastí $A$ a $B$. Ke spojení použijeme $l$ kopií řetízku $R$, každý napojíme na jeden z vrcholů jádra a druhé konce spojíme s \uv{in} vrcholy základny triarku. V řetízku navíc fixujeme, ve které straně od něj budou mít které jeho vrcholy třetího souseda (znázorněno šedě v Obrázku \ref{obr03:konstrukceiii}). Konstrukce je obecná pro všechny přípustné hodnoty $l$, tedy není závislá na volbě $p$. Nevíme ani o důvodu, který by implikoval nemožnost jejího využití pro libovolné $q$.
+Pro dané $k$ získáme grafy (i) a (ii) z řešítka hned. Pro zbylé je nutné pomoci si konstrukcí, která se ukázala jako úspěšná pro některé neutrální sekvence. O~výsledcích získaných z programu píšeme v Kapitole \ref{vysledky}.
 
 \begin{figure}[h]\centering
 \includegraphics[width = 80mm]{../img/iii-construction}
@@ -75,9 +73,10 @@ Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít pr�
 \label{obr03:konstrukceiii}
 \end{figure}
 
-Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí -- $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na Obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
+Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít právě jednu stěnu délky $p_l$. Spojme proto stěnu s vnější stěnou triarku ručně a ptejme se na výplň vzniklých oblastí $A$ a $B$. Ke spojení použijeme $l$ kopií řetízku $R$, každý napojíme na jeden z vrcholů jádra a druhé konce spojíme s \uv{in} vrcholy základny triarku. V řetízku navíc fixujeme, ve které straně od něj budou mít které jeho vrcholy třetího souseda (znázorněno šedě v Obrázku \ref{obr03:konstrukceiii}). Konstrukce je obecná pro všechny přípustné hodnoty $l$, tedy není závislá na volbě $p$. Nevíme ani o důvodu, který by implikoval nemožnost jejího využití pro libovolné $q$.
 
-Tyto konstrukce jsou v řešítku implementovány. Výsledný program tedy na vstupu očekává seznam velikostí stěn, které mohou tvořit neutrální posloupnost. Pokud pro daný seznam stěn existuje více neutrálních posloupností, využije program pro každý pomocný graf libovolnou z nich.
+
+Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí -- $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na Obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
 
 \begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/iv-construction}
@@ -85,12 +84,15 @@ Tyto konstrukce jsou v řešítku implementovány. Výsledný program tedy na vs
 \label{obr03:konstrukceiv}
 \end{figure}
 
+Tyto konstrukce jsou v řešítku implementovány. Výslednému program stačí zadat seznam velikostí stěn, které mohou tvořit neutrální posloupnost. Pokud pro daný seznam stěn existuje více neutrálních posloupností, využije program pro~každý pomocný graf libovolnou z nich.
+
+
 %\newpage 
 
 
 \section{Program a výstupy} \label{prg&vystupy}
 
-Implementaci výše popsaného algoritmu k práci přikládáme jako spustitelný program (pro Windows) i zdrojové kódy. Jde o standardní konzolovou aplikaci, včetně nápovědy pro použití v podobě \texttt{-h} argumentu při spuštění. Například příloha TODO včetně dat pro Tabulku \ref{obr03:tabvysledkycele} lze vygenerovat argumenty \texttt{-r -l 50000 -ExportAsAll}.
+Implementaci výše popsaného algoritmu k práci přikládáme jako spustitelný program (pro Windows) i zdrojové kódy. Jde o standardní konzolovou aplikaci, včetně nápovědy pro použití v podobě \texttt{-h} argumentu při spuštění. Například Příloha \ref{priloha:vysledky} včetně dat pro Tabulku \ref{obr03:tabvysledkycele} lze vygenerovat argumenty \texttt{-r -l 50000 --ExportAsAll}.
 
 Zastavme se u typů souborů, které program může generovat:
 \begin{description}

@@ -2,10 +2,10 @@
 
 \chapter{Pojmy a definice}
 
-Pokud čtenář není seznámen se základy teorie grafů, doporučujeme začít třeba knihou Kapitoly z diskrétní matematiky \cite{Matousek}. Před zadefinováním základní terminologie pro tuto práci dokažme nejprve, jak z Eulerova vzorce získáme \eqref{eq01:neccCond}. 
+Pokud čtenář není seznámen se základy teorie grafů, doporučujeme začít třeba knihou Kapitoly z diskrétní matematiky \cite{Matousek}. Před zadefinováním základní terminologie pro~tuto práci dokažme nejprve, jak z Eulerova vzorce získáme~\eqref{eq01:neccCond}. 
 
 \begin{dukaz}
-Pro každý kubický graf $G = (V,E)$ platí $3 |V| = 2 |E|$. Obecně platí, že počet stěn $s$ můžeme přepsat následovně $s = \sum_{k \geq 3}{p_k}$ a pro rovinné grafy platí i $ \sum_{k \geq 3}{k \cdot p_k}= 2|E|$, protože pokud pro každou stěnu započteme každou její hranu, získáme právě $2|E|$. Úpravou a dosazením do vzorce získáme požadovaný výraz: 
+Pro každý kubický graf $G = (V,E)$ platí $3 |V| = 2 |E|$. Obecně platí, že počet stěn $s$ můžeme přepsat následovně $s = \sum_{k \geq 3}{p_k}$ a pro rovinné grafy platí i~$ \sum_{k \geq 3}{k \cdot p_k}= 2|E|$, protože pokud pro každou stěnu započteme každou její hranu, získáme právě $2|E|$. Úpravou a dosazením do vzorce získáme požadovaný výraz: 
 \begin{align*}
 |V|-|E|+|S|=2 \\ -\frac{1}{3} |E| + s = 2 \\
 -\frac{1}{6} \sum_{k \geq 3}{k \cdot p_k} + \sum_{k \geq 3}{p_k} = 2 \\ 
@@ -29,7 +29,7 @@ Posloupnost $(p_k) = (p_3,p_4,\dots)$ nezáporných celých čísel je přípust
 Posloupnost $(p_k) = (p_3,p_4,\dots)$ nezáporných celých čísel je realizovatelná, pokud existuje konečný rovinný kubický graf, který má právě $p_k$ $k$-úhelníků.
 \end{definice}
 
-Všimněme si, že původní Eberhardova věta, a i mnoho jejích variant, byla formulována pro 3-souvislé grafy, tedy přesněji pro jednoduché konvexní 3-polytopy. Bijekci mezi těmito dvěma strukturami dokázal až o několik desítek let později Steinitz \cite{Steinitz}. 
+Všimněme si, že původní Eberhardova věta, a i mnoho jejích variant, byla formulována pro 3-souvislé grafy, tedy přesněji pro jednoduché konvexní 3-polytopy. Bijekci mezi těmito dvěma strukturami dokázal až o~několik desítek let později Steinitz \cite{Steinitz}. 
 
 Pro ujištění pojmů uveďme následující jednoduché vlastnosti neutrálních, přípustných a realizovatelných posloupností, které využijeme později.
 \begin{tvrz}
@@ -37,7 +37,7 @@ Pro každou neutrální (či přípustnou nebo realizovatelnou) posloupnost $p=(
 \end{tvrz}
 
 \begin{dukaz}
-Neutrální posloupnost $p$ splňuje $\sum_{k \geq 3}{(6-k)p_k}=0$ neboli $\sum_{3 \leq k \leq 5}{(6-k)p_k}=\sum_{k \geq 5}{(k-6)p_k}$. Všechny sčítance na obou stranách výrazu jsou kladné. Hodnota levého součtu tří sčítanců je konečná. Pravý součet má tedy také konečnou hodnotu a navíc mají všechny jeho nenulové sčítance hodnotu alespoň 1. Nenulových hodnot v posloupnosti je tedy pouze konečně. 
+Neutrální posloupnost $p$ splňuje $\sum_{k \geq 3}{(6-k)p_k}=0$, což můžeme upravit na $\sum_{3 \leq k \leq 5}{(6-k)p_k}=\sum_{k \geq 5}{(k-6)p_k}$. Všechny sčítance na obou stranách výrazu jsou kladné. Hodnota levého součtu tří sčítanců je konečná. Pravý součet má tedy také konečnou hodnotu a navíc mají všechny jeho nenulové sčítance hodnotu alespoň 1. Nenulových hodnot v posloupnosti je tedy pouze konečně. 
 \end{dukaz}
 
 \begin{tvrz}\label{veta:posloupnosti}
@@ -49,7 +49,7 @@ Neutrální posloupnost $p$ splňuje $\sum_{k \geq 3}{(6-k)p_k}=0$ neboli $\sum_
 \end{tvrz}
 
 \begin{dukaz}
-Pro ukázání první vlastnosti si stačí uvědomit, že chceme $\sum_{k \geq 3}{(6-k)p_k} = 0$, kde pro $k < 6$ je sčítaný člen kladný, zato pro $k>6$ je sčítaný člen záporný. Druhá vlastnost plyne z definice a distributivity násobení. Třetí tvrzení pro je slabší verze Věty \ref{veta:Eberhard}.
+Pro ukázání první vlastnosti postačí, když si uvědomíme, že chceme $\sum_{k \geq 3}{(6-k)p_k} = 0$, kde pro $k < 6$ je sčítaný člen kladný, zato pro $k>6$ je sčítaný člen záporný. Druhá vlastnost plyne z definice a distributivity násobení. Třetí tvrzení pro je slabší verze Věty \ref{veta:Eberhard}.
 \end{dukaz}
 K poslední vlastnosti se nabízí otázka, jak lze $q$ omezit, aby pořád $p+qn$ byla realizovatelná. Eberhard ukázal, že stačí  $q = (0,0,0,q_6=1,0,\dots)$, tedy přidat šestiúhelníky. DeVos a kol. ukázal že i omezení na  $q = (0,0,1,0,1,0,\dots)$ funguje. V této práci ukážeme, že posloupností s pouze dvěma nenulovými hodnotami, které v tomto směru vyhovují, existuje výrazně víc.
 
