@@ -3,3 +3,5 @@ cs/*.aux
 cs/*.aux
 cs/*.out
 cs/*.log
+img/pdf/*.*
+img/kresleni/*.*

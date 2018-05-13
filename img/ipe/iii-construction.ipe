@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20180508103944" modified="D:20180509154210"/>
+<info created="D:20180508103944" modified="D:20180513143907"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -303,13 +303,13 @@ h
 136 0 0 136 256 384 e
 </path>
 </group>
-<path matrix="-0.990146 0.0978575 0.097901 0.989707 471.883 -21.099" stroke="darkgray" pen="heavier">
-128 384 m
-120 384 l
+<path stroke="darkgray" pen="heavier">
+382.738 371.474 m
+390.659 370.691 l
 </path>
-<path matrix="0.990146 0.0978575 -0.097901 0.989707 40.1165 -21.099" stroke="darkgray" pen="heavier">
-128 384 m
-120 384 l
+<path stroke="darkgray" pen="heavier">
+129.261 371.474 m
+121.34 370.691 l
 </path>
 <group>
 <group matrix="0.818023 -0.159007 0.190809 0.981627 -18.8314 46.2346">
@@ -486,37 +486,37 @@ h
 256 512 m
 256 520 l
 </path>
-<path matrix="-0.707107 -0.707107 -0.707107 0.707107 707.387 173.363" stroke="darkgray" pen="heavier">
-80 400 m
-72 400 l
+<path stroke="darkgray" pen="heavier">
+367.976 399.637 m
+373.632 405.294 l
 </path>
-<path matrix="-0.707107 -0.707107 -0.707107 0.707107 685.754 184.069" stroke="darkgray" pen="heavier">
-80 400 m
-72 400 l
+<path stroke="darkgray" pen="heavier">
+346.343 410.343 m
+351.999 416 l
 </path>
-<path matrix="-0.707107 -0.707107 -0.707107 0.707107 621.754 248.069" stroke="darkgray" pen="heavier">
-80 400 m
-72 400 l
+<path stroke="darkgray" pen="heavier">
+282.343 474.343 m
+287.999 480 l
 </path>
-<path matrix="-0.707107 -0.707107 -0.707107 0.707107 611.411 269.726" stroke="darkgray" pen="heavier">
-80 400 m
-72 400 l
+<path stroke="darkgray" pen="heavier">
+272 496 m
+277.656 501.657 l
 </path>
-<path matrix="0.707107 -0.707107 0.707107 0.707107 -195.387 173.363" stroke="darkgray" pen="heavier">
-80 400 m
-72 400 l
+<path stroke="darkgray" pen="heavier">
+144.024 399.637 m
+138.368 405.294 l
 </path>
-<path matrix="0.707107 -0.707107 0.707107 0.707107 -173.754 184.069" stroke="darkgray" pen="heavier">
-80 400 m
-72 400 l
+<path stroke="darkgray" pen="heavier">
+165.657 410.343 m
+160.001 416 l
 </path>
-<path matrix="0.707107 -0.707107 0.707107 0.707107 -109.754 248.069" stroke="darkgray" pen="heavier">
-80 400 m
-72 400 l
+<path stroke="darkgray" pen="heavier">
+229.657 474.343 m
+224.001 480 l
 </path>
-<path matrix="0.707107 -0.707107 0.707107 0.707107 -99.411 269.726" stroke="darkgray" pen="heavier">
-80 400 m
-72 400 l
+<path stroke="darkgray" pen="heavier">
+240 496 m
+234.344 501.657 l
 </path>
 <path stroke="darkgray" pen="heavier">
 384 384 m
@@ -619,9 +619,9 @@ h
 303.118 374.841 m
 381.648 359.576 l
 </path>
-<path matrix="0.98178 0.190022 -0.190022 0.98178 177.633 -165.649" stroke="black" pen="ultrafat">
-303.118 374.841 m
-381.648 359.576 l
+<path stroke="black" pen="ultrafat">
+404 259.961 m
+484 259.897 l
 </path>
 <group>
 <group>
@@ -636,5 +636,8 @@ h
 <text matrix="1 0 0 1 160 0" transformations="translations" pos="164 452" stroke="black" type="label" width="28.913" height="14.349" depth="0" valign="baseline" size="huge" style="math">mk</text>
 <text matrix="1 0 0 1 12 0" transformations="translations" pos="428 264" stroke="black" type="label" width="15.57" height="14.119" depth="0" valign="baseline" size="huge" style="math">R</text>
 </group>
+<use name="mark/disk(sx)" pos="256 512" size="large" stroke="black"/>
+<use name="mark/disk(sx)" pos="128 384" size="large" stroke="black"/>
+<use name="mark/disk(sx)" pos="384 384" size="large" stroke="black"/>
 </page>
 </ipe>
