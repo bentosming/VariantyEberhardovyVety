@@ -52,6 +52,39 @@ Při výpočtu reprezentace podle definice hledáme maximum přes $2 |V(C)|$ hod
 Každý vrchol v C má dva sousedy, tedy v (multi)množině, ze které hledáme řetězce je $2 |V(C)|$ (ne nutně různých) hodnot. Odpovídá to představě, že zkoušíme začít v každém vrcholu a čteme v obou směrech. Vzhledem k tomu, že $I\neq \emptyset$, je v každém přečteném řetězci alespoň jedna jednička. Hledání maxima zajistí, že se upřednostní řetězec, který jedničkou začíná (ten je dostupný, protože se začínalo číst i z vrcholů, které jsou v $I$).  
 \end{dukaz}
 
+\begin{figure}
+
+\begin{algorithmic}
+\Procedure{Vyplň}{vstup: reprezentace vnější hranice $vnějšíHraniceStdRep$, velikosti povolených stran $stěny$, $limit$}
+  
+\State vstup: reprezentace vnější hranice vnějšíHraniceStdRep, velikosti povolených stran stěny, limit
+\State $nevyřešenéHranice \gets vnějšíHraniceStdRep	$
+\State $přechody \gets \emptyset$ 		
+ \While {$přechody$.Počet $\leq limit$}
+ \State $hranice \gets nevyřešené$.Nejmenší
+\State $rotace \gets$ \textbf{RotaceHraniceZačínajícíInVrcholem}$(hranice)$
+\ForAll { $h$ in $rotace$}
+\ForAll {$s$ in $stěny$}
+\State	$nováHraniceStdRep \gets $\textbf{ZkusSpojitPrvníDvaInVrcholy}$(h,s) 	$
+	\If {$nováHraniceStdRep$.MáHodnotu}  
+\State		$nevyřešenéHranice$.Přidej($nováHraniceStdRep$)
+\State		$přechody$.Přidej($nováHraniceStdRep$, $hranice$)
+\EndIf
+	\If {JeStěna($nováHraniceStdRep$)} 
+\State		vrať \textbf{Cesta}($vnějšíHraniceStdRep$, $nováHraniceStdRep$)
+\EndIf
+
+\EndFor
+\EndFor
+\EndWhile
+\State ohlaš nenalezení
+\EndProcedure
+
+\end{algorithmic}
+\caption{algoritmus TODO popis}
+\end{figure}
+
+
 Pro jistotu poznamenejme, že pokud program hledaný graf nenašel, může, ale nemusí to znamenat, že neexistuje.
 
 
