@@ -13,7 +13,7 @@ Další možností jsou běžně dostupné programy či funkce na kreslení graf
 
 \begin{figure}[h]\centering
 \includegraphics[width = 50mm]{../img/sageplot}
-\caption{Automatické nakreslení SageMath \cite{sagemath}. Všimněme si, pokud bychom si zkusili představit, že cyklus vrcholů 0, 1, $\dots$, 16 je ona vnější kružnice z vylepšeného prvního popsaného kreslení a navíc nechť je základnou kužele a všechny další kružnice nechť jsou vždy v tomto kuželu výš (tak, aby mohly ležet na plášti), pak (s množstvím fantazie) se koukáme na podobné prostorové nakreslení, jen z různých úhlů. Při nakreslení většího grafu je tato myšlenka viditelnější.}
+\caption{Automatické nakreslení SageMath \cite{sagemath}. Všimněme si, pokud bychom si zkusili představit, že cyklus vrcholů 0, 1, $\dots$, 16 je ona vnější kružnice z~vylepšeného prvního popsaného kreslení a navíc nechť je základnou kužele a všechny další kružnice nechť jsou vždy v~tomto kuželu výš (tak, aby mohly ležet na plášti), pak (s množstvím fantazie) se koukáme na podobné prostorové nakreslení, jen z~různých úhlů. Při nakreslení většího grafu je tato myšlenka viditelnější.}
 \label{obr:sageplot}
 \end{figure}
 
@@ -46,7 +46,7 @@ Pro spor nechť jsou vrcholy $u,v  \in V\cup V^*$ takové, že po~jejich odebrá
 \end{dukaz}
 
 
-Pro převedení grafu na 3-souvislý stačí tedy do každé stěny vložit nový vrchol a spojit ho se všemi vrcholy dané stěny. Aby nakreslení odpovídalo představě, nemůžeme přidat vrchol pro vnější stěnu. I po této modifikaci zůstane nový graf 3-souvislý, v důkazu by stačilo uvážit speciálně případ, kdy vrchol $u$ leží na vnější stěně a tedy nelze použít k náhradě v cestě vrchol vnější stěny. Pokud je v $G$ $u$ dvojvazný, použijme vrchol příslušné vnitřní stěny. Pokud je třívazný, je třeba rozlišit jestli jeho sousední vrcholy v cestě jsou oba na vnější hraně. Pokud ano, obejdeme $u$ pomocí vrcholů vnitřních stěn a vnitřního souseda $u$. Pokud ne, stačí použít odpovídající vnitřní stěnu. 
+Pro převedení grafu na 3-souvislý stačí tedy do každé stěny vložit nový vrchol a spojit ho se všemi vrcholy dané stěny. Aby nakreslení odpovídalo představě, nemůžeme přidat vrchol pro vnější stěnu. I po této modifikaci zůstane nový graf 3-souvislý, v důkazu by stačilo uvážit speciálně případ, kdy vrchol $u$ leží na vnější stěně a tedy nelze použít k náhradě v cestě vrchol vnější stěny. Pokud je v $G$ vrchol $u$ dvojvazný, použijme vrchol příslušné vnitřní stěny. Pokud je třívazný, je třeba rozlišit jestli jeho sousední vrcholy v cestě jsou oba na vnější hraně. Pokud ano, obejdeme $u$ pomocí vrcholů vnitřních stěn a vnitřního souseda $u$. Pokud ne, stačí použít odpovídající vnitřní stěnu. 
 
 Pak zbývá zvolit pevné vrcholy -- v našem případě volíme vrcholy původní vnější stěny, které rozmístíme na kružnici a podle konkrétního grafu je pak možné nastavit váhy jednotlivých vrcholů. Obecně se pro dostatečně malé grafy (do 40-ti vrcholů) osvědčila lineární závislost váhy na~pořadí přidání vrcholu do grafu, nejdříve přidaný je nejtěžší. Skript, ve kterém lze Tuttovo nakreslení spočítat je jedním z výstupních formátů přiložené aplikace, více v Sekci~\ref{prg&vystupy}.
 
