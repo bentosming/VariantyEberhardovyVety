@@ -55,8 +55,14 @@
 \usepackage{dcolumn}        % lepší zarovnání sloupců v tabulkách
 \usepackage{booktabs}       % lepší vodorovné linky v tabulkách
 \usepackage{paralist}       % lepší enumerate a itemize
+
 \usepackage{colortbl}			%tabulka
 \usepackage{algpseudocode} 		%kod
+\algtext*{EndWhile}% Remove "end while" text
+\algtext*{EndIf}% Remove "end if" text
+\algtext*{EndFor}% Remove "end if" text
+\usepackage{algorithm}
+
 \usepackage[usenames]{xcolor}  % barevná sazba
 
 %%% Údaje o práci
@@ -104,15 +110,15 @@ Děkuji doc. Mgr. Robertu Šámalovi, Ph.D., vedoucímu práce, za~ochotu, trpě
 Pro konkrétní nakreslení rovinného grafu definujme posloupnost $(p_k)=(p_3,p_4,\dots)$ počtů k-hranných stěn -- $k$-úhelníků. Důsledkem Eulerova vzorce o~rovinných grafech pro kubické grafy splňuje $p$ vztah $\sum_{k \geq 3}{(6-k)p_k}=12$. Je celkem přirozené ptát se, jak vypadají $p$, pro která existuje odpovídající graf. Eberhard ukázal, že pokud $p$ splňuje výše uvedenou rovnost, pak existuje rovinný kubický graf, který odpovídá $p$ až na počet šestiúhelníků. DeVos a kol. dokázali obdobu věty, kde je povoleno k $p$ přidat pětiúhelníky a sedmiúhelníky. V této práci na jejich výsledky navazujeme, využijeme jejich důkazové strategie a díky navrženému programu najdeme stavební bloky, které autorům k zobecnění věty chyběly. Výsledkem práce je následující věta: pro každou dvojici $r,s \in \mathbb{N} $ splňující $ s<6<r<14, s,r$ nesoudělné, platí následující věta: pro každou posloupnost $p$ nezáporných celých čísel splňující $\sum_{k \geq 3}{(6-k)p_k}=12$ existuje nekonečně mnoho kubických rovinných grafů, které $p$ odpovídají až na $r$-úhelníky a $s$-úhelníky. 
 }
 \def\AbstraktEN{%
-Define sequence $(p_k)=(p_3,p_4,\dots)$  as numbers of $k$-sized faces -- k-gons -- of an embedding of a planar graph. A corollary to Euler’s formula for planar graphs states that for cubic graphs  $\sum_{k \geq 3}{(6-k)p_k}=12$ holds. Naturally, this leads us to explore the nature of p for which a corresponding cubic planar graph exists. Eberhard proved that if $p$ satisfies the equality above then a cubic planar graph that corresponds to $p$ except for the number of hexagons, exists. DeVos et al. show similar theorem, but instead of hexagon, both pentagons and heptagons can be added. In this thesis, we follow up their result by using their proof strategy and designing a program to find graphs needed in such proof. We were able to prove that $ \forall r,s \in  \mathbb{N}$ where $ s<6<r<14$ and $r,s $ are coprime the following theorem holds: for each sequence of nonnegative integers satisfying  $\sum_{k \geq 3}{(6-k)p_k}=12$ there are infinitely many cubic planar graphs corresponding to $p$ except for the number of both $r$-gons and $s$-gons.
+Define sequence $(p_k)=(p_3,p_4,\dots)$  as numbers of $k$-sized faces -- k-gons -- of an embedding of a planar graph. A corollary to Euler’s formula for planar graphs states that for cubic graphs  $\sum_{k \geq 3}{(6-k)p_k}=12$ holds. Naturally, this leads us to explore the nature of $p$ for which a corresponding cubic planar graph exists. Eberhard proved that if $p$ satisfies the equality above then a cubic planar graph that corresponds to $p$ except for the number of hexagons, exists. DeVos et al. show similar theorem, but instead of hexagon, both pentagons and heptagons can be added. In this thesis, we extend their result by using their proof strategy and designing a program to find graphs needed in such proof. We were able to prove that for every pair $r,s \in  \mathbb{N}$ where $ s<6<r<14$ and $r,s $ are coprime the following theorem holds: for each sequence of nonnegative integers satisfying  $\sum_{k \geq 3}{(6-k)p_k}=12$ there are infinitely many cubic planar graphs corresponding to $p$ except for the number of both $r$-gons and $s$-gons.
 }
 
 % 3 až 5 klíčových slov (doporučeno), každé uzavřeno ve složených závorkách
 \def\KlicovaSlova{%
-{kubické grafy} {rovinné grafy} {Eberhardova věta} {kreslení grafů} 
+{rovinné grafy} {kreslení grafů} 
 }
 \def\KlicovaSlovaEN{%
-{cubic graphs} {planar graphs} {Eberhard's theorem} {graph drawing}
+{planar graphs} {graph drawing}
 }
 
 %% Balíček hyperref, kterým jdou vyrábět klikací odkazy v PDF,
@@ -147,7 +153,7 @@ Define sequence $(p_k)=(p_3,p_4,\dots)$  as numbers of $k$-sized faces -- k-gons
 
 %%% Obrázky v bakalářské práci
 %%% (pokud jich je malé množství, obvykle není třeba seznam uvádět)
-\listoffigures
+%\listoffigures
 
 %%% Tabulky v bakalářské práci (opět nemusí být nutné uvádět)
 %%% U matematických prací může být lepší přemístit seznam tabulek na začátek práce.
@@ -171,8 +177,8 @@ Define sequence $(p_k)=(p_3,p_4,\dots)$  as numbers of $k$-sized faces -- k-gons
 \chapter{Přílohy}
 Přiložený disk obsahuje zdrojové kódy aplikace, spustitelnou aplikaci a výsledky, které jsme získali.
 
-\section{Aplikace}
-Přikládáme zdrojové kódy v \texttt{C\#} (.NET Framework 4.6.1) v podobě kompletního projektu pro  Visual Studio 2015. A také zkompilovaný program, který zpřístupňuje uživatelům Windows aplikaci bez nutné instalace.
+\section{Program} \label{priloha:aplikace}
+Přikládáme zdrojové kódy v \texttt{C\#} (.NET Framework 4.6.1) v podobě kompletního projektu pro  Visual Studio 2015. A také zkompilovaný program, který zpřístupňuje uživatelům Windows aplikaci bez nutné kompilace.
  
 \section{Získané výsledky} \label{priloha:vysledky}
 Přikládáme grafy, které dokazují pravdivost hlavního výsledku, Věty \ref{veta:vysledek}. Pro každou dvojici stěn $r$, $s$, která je v Tabulce~\ref{obr03:tabvysledky} označena, je ve složce \texttt{grafy} přiložena složka s velikostmi stěn v názvu. V ní jsou shrnuté parametry nalezených grafů a podadresáře s jednotlivými grafy, ve všech formátech popsaných v Sekci \ref{prg&vystupy}.

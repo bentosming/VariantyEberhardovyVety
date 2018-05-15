@@ -21,11 +21,10 @@ Postup hledání původně imitoval lidské pokusy o řešení problému:
 
 Kdybychom chtěli znát jen \uv{ano/ne} odpověď, jestli graf existuje, nebylo by vůbec třeba si pamatovat celý rozpracovaný graf, stačilo by pracovat s hranicemi, které navíc stačí reprezentovat jako binární číslo. Výsledkem by pak mohla být jen posloupnost hranic, kterými se prošlo před uzavřením grafu, nebo samotné \uv{ano/ne}. Překvapivě obtížné je pak z této posloupnosti nestrojově získat skutečný graf, proto program nabízí i možnost graf dodatečně rekonstruovat podle prošlých stavů.
 
-V tento okamžik je jasné, že problém je vlastně prohledávání v binárních řetězcích (které reprezentují hranice). Je proto vhodné zmínit, podle jakého kritéria se program rozhoduje, kterým směrem hledat dále. Implementace vždy upřednostňuje ke zpracování již nalezený řetězec nejmenší délky, a pro něj najde všechny další sousedy.
+V tento okamžik je jasné, že problém je vlastně prohledávání v binárních řetězcích (které reprezentují hranice). Je proto vhodné zmínit, podle jakého kritéria se program rozhoduje, kterým směrem hledat dále. Implementace vždy upřednostňuje ke zpracování již nalezený řetězec nejmenší délky, a pro něj najde všechny další sousedy. Pro názornost přikládáme i pseudokód Vyplň. Vzhledem k návrhu lze algoritmus implementovat vícevláknově -- každou nezpracovanou hranici lze zpracovávat v jiném vlákně, stačí zajistit bezpečnost sdílených datových struktur.
 
 Aby toto prohledávání fungovalo dobře, je třeba trochu zkomplikovat reprezentaci hranice. Hlavním požadavkem bude identita mezi reprezentací (jediným binárním řetězcem) a všemi hranicemi (tedy cykly, na kterých vyznačené vrcholy ještě vyžadují dalšího souseda), které jsou pro algoritmus izomorfní -- tedy všechny rotace a převrácení hranice.
 
-TODO pseudokód
 
 \begin{figure}[h!]\centering
 \includegraphics[width=\textwidth]{../img/reseni}
@@ -52,37 +51,40 @@ Při výpočtu reprezentace podle definice hledáme maximum přes $2 |V(C)|$ hod
 Každý vrchol v C má dva sousedy, tedy v (multi)množině, ze které hledáme řetězce je $2 |V(C)|$ (ne nutně různých) hodnot. Odpovídá to představě, že zkoušíme začít v každém vrcholu a čteme v obou směrech. Vzhledem k tomu, že $I\neq \emptyset$, je v každém přečteném řetězci alespoň jedna jednička. Hledání maxima zajistí, že se upřednostní řetězec, který jedničkou začíná (ten je dostupný, protože se začínalo číst i z vrcholů, které jsou v $I$).  
 \end{dukaz}
 
-\begin{figure}
+\makeatletter
+\algrenewcommand\ALG@beginalgorithmic{\footnotesize}
+\makeatother
 
+
+\begin{algorithm}
+\label{alg:Vypln}
 \begin{algorithmic}
-\Procedure{Vyplň}{vstup: reprezentace vnější hranice $vnějšíHraniceStdRep$, velikosti povolených stran $stěny$, $limit$}
-  
-\State vstup: reprezentace vnější hranice vnějšíHraniceStdRep, velikosti povolených stran stěny, limit
-\State $nevyřešenéHranice \gets vnějšíHraniceStdRep	$
-\State $přechody \gets \emptyset$ 		
- \While {$přechody$.Počet $\leq limit$}
- \State $hranice \gets nevyřešené$.Nejmenší
-\State $rotace \gets$ \textbf{RotaceHraniceZačínajícíInVrcholem}$(hranice)$
-\ForAll { $h$ in $rotace$}
-\ForAll {$s$ in $stěny$}
-\State	$nováHraniceStdRep \gets $\textbf{ZkusSpojitPrvníDvaInVrcholy}$(h,s) 	$
-	\If {$nováHraniceStdRep$.MáHodnotu}  
-\State		$nevyřešenéHranice$.Přidej($nováHraniceStdRep$)
-\State		$přechody$.Přidej($nováHraniceStdRep$, $hranice$)
+\Procedure{Vyplň}{reprezentace vnější hranice \textit{vnějšíHraniceStdRep}, velikosti povolených stran \textit{stěny}, \textit{limit}}
+
+\State \textit{nevyřešenéHranice} $\gets$ \textit{vnějšíHraniceStdRep}	
+\State \textit{přechody} $\gets \emptyset$ 		
+ \While {\textit{přechody}.Počet $\leq$ \textit{limit}}
+ \State \textit{hranice} $\gets$ \textit{nevyřešené}.Nejmenší
+\State \textit{rotace} $\gets$ \textbf{RotaceHraniceZačínajícíInVrcholem}(\textit{hranice})
+\ForAll { \textit{h} in \textit{rotace}}
+\ForAll {\textit{s} in \textit{stěny}}
+\State	\textit{nováHraniceStdRep} $\gets$ \textbf{ZkusSpojitPrvníDvaInVrcholy}(\textit{h, s}) 	
+	\If {\textit{nováHraniceStdRep}.MáHodnotu}  
+\State		\textit{nevyřešenéHranice}.Přidej(\textit{nováHraniceStdRep})
+\State		\textit{přechody}.Přidej(\textit{nováHraniceStdRep, hranice})
 \EndIf
-	\If {JeStěna($nováHraniceStdRep$)} 
-\State		vrať \textbf{Cesta}($vnějšíHraniceStdRep$, $nováHraniceStdRep$)
+	\If {\textbf{JeStěna}(\textit{nováHraniceStdRep, stěny})} 
+\State		vrať \textbf{Cesta}(\textit{přechody, nováHraniceStdRep, vnějšíHraniceStdRep})
 \EndIf
 
 \EndFor
 \EndFor
 \EndWhile
-\State ohlaš nenalezení
+\State oznam nenalezení
 \EndProcedure
 
 \end{algorithmic}
-\caption{algoritmus TODO popis}
-\end{figure}
+\end{algorithm}
 
 
 Pro jistotu poznamenejme, že pokud program hledaný graf nenašel, může, ale nemusí to znamenat, že neexistuje.
@@ -94,7 +96,7 @@ Podle předchozí kapitoly pro dokončení důkazu pro konkrétní dvojici $p$ a
 \begin{description}
 \item[(i)] ($k$, $k$, $k$)$Q$-triark;
 \item[(ii)] ($k$, $k$, $k-1$)$Q$-triark;
-\item[(iii)] ($mk$ ,$mk$ ,$x$)$Q\cup \lbrace l\rbrace$-triark, kde je právě jedna stěna velikosti $l$;
+\item[(iii)] ($mk$, $mk$, $x$)$Q\cup \lbrace l\rbrace$-triark, kde je právě jedna stěna velikosti $l$;
 \item[(iv)] prstenec, který dokáže spojit dva stejně velké, rovnostranné triarky.
 \end{description}
 
@@ -117,24 +119,44 @@ Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci
 \label{obr03:konstrukceiv}
 \end{figure}
 
-Tyto konstrukce jsou v řešítku implementovány. Výslednému program stačí zadat seznam velikostí stěn, které mohou tvořit neutrální posloupnost. Pokud pro daný seznam stěn existuje více neutrálních posloupností, využije program pro~každý pomocný graf libovolnou z nich.
+Tyto konstrukce jsou v řešítku implementovány, pro ukázku přikládáme pseudokód Dokaž. Výslednému program stačí zadat seznam velikostí stěn, které mohou tvořit neutrální posloupnost. Pokud pro daný seznam stěn existuje více neutrálních posloupností, využije program pro~každý pomocný graf libovolnou z nich.
 
 
+\begin{algorithm}
+\label{alg:dokaz}
+\begin{algorithmic}
+\Procedure{Dokaž}{velikosti povolených stran \textit{stěny}, \textit{limit}}
+\State \textit{řetízky} \Comment{Předdefinovaná množina řetízků}
+\State \textit{velikostiStran} \Comment{Předdefinovaná množina velikostí stran}
+\State 
+\State \textit{iGraf} $\gets$ \textit{velikostiStran}.Kde(\textit{k} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceTriarku}(\textit{k, k, k}), \textit{stěny, limit}))
+\State \textit{iiGraf} $\gets$ \textit{iGraf}.Kde(\textit{k} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceTriarku}(\textit{k, k, k-1}), \textit{stěny, limit}))
+\State \textit{řetízkyA} $\gets$ \textit{řetízky}.Kde(\textit{r} $\Rightarrow$ \textit{velikostiGrafuii}.Existuje(\textbf{Vyplň}(\textbf{HraniceA}(\textit{r, k}), \textit{stěny}, \textit{limit})
+\State \textit{iiiGraf} $\gets$ \textit{řetízkyA}.Kde(\textit{r} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceB}(\textit{r}), \textit{stěny}, \textit{limit}))
+\State \textit{řetízkyC} $\gets$ \textit{řetízky}.Kde(\textit{r} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceC}(\textit{r}), \textit{stěny}, \textit{limit}))
+\State \textit{ivGraf} $\gets$ \textit{řetízkyC}.Kde(\textit{r} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceD}(\textit{r}), \textit{stěny}, \textit{limit}))
+\State 
+\State vrať \textit{iiiGraf}.Počet $ \neq 0$ \textbf{AND} \textit{ivGraf}.Počet $\neq 0$
+
+\EndProcedure
+
+\end{algorithmic}
+\end{algorithm}
 %\newpage 
 
 
 \section{Program a výstupy} \label{prg&vystupy}
 
-Implementaci výše popsaného algoritmu k práci přikládáme jako spustitelný program (pro Windows) i zdrojové kódy. Jde o standardní konzolovou aplikaci, včetně nápovědy pro použití v podobě \texttt{-h} argumentu při spuštění. Například Příloha \ref{priloha:vysledky} včetně dat pro Tabulku \ref{obr03:tabvysledkycele} lze vygenerovat argumenty \texttt{-r -l 50000 --ExportAsAll}.
+Implementaci výše popsaného algoritmu k práci přikládáme jako spustitelný program (pro Windows) i zdrojové kódy, Příloha \ref{priloha:aplikace}. Jde o standardní konzolovou aplikaci, včetně nápovědy pro použití v podobě \texttt{-h} argumentu při spuštění. Například Příloha \ref{priloha:vysledky} včetně dat pro Tabulku \ref{obr03:tabvysledkycele} lze vygenerovat argumenty \texttt{-r -l 50000 --ExportAsAll}.
 
 Zastavme se u typů souborů, které program může generovat:
 \begin{description}
 
-\item[Graf] vypíše nalezený graf jako seznam hran
-\item[Hranice] vypíše posloupnost hranic, podle kterých je graf sestaven, příkladem může být Obrázek \ref{obr03:reseni}
-\item[Stěny] vypíše vnitřní stěny grafu, které odpovídají chodu algoritmu a které jinak nemusí být dány jednoznačně
-\item[Graphviz -- neato] vypíše graf v jazyku DOT, navíc rozmístí vrcholy vnější hranice grafu na kružnici
-\item[Tuttovo kreslení] vypíše skript pro SageMath, který graf vykreslí podle barycentrické metody, je v něm připravená funkce pro změnu vah vrcholů
+\item[Graf] vypíše nalezený graf jako seznam hran.
+\item[Hranice] vypíše posloupnost hranic, podle kterých je graf sestaven, příkladem může být Obrázek \ref{obr03:reseni}.
+\item[Stěny] vypíše vnitřní stěny grafu, které odpovídají chodu algoritmu a které jinak nemusí být dány jednoznačně.
+\item[Graphviz -- neato] vypíše graf v jazyku DOT, navíc rozmístí vrcholy vnější hranice grafu na kružnici.
+\item[Tuttovo kreslení] vypíše skript pro SageMath, který graf vykreslí podle barycentrické metody, je v něm připravená funkce pro změnu vah vrcholů.
 
 \end{description}
 

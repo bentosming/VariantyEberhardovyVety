@@ -12,44 +12,44 @@ A level-1 auxiliary file: zaver.aux
 A level-1 auxiliary file: literatura.aux
 The style file: unsrt.bst
 Database file #1: literatura.bib
-You've used 8 entries,
+You've used 9 entries,
             1791 wiz_defined-function locations,
-            509 strings with 4519 characters,
-and the built_in function-call counts, 1435 in all, are:
-= -- 129
-> -- 46
-< -- 1
-+ -- 20
-- -- 12
-* -- 64
-:= -- 240
-add.period$ -- 25
-call.type$ -- 8
+            516 strings with 4666 characters,
+and the built_in function-call counts, 1697 in all, are:
+= -- 156
+> -- 50
+< -- 2
++ -- 22
+- -- 13
+* -- 77
+:= -- 273
+add.period$ -- 28
+call.type$ -- 9
 change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 77
-empty$ -- 152
-format.name$ -- 12
-if$ -- 329
+cite$ -- 9
+duplicate$ -- 90
+empty$ -- 180
+format.name$ -- 13
+if$ -- 392
 int.to.chr$ -- 0
-int.to.str$ -- 8
+int.to.str$ -- 9
 missing$ -- 9
-newline$ -- 43
-num.names$ -- 8
-pop$ -- 24
+newline$ -- 48
+num.names$ -- 9
+pop$ -- 28
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 32
+skip$ -- 41
 stack$ -- 0
-substring$ -- 56
-swap$ -- 16
-text.length$ -- 1
+substring$ -- 84
+swap$ -- 23
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 12
-width$ -- 9
-write$ -- 88
+while$ -- 16
+width$ -- 10
+write$ -- 98

@@ -16,9 +16,9 @@ B.~Grünbaum.
 \newblock {S}econd {E}dition. Springer-{V}erlag, New York, 2003.
 
 \bibitem{Samal09}
-M.~DeVos, A.~Georgakopoulos, B.~Mohar, and R.~Šámal.
+Matt DeVos, Agelos Georgakopoulos, Bojan Mohar, and Robert \v~S\'amal.
 \newblock An {E}berhard-like theorem for pentagons and heptagons.
-\newblock {\em TODO}, 2009.
+\newblock {\em Discrete Comput. Geom.}, 44:931--945, 2010.
 
 \bibitem{Matousek}
 J.~Matoušek and J.~Nešetřil.
@@ -28,14 +28,19 @@ J.~Matoušek and J.~Nešetřil.
 \bibitem{Steinitz}
 E.~Steinitz.
 \newblock Polyeder und {R}aumeinteilungen.
-\newblock {\em Encyclopädie der mathematischen {W}issenschaften, Band 3TODO},
-  ??:1--139, 1922.
+\newblock {\em Encyclopädie der mathematischen {W}issenschaften, Band 3},
+  pages 1--139, 1922.
 
 \bibitem{sagemath}
 {The Sage Developers}.
 \newblock {\em {S}ageMath, the {S}age {M}athematics {S}oftware {S}ystem
   ({V}ersion 8.1)}, 2017.
 \newblock {\tt http://www.sagemath.org}.
+
+\bibitem{graphviz}
+{The GraphViz Developers}.
+\newblock {\em {G}raphviz ({V}ersion 2.38)}.
+\newblock {\tt http://http://www.graphviz.org/}.
 
 \bibitem{Tutte}
 W.~T. Tutte.

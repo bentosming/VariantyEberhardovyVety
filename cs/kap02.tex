@@ -40,7 +40,7 @@ Mohli bychom ale chtít spojovat triarky tak, aby výsledkem byl opět triark. M
 \label{obr22:T-T}
 \end{figure}
 
-A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Pro lepší představu si prstenec představujme jako plášť trojbokého hranolu, triarky jako dolní a boční podstavu. Na všech podstavných hranách dojde ke splynutí vrcholů triarků s vrcholy prstence a vznikne graf nakreslitelný na hranol (tedy tedy i na sféru), takže výsledkem je rovinný graf. Zadefinujme prstenec formálně. Prstenec je souvislý kubický rovinný graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačné znamená záměna dvoj- a tří- vaznosti vrcholů. Pro případné dokreslení můžeme použít Obrázek \ref{obr03:konstrukceiv}, na kterém je speciální druh prstence. 
+A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Pro lepší představu si prstenec představujme jako plášť trojbokého hranolu, triarky jako dolní a boční podstavu. Na všech podstavných hranách dojde ke splynutí vrcholů triarků s vrcholy prstence a vznikne graf nakreslitelný na hranol (tedy tedy i na sféru), takže výsledkem je rovinný graf. Zadefinujme prstenec formálně. Prstenec je souvislý kubický rovinný graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačné znamená záměna dvoj- a třívaznosti vrcholů. Pro případné dokreslení můžeme použít Obrázek \ref{obr03:konstrukceiv}, na kterém je speciální druh prstence. 
 
 %\begin{figure}[h!]\centering
 %\includegraphics[height=40mm]{../img/T-G}
@@ -52,7 +52,7 @@ A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický gr
 \section{Důkaz za předpokladu existence pomocných grafů}
 Převeďme hypotézu ve větu.
 
-\begin{veta}\label{veta02:2}
+\begin{veta}[DeVos a~kol.~\cite{Samal09} Sekce 4]\label{veta02:2}
 Mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální posloupnost $q=(q_k \mid 3 \leq k \neq 6)$ a následující grafy pro nějaké přirozené k:
 \begin{description}
 \item[(i)] ($k$, $k$, $k$)$Q$-triark;
@@ -61,7 +61,7 @@ Mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální poslou
 \item[(iv)] $\forall t \in \mathbb{N}, t>1$ $Q$-prstenec, který dokáže spojit dva ($t$, $t$, $t$)-triarky.
 \end{description} 
 
-Pak existuje takové přirozené $n$, že $p+nq$ je realizovatelná.
+Počet stěn $Q$ v každém z grafů (i) -- (iv) navíc musí zachovat poměr z $q$. Pak existuje takové přirozené $n$, že $p+nq$ je realizovatelná.
 \end{veta}
 
 
