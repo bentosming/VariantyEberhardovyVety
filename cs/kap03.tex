@@ -131,7 +131,7 @@ Tyto konstrukce jsou v řešítku implementovány, pro ukázku přikládáme pse
 \State 
 \State \textit{iGraf} $\gets$ \textit{velikostiStran}.Kde(\textit{k} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceTriarku}(\textit{k, k, k}), \textit{stěny, limit}))
 \State \textit{iiGraf} $\gets$ \textit{iGraf}.Kde(\textit{k} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceTriarku}(\textit{k, k, k-1}), \textit{stěny, limit}))
-\State \textit{řetízkyA} $\gets$ \textit{řetízky}.Kde(\textit{r} $\Rightarrow$ \textit{velikostiGrafuii}.Existuje(\textbf{Vyplň}(\textbf{HraniceA}(\textit{r, k}), \textit{stěny}, \textit{limit})
+\State \textit{řetízkyA} $\gets$ \textit{řetízky}.Kde(\textit{r} $\Rightarrow$ \textit{iiGraf}.Existuje(\textit{k} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceA}(\textit{r, k}), \textit{stěny}, \textit{limit})
 \State \textit{iiiGraf} $\gets$ \textit{řetízkyA}.Kde(\textit{r} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceB}(\textit{r}), \textit{stěny}, \textit{limit}))
 \State \textit{řetízkyC} $\gets$ \textit{řetízky}.Kde(\textit{r} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceC}(\textit{r}), \textit{stěny}, \textit{limit}))
 \State \textit{ivGraf} $\gets$ \textit{řetízkyC}.Kde(\textit{r} $\Rightarrow$ \textbf{JdeVyplnit}(\textbf{HraniceD}(\textit{r}), \textit{stěny}, \textit{limit}))
