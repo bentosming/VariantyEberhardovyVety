@@ -3,7 +3,7 @@
 
 Představme hypotézu, kterou se snažíme ověřit.
 \begin{hypot}\label{veta02:hypoteza}
-Mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální posloupnost $q=(q_k \mid 3 \leq k \neq 6)$, pak existuje takové přirozené $n$, že $p+nq$ je realizovatelná.
+Mějme přípustnou posloupnost $(p_k) = (p_3,p_4,\dots)$ a neutrální posloupnost $(q_k) = (q_3,q_4,\dots)$, pak existuje takové přirozené $n$, že $p+nq$ je realizovatelná.
 \end{hypot}
 
 
@@ -40,20 +40,14 @@ Mohli bychom ale chtít spojovat triarky tak, aby výsledkem byl opět triark. M
 \label{obr22:T-T}
 \end{figure}
 
-A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Pro lepší představu si prstenec představujme jako plášť trojbokého hranolu, triarky jako dolní a boční podstavu. Na všech podstavných hranách dojde ke splynutí vrcholů triarků s vrcholy prstence a vznikne graf nakreslitelný na hranol (tedy tedy i na sféru), takže výsledkem je rovinný graf. Zadefinujme prstenec formálně. Prstenec je souvislý kubický rovinný graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačné znamená záměna dvoj- a třívaznosti vrcholů. Pro případné dokreslení můžeme použít Obrázek \ref{obr03:konstrukceiv}, na kterém je speciální druh prstence. 
-
-%\begin{figure}[h!]\centering
-%\includegraphics[height=40mm]{../img/T-G}
-%\caption{Spojení triarků prstencem za vzniku kubického grafu.}
-%\label{obr23:T-G}
-%\end{figure}
+A závěrem budeme chtít spojit dva triarky tak, aby výsledkem byl kubický graf (tedy aby nevznikly žádné nové stěny s vrcholy stupně dva). Graf, který má tuto funkci označíme za \textbf{prstenec}. Pro lepší představu si prstenec představujme jako plášť trojbokého hranolu, triarky jako dolní a horní podstavu. Na všech podstavných hranách dojde ke splynutí vrcholů triarků s vrcholy prstence a vznikne graf nakreslitelný na hranol (tedy tedy i na sféru), takže výsledkem je rovinný graf. Zadefinujme prstenec formálně. Prstenec je souvislý kubický rovinný graf, ve kterém můžeme vyznačit dva disjunktní cykly tak, že stupně vrcholů každého cyklu jsou opačné než stupně příslušných triarků, které chceme spojit. Kde opačné znamená záměna dvoj- a třívaznosti vrcholů. Pro dokreslení můžeme použít Obrázek~\ref{obr03:konstrukceiv}, na~kterém je speciální druh prstence znázorněn. 
 
 
 \section{Důkaz za předpokladu existence pomocných grafů}
 Převeďme hypotézu ve větu.
 
 \begin{veta}[DeVos a~kol.~\cite{Samal09} Sekce 4]\label{veta02:2}
-Mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$ a neutrální posloupnost $q=(q_k \mid 3 \leq k \neq 6)$ a následující grafy pro nějaké přirozené k:
+Mějme přípustnou posloupnost $(p_k) = (p_3,p_4,\dots)$ a neutrální posloupnost $(q_k) = (q_3,q_4,\dots)$ a následující grafy pro~nějaké přirozené~k:
 \begin{description}
 \item[(i)] ($k$, $k$, $k$)$Q$-triark;
 \item[(ii)] ($k$, $k$, $k-1$)$Q$-triark;
@@ -71,7 +65,7 @@ Nejprve slepíme dva ($k$, $k$, $k-1$)-triarky za stěnu délky $k$ a získáme 
 
 Zkusme vzniklý triark upravit na rovnostranný. Při slepování triarků se velikosti výsledných stran rovnají součtům původním. Pokud tedy slepujeme s~($k$, $k$, $k-1$)-triarkem, zmenšíme vždy tu stěnu, na kterou připadne rozměr $k-1$, vůči ostatním. Takže pokud budeme opakovat lepení výsledného triarku, v každém kroku se součet rozdílů mezi stranami zmenší a tedy nutně získáme rovnostranný triark. Modifikujme ho stejnou operací, aby zůstal rovnostranný, ale navíc délka jeho stran byla násobkem $k$ a označme výsledný triark $T_1$.
 
-Slepováním ($k$,$k$,$k$)-triarků z (i) spolu s ($k$, $k$) rovnoběžníky získáme druhý triark $T_2$ o stejném rozměru jako $T_1$. Kdybychom celý problém řešili na toru, stačilo by $T_1$ a $T_2$ spojit do rovnoběžníku a sjednotit odpovídající strany. Na kouli místo toho použijeme prstenec z (iv). Tím získáme graf, který je kubický, rovinný a obsahuje požadované stěny. 
+Slepováním ($k$, $k$, $k$)-triarků z (i) spolu s ($k$, $k$) rovnoběžníky získáme druhý triark $T_2$ o stejném rozměru jako $T_1$. Kdybychom celý problém řešili na toru, stačilo by $T_1$ a $T_2$ spojit do rovnoběžníku a sjednotit odpovídající strany. Na kouli místo toho použijeme prstenec z (iv). Tím získáme graf, který je kubický, rovinný a obsahuje požadované stěny. 
 \end{dukaz}
 
 Všimněme si, že větu jde jednoduše zesílit: nejen že za splnění předpokladů existuje nějaké $n \in \mathbb{N}$, pro které je $p+nq$ realizovatelná; existuje jich libovolně mnoho. V důkazu stačí před spojením $T_1$ a $T_2$ prstencem nejprve oba triarky slepit s dalšími instancemi $T_2$ tak, aby vznikly nové, stejně velké rovnostranné triarky $T_{1}^*$ a $T_{2}^*$. Tímto způsobem lze libovolně zvětšit $n$. $T_{1}^*$ a $T_{2}^*$ pak opět spojíme prstencem.

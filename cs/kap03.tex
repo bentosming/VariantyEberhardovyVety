@@ -17,11 +17,11 @@ Postup hledání původně imitoval lidské pokusy o řešení problému:
 \item V situaci, kdy nelze dál nic spojit, nebo je jasné, že graf nemůže vyhovovat parametrům, se vrátit podle uvážení zpět.
 \end{enumerate}
 
-Část běhu algoritmu je znázorněna na Obrázku \ref{obr03:reseni}, nejsou v něm zaznamenány \uv{slepé uličky}.
+Výsledek běhu algoritmu je znázorněna na Obrázku \ref{obr03:reseni}.
 
 Kdybychom chtěli znát jen \uv{ano/ne} odpověď, jestli graf existuje, nebylo by vůbec třeba si pamatovat celý rozpracovaný graf, stačilo by pracovat s hranicemi, které navíc stačí reprezentovat jako binární číslo. Výsledkem by pak mohla být jen posloupnost hranic, kterými se prošlo před uzavřením grafu, nebo samotné \uv{ano/ne}. Překvapivě obtížné je pak z této posloupnosti nestrojově získat skutečný graf, proto program nabízí i možnost graf dodatečně rekonstruovat podle prošlých stavů.
 
-V tento okamžik je jasné, že problém je vlastně prohledávání v binárních řetězcích (které reprezentují hranice). Je proto vhodné zmínit, podle jakého kritéria se program rozhoduje, kterým směrem hledat dále. Implementace vždy upřednostňuje ke zpracování již nalezený řetězec nejmenší délky, a pro něj najde všechny další sousedy. Pro názornost přikládáme i pseudokód Vyplň. Vzhledem k návrhu lze algoritmus implementovat vícevláknově -- každou nezpracovanou hranici lze zpracovávat v jiném vlákně, stačí zajistit bezpečnost sdílených datových struktur.
+V tento okamžik je jasné, že problém je vlastně prohledávání v binárních řetězcích (které reprezentují hranice). Je proto vhodné zmínit, podle jakého kritéria se program rozhoduje, kterým směrem hledat dále. Implementace vždy upřednostňuje ke zpracování již nalezený řetězec nejmenší hodnoty, a pro něj najde všechny další sousedy. Pro názornost přikládáme i pseudokód Vyplň. Vzhledem k návrhu lze algoritmus implementovat vícevláknově -- každou nezpracovanou hranici lze zpracovávat v jiném vlákně, stačí zajistit bezpečnost sdílených datových struktur.
 
 Aby toto prohledávání fungovalo dobře, je třeba trochu zkomplikovat reprezentaci hranice. Hlavním požadavkem bude identita mezi reprezentací (jediným binárním řetězcem) a všemi hranicemi (tedy cykly, na kterých vyznačené vrcholy ještě vyžadují dalšího souseda), které jsou pro algoritmus izomorfní -- tedy všechny rotace a převrácení hranice.
 
@@ -33,9 +33,9 @@ Aby toto prohledávání fungovalo dobře, je třeba trochu zkomplikovat repreze
 \end{figure}
 
 \begin{definice}[Hranice a její reprezentace]\label{def01:1}
-Dvojici cyklus $C$ a množina $I \subseteq V(C)$ nazveme hranicí $H$. Množina $I$ jsou právě ty vrcholy, které ve výsledném vyplnění musí mít dalšího souseda. Pokud  $I = \emptyset$, mluvíme o hranici přímo jako o~stěně a~nedefinujeme pro ni reprezentaci.
+Dvojici cyklu $C$ a množiny $I \subseteq V(C)$ nazveme hranicí $H$. Množina $I$ jsou právě ty vrcholy, které ve výsledném vyplnění musí mít dalšího souseda. Pokud  $I = \emptyset$, mluvíme o hranici přímo jako o~stěně a~nedefinujeme pro ni reprezentaci.
 
-Definujme funkci $f(H,(u,v))$ jako charakteristický vektor množiny $I$ následně: každý vrchol H popišme buď znakem 1 (jako I v \uv{in} podle orientace pomyslené hrany) nebo 0 (jako 0 v \uv{out}). Hodnota $f(H, (u, v))$, kde $H=(C, I)$, $u, v \in V(C)$ a $ \lbrace u, v \rbrace \in E(C)$, se pak získá zaznamenáním popisků vrcholů $H$, začínaje vrcholem $u$, pokračujíce vrcholem $v$ a dále po hranách $C$. 
+Definujme funkci $f(H,(u,v))$ jako charakteristický vektor množiny $I$ následně: každý vrchol H popišme buď znakem 1 (jako I v \uv{in} podle orientace pomyslené hrany) nebo 0 (jako O v \uv{out}). Hodnota $f(H, (u, v))$, kde $H=(C, I)$, $u, v \in V(C)$ a $ \lbrace u, v \rbrace \in E(C)$, se pak získá zaznamenáním popisků vrcholů $H$, začínaje vrcholem $u$, pokračujíce vrcholem $v$ a dále po hranách $C$. 
 
 Reprezentací hranice je hodnota $\max_{\lbrace u, v \rbrace \in E(C)} {f(H,(u,v))}$.
 \end{definice}
@@ -63,7 +63,7 @@ Každý vrchol v C má dva sousedy, tedy v (multi)množině, ze které hledáme 
 
 \State \textit{nevyřešenéHranice} $\gets$ \textit{vnějšíHraniceStdRep}	
 \State \textit{přechody} $\gets \emptyset$ 		
- \While {\textit{přechody}.Počet $\leq$ \textit{limit}}
+ \While {\textit{přechody}.Počet $\leq$ \textit{limit} \textbf{AND} \textit{nevyřešenéHranice}.Počet $\neq 0$ }
  \State \textit{hranice} $\gets$ \textit{nevyřešené}.Nejmenší
 \State \textit{rotace} $\gets$ \textbf{RotaceHraniceZačínajícíInVrcholem}(\textit{hranice})
 \ForAll { \textit{h} in \textit{rotace}}
@@ -100,7 +100,7 @@ Podle předchozí kapitoly pro dokončení důkazu pro konkrétní dvojici $p$ a
 \item[(iv)] prstenec, který dokáže spojit dva stejně velké, rovnostranné triarky.
 \end{description}
 
-Pro dané $k$ získáme grafy (i) a (ii) z řešítka hned. Pro zbylé je nutné pomoci si konstrukcí, která se ukázala jako úspěšná pro některé neutrální sekvence. O~výsledcích získaných z programu píšeme v Kapitole \ref{vysledky}.
+Pro dané $k$ získáme grafy (i) a (ii) z řešítka hned. Pro zbylé je nutné pomoci si konstrukcí, která se ukázala jako úspěšná pro některé neutrální posloupnosti. O~výsledcích získaných z programu píšeme v Kapitole \ref{vysledky}.
 
 \begin{figure}[h]\centering
 \includegraphics[width = 80mm]{../img/iii-construction}
@@ -108,10 +108,10 @@ Pro dané $k$ získáme grafy (i) a (ii) z řešítka hned. Pro zbylé je nutné
 \label{obr03:konstrukceiii}
 \end{figure}
 
-Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít právě jednu stěnu délky $p_l$. Spojme proto stěnu s vnější stěnou triarku ručně a ptejme se na výplň vzniklých oblastí $A$ a $B$. Ke spojení použijeme $l$ kopií řetízku $R$, každý napojíme na jeden z vrcholů jádra a druhé konce spojíme s \uv{in} vrcholy základny triarku. V řetízku navíc fixujeme, ve které straně od něj budou mít které jeho vrcholy třetího souseda (znázorněno šedě v Obrázku \ref{obr03:konstrukceiii}). Konstrukce je obecná pro všechny přípustné hodnoty $l$, tedy není závislá na volbě $p$. Nevíme ani o důvodu, který by implikoval nemožnost jejího využití pro libovolné $q$.
+Na graf (iii) se neumíme zeptat přímo, protože potřebujeme v grafu mít právě jednu stěnu délky $p_l$. Spojme proto stěnu s vnější stěnou triarku ručně a ptejme se na výplň vzniklých oblastí $A$ a $B$. Ke spojení použijeme $l$ kopií řetízku $R$, každý napojíme na jeden z vrcholů jádra a druhé konce spojíme s \uv{in} vrcholy základny triarku. V řetízku navíc fixujeme, na které straně od něj budou mít které jeho vrcholy třetího souseda (znázorněno šedě v Obrázku \ref{obr03:konstrukceiii}). Konstrukce je obecná pro všechny přípustné hodnoty $l$, tedy není závislá na volbě $p$. Nevíme ani o důvodu, který by implikoval nemožnost jejího využití pro libovolné $q$.
 
 
-Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí -- $C$ při rozích triarku a $D$ mezi odpovídajícími kusy stran triarků. Přesný nákres je na Obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
+Podobnou konstrukci tvoříme i pro graf typu (iv). V tomto případě za pomoci řetízků spojujeme odpovídající vrcholy rovnostranných, stejně velkých triarků $T_1$ a $T_2$. Vzniknou dva typy oblastí -- $C$ při rozích triarku a $D$ mezi odpovídajícími úseky stran triarků. Přesný nákres je na Obrázku \ref{obr03:konstrukceiv}. Poznamenejme, že pokud jde graf nakreslit na povrch hranolu, je rovinný. 
 
 \begin{figure}[h]\centering
 \includegraphics[width = 60mm]{../img/iv-construction}
@@ -147,7 +147,7 @@ Tyto konstrukce jsou v řešítku implementovány, pro ukázku přikládáme pse
 
 \section{Program a výstupy} \label{prg&vystupy}
 
-Implementaci výše popsaného algoritmu k práci přikládáme jako spustitelný program (pro Windows) i zdrojové kódy, Příloha \ref{priloha:aplikace}. Jde o standardní konzolovou aplikaci, včetně nápovědy pro použití v podobě \texttt{-h} argumentu při spuštění. Například Příloha \ref{priloha:vysledky} včetně dat pro Tabulku \ref{obr03:tabvysledkycele} lze vygenerovat argumenty \texttt{-r -l 50000 --ExportAsAll}.
+Implementaci výše popsaného algoritmu k práci přikládáme, Příloha \ref{priloha:aplikace}, jako spustitelný program (pro Windows) i zdrojové kódy. Jde o standardní konzolovou aplikaci, včetně nápovědy pro použití v podobě \texttt{-h} argumentu při spuštění. Například Příloha \ref{priloha:vysledky} včetně dat pro Tabulku \ref{obr03:tabvysledkycele} lze vygenerovat argumenty \texttt{-r -l 100000 -{}-ExportAsAll}.
 
 Zastavme se u typů souborů, které program může generovat:
 \begin{description}

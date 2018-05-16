@@ -22,7 +22,7 @@ Posloupnost $(p_k) = (p_3,p_4,\dots)$ nezáporných celých čísel je neutráln
 \end{definice}
 
 \begin{definice}[Přípustná posloupnost]\label{def01:pripustna}
-Posloupnost $(p_k) = (p_3,p_4,\dots)$ nezáporných celých čísel je přípustná, pokud $\sum_{k \geq 3}{(6-k)p_k}=6$.
+Posloupnost $(p_k) = (p_3,p_4,\dots)$ nezáporných celých čísel je přípustná, pokud $\sum_{k \geq 3}{(6-k)p_k}=12$.
 \end{definice}
 
 \begin{definice}[Realizovatelná posloupnost]\label{def01:realizovatelna}
@@ -37,7 +37,7 @@ Pro každou neutrální (či přípustnou nebo realizovatelnou) posloupnost $p=(
 \end{tvrz}
 
 \begin{dukaz}
-Neutrální posloupnost $p$ splňuje $\sum_{k \geq 3}{(6-k)p_k}=0$, což můžeme upravit na $\sum_{3 \leq k \leq 5}{(6-k)p_k}=\sum_{k \geq 5}{(k-6)p_k}$. Všechny sčítance na obou stranách výrazu jsou kladné. Hodnota levého součtu tří sčítanců je konečná. Pravý součet má tedy také konečnou hodnotu a navíc mají všechny jeho nenulové sčítance hodnotu alespoň 1. Nenulových hodnot v posloupnosti je tedy pouze konečně. 
+Neutrální posloupnost $p$ splňuje $\sum_{k \geq 3}{(6-k)p_k}=0$, což můžeme upravit na $3p_3+2p_4+p_5=\sum_{k \geq 7}{(k-6)p_k}$. Všechny sčítance na obou stranách výrazu jsou kladné. Hodnota levého součtu tří sčítanců je konečná. Pravý součet má tedy také konečnou hodnotu a navíc mají všechny jeho nenulové sčítance hodnotu alespoň 1. Nenulových hodnot v posloupnosti je tedy pouze konečně. 
 \end{dukaz}
 
 \begin{tvrz}\label{veta:posloupnosti}
@@ -51,7 +51,7 @@ Neutrální posloupnost $p$ splňuje $\sum_{k \geq 3}{(6-k)p_k}=0$, což můžem
 \begin{dukaz}
 Pro ukázání první vlastnosti postačí, když si uvědomíme, že chceme $\sum_{k \geq 3}{(6-k)p_k} = 0$, kde pro $k < 6$ je sčítaný člen kladný, zato pro $k>6$ je sčítaný člen záporný. Druhá vlastnost plyne z definice a distributivity násobení. Třetí tvrzení pro je slabší verze Věty \ref{veta:Eberhard}.
 \end{dukaz}
-K poslední vlastnosti se nabízí otázka, jak lze $q$ omezit, aby pořád $p+qn$ byla realizovatelná. Eberhard ukázal, že stačí  $q = (0,0,0,q_6=1,0,\dots)$, tedy přidat šestiúhelníky. DeVos a kol. ukázal že i omezení na  $q = (0,0,1,0,1,0,\dots)$ funguje. V této práci ukážeme, že posloupností s pouze dvěma nenulovými hodnotami, které v tomto směru vyhovují, existuje výrazně víc.
+K poslední vlastnosti se nabízí otázka, jak lze $q$ omezit, aby pořád $p+qn$ byla realizovatelná. Eberhard ukázal, že stačí  $q = (0,0,0,q_6=1,0,\dots)$, tedy přidat šestiúhelníky. DeVos a kol. ukázali že i omezení na  $q = (0,0,1,0,1,0,\dots)$ funguje. V této práci ukážeme, že posloupností s pouze dvěma nenulovými hodnotami, které v tomto směru vyhovují, existuje výrazně víc.
 
 
 

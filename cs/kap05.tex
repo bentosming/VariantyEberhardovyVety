@@ -1,6 +1,6 @@
 \chapter{Výsledky} \label{vysledky}
 
-Díky programu popsanému v předchozí kapitole bylo možné zkusit dokončit důkaz Věty \ref{veta02:hypoteza} pro některé neutrální posloupnosti $q$ (na volbě posloupnosti $p$ nezáleží, protože konstrukce pro jádrový triark nezávisí na velikosti jádra). 
+Díky programu popsanému v předchozí kapitole bylo možné zkusit dokončit důkaz Hypotézy \ref{veta02:hypoteza} pro některé neutrální posloupnosti $q$ (na volbě posloupnosti $p$ nezáleží, protože konstrukce pro jádrový triark nezávisí na velikosti jádra). 
 
 Vzhledem k výpočetním omezením programu jsme zkusili dokončit důkaz věty pouze pro takové neutrální posloupnosti $q$, že $Q = \lbrace r, s\rbrace$ a navíc $r<s<18$. Seznam posloupností, pro které program nalezl potřebné grafy je v Tabulce \ref{obr03:tabvysledky}. Pokud bychom se omezili na rozsah $r<s<14$, pak program grafy nalezl právě tehdy, když $r$ a $s$ jsou nesoudělná čísla.
 
@@ -19,7 +19,7 @@ Formulujme výsledek do věty.
 
 \begin{veta} \label{veta:vysledek}
 Pro každou neutrální posloupnost $q$, která má nenulové hodnoty pouze pro $q_r$ a $q_s$, kde $r,s$ je vyznačená dvojice z Tabulky \ref{obr03:tabvysledky}, platí následující: 
-mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$, pak existuje nekonečně takových přirozených $n$, že $p+nq$ je realizovatelná.
+mějme přípustnou posloupnost $(p_k) = (p_3,p_4,\dots)$, pak existuje nekonečně takových přirozených $n$, že $p+nq$ je realizovatelná.
 \end{veta}
 
 
@@ -65,7 +65,7 @@ mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$, pak existuje nekone
  & \cellcolor{lightgray}AB : 1010 & \cellcolor{lightgray}AB : 1010 & \cellcolor{lightgray}AB : 1010\\
  & \cellcolor{lightgray}CD : 1010 & \cellcolor{lightgray}CD : 1010 & \cellcolor{lightgray}CD : 1010\\\hline
 
-14 & \cellcolor{lightgray}(i): 3 & (i): 3,4,5,6,7,8,9,10 & (i): \\
+14 & \cellcolor{lightgray}(i): 3 & (i): 3,4,5,6,7,8,10 & (i): \\
  & \cellcolor{lightgray}(ii): 3 & (ii):  & (ii): \\
  & \cellcolor{lightgray}AB : 1010 & AB :  & AB : \\
  & \cellcolor{lightgray}CD : 1010 & CD : 1010 & CD : \\\hline
@@ -84,6 +84,8 @@ mějme přípustnou posloupnost $p=(p_k | 3 \leq k \neq 6)$, pak existuje nekone
  & \cellcolor{lightgray}(ii): 3 & (ii):  & (ii): \\
  & \cellcolor{lightgray}AB : 1010 & AB :  & AB : \\
  & \cellcolor{lightgray}CD : 1010 & CD :  & CD : \\\hline
+
+
 
 \end{tabular}}
 \caption{Přehled nalezených grafů. Ohraničené buňky kódují výsledek pro danou dvojici $r$, $s$. Pokud jsou grafy nalezené, je buňka šedá. První řádek buňky: $k$ pro nalezené ($k$, $k$, $k$)-triarky; druhý: $k$ pro nalezené ($k$, $k$, $k$)- a zároveň ($k$, $k$, $k-1$)-triarky; třetí: řetízek pro konstrukci grafu (iii), kde $mk$ odpovídá poslední hodnotě v druhém řádku; čtvrtý: řetízek pro graf (iv).}
